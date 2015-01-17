@@ -19,6 +19,7 @@ base  <- "/projectnb/dietzelab/paleon/ED_runs/phase1a_spininitial.v2/"
 out   <- "/projectnb/dietzelab/paleon/ED_runs/SAS_spinup/phase1a_spinup.v2/"
 #sites <- c("PBL","PHA","PMB","PDL","PHO","PUN")
 blckyr<- 10 #number of years to chunk data by
+steps <- (2000-1850)/blckyr
 niter <- length(list.dirs(paste(base,sites[2],"/",sep=""),recursive=FALSE)) #iterations/site 
 pft   <- c(5,6,8,9,10,11) #set of PFTs used in analysis
 dpm <- c(31,28,31,30,31,30,31,31,30,31,30,31) # days per month
@@ -105,9 +106,9 @@ for(s in sites){
       css.tmp[,4] <- ncvar_get(now,'DBH')
       css.tmp[,5] <- ncvar_get(now,'HITE')
       css.tmp[,6] <- ipft
-      css.tmp[,7] <- ncvar_get(now,'NPLANT')
-      css.tmp[,8] <- ncvar_get(now,'BDEAD')
-      css.tmp[,9] <- ncvar_get(now,'BALIVE')
+      css.tmp[,7] <- ncvar_get(now,'NPLANT')/steps
+      css.tmp[,8] <- ncvar_get(now,'BDEAD')/steps
+      css.tmp[,9] <- ncvar_get(now,'BALIVE')/steps
       css.tmp[,10] <- rep(-999,length(ipft))
       colnames(css.tmp) <- c("year","patch","cohort","dbh","ht","pft","n","bdead","balive","Avgrg")
       
