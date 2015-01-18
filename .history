@@ -1,0 +1,603 @@
+for(i in 1:length(year$year)){#
+	for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH^sample(beta1, size=1, replace=T))}#
+	year$mean[i] <- mean(test)#
+	year$sd[i] <- sd(test)#
+	return(test)#
+}
+test <- rep(NA,1000)#
+for(j in 1:length(year$year)){#
+	for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH^sample(beta1, size=1, replace=T))}#
+	year$mean[j] <- mean(test)#
+	year$sd[j] <- sd(test)#
+	return(test)#
+}
+for(j in 1:length(year$year)){#
+	test <- rep(NA,1000)#
+	for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH^sample(beta1, size=1, replace=T))}#
+	year$mean[j] <- mean(test)#
+	year$sd[j] <- sd(test)#
+	return(test)#
+}
+year
+beta0 <- rnorm(50, mean=0.054, sd=0.004)#
+beta1 <- rnorm(50, mean=2.651, sd=0.0175)#
+for(j in 1:length(year$year)){#
+	test <- rep(NA,1000)#
+	for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH^sample(beta1, size=1, replace=T))}#
+	year$mean[j] <- mean(test)#
+	year$sd[j] <- sd(test)#
+}
+year
+year <- 1950:2010#
+year <- data.frame(year)
+DBH <- data.frame(dim=c(5,length(1950:2010)))
+DBH <- data.frame(dim=c(5,length(1950:2010)))#
+for(j in 1:ncol(DBH)){#
+	DBH <- rnorm(length(DBH[,1]), mean=10, sd=2)	#
+}
+DBH
+DBH <- data.frame(dim=c(5,length(1950:2010)))
+DBH
+DBH <- data.frame(ncol=5, nrow=length(1950:2010))
+dim(DBH)
+?data.frame
+length(1950:2010)
+DBH <- data.frame(x=length(1950:2010), y=5)
+dim(DBH)
+DBH
+DBH <- data.frame(x=length(1950:2010), y=5, NA)
+dim(DBH)
+DBH <- vector(length=length(1950:2010))
+dim(DBH)
+length(DBH)
+DBH <- data.frame(DBH)
+summary(DBH)
+for(j in 1:5){#
+	DBH[,j] <- rnorm(length(DBH[,1]), mean=10, sd=2)#
+}
+summary(DBH)
+names(DBH) <- paste("X", 1:5)
+summary(DBH)
+names(DBH) <- paste("X", 1:5, sep="")
+summary(DBH)
+DBH$Year <- 1950:2010
+DBH <- DBH[, c("Year", 1:5)]
+DBH$Year <- 1950:2010
+summary(DBH)
+DBH <- DBH[, c(6, 1:5)]
+summary(DBH)
+beta0 <- rnorm(50, mean=0.054, sd=0.004)#
+beta1 <- rnorm(50, mean=2.651, sd=0.0175)#
+for(j in 1:length(DBH$Year)){#
+	test <- rep(NA,1000)#
+	for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH[DBH$Year==j, 2:ncol(DBH)]^sample(beta1, size=1, replace=T))}#
+	year$mean[j] <- mean(test)#
+	year$sd[j] <- sd(test)#
+}
+for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH[DBH$Year==j, 2:ncol(DBH)]^sample(beta1, size=1, replace=T))}
+test <- rep(NA,1000)
+for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH[DBH$Year==j, 2:ncol(DBH)]^sample(beta1, size=1, replace=T))}
+test <- rep(NA,1000)
+for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH[DBH$Year==j, 2:ncol(DBH)]^sample(beta1, size=1, replace=T))}
+mean(2*DBH[DBH$Year==j, 2:ncol(DBH)]^2)
+mean(DBH[DBH$Year==j, 2:ncol(DBH)])
+mean(DBH[DBH$Year==j, 2:ncol(DBH)], na.rm=T)
+DBH[DBH$Year==j, 2:ncol(DBH)]
+mean(DBH[DBH$Year==2000, 2:ncol(DBH)], na.rm=T)
+DBH[DBH$Year==2000, 2:ncol(DBH)]
+mean(DBH[DBH$Year==2000, 2:ncol(DBH)])
+mean(DBH[DBH$Year==2000, 2:6])
+DBH[DBH$Year==2000, 2:ncol(DBH)]
+test <- as.vector(DBH[DBH$Year==2000, 2:ncol(DBH)])
+test
+test <- as.;ost(DBH[DBH$Year==2000, 2:ncol(DBH)])
+test <- (DBH[DBH$Year==2000, 2:ncol(DBH)])
+test
+test <- as.list(DBH[DBH$Year==2000, 2:ncol(DBH)])
+test
+test <- paste(DBH[DBH$Year==2000, 2:ncol(DBH)])
+test
+test <- as.vector(DBH[DBH$Year==2000, 2:ncol(DBH)])
+test
+test <- as.vector(as.list(DBH[DBH$Year==2000, 2:ncol(DBH)]))
+test
+test <- (DBH[DBH$Year==2000, 2:ncol(DBH)])
+test <- as.numeric(paste(DBH[DBH$Year==2000, 2:ncol(DBH)]))
+test
+beta0 <- rnorm(50, mean=0.054, sd=0.004)#
+beta1 <- rnorm(50, mean=2.651, sd=0.0175)#
+for(j in 1:length(DBH$Year)){#
+	DBH.list <- as.numeric(paste(DBH[DBH$Year==j, 2:ncol(DBH)]))#
+	test <- rep(NA,1000)#
+	for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH.list^sample(beta1, size=1, replace=T))}#
+	year$mean[j] <- mean(test)#
+	year$sd[j] <- sd(test)#
+}
+warnings()
+summary(DBH)
+year <- 1950:2010#
+year <- data.frame(year)
+beta0 <- rnorm(50, mean=0.054, sd=0.004)#
+beta1 <- rnorm(50, mean=2.651, sd=0.0175)
+for(j in 1:length(DBH$Year)){#
+	DBH.list <- as.numeric(paste(DBH[DBH$Year==j, 2:ncol(DBH)]))#
+	test <- rep(NA,1000)#
+	for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH.list^sample(beta1, size=1, replace=T))}#
+	year$mean[j] <- mean(test)#
+	year$sd[j] <- sd(test)#
+}
+summary(year)
+beta0 <- rnorm(50, mean=0.054, sd=0.004)#
+beta1 <- rnorm(50, mean=2.651, sd=0.0175)#
+for(j in 1:length(DBH$Year)){#
+	DBH.list <- as.numeric(paste(DBH[DBH$Year==j, 2:ncol(DBH)]))#
+	test <- rep(NA,1000)#
+	for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH.list^sample(beta1, size=1, replace=T), na.rm=T)}#
+	year$mean[j] <- mean(test)#
+	year$sd[j] <- sd(test)#
+}
+DBH.list <- rnorm(mean=10, sd=2)
+DBH.list <- rnorm(50, mean=10, sd=2)
+test <- rep(NA,1000)#
+	for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH.list^sample(beta1, size=1, replace=T), na.rm=T)}
+DBH.list <- as.vector(DBH[DBH$Year==j, 2:ncol(DBH)])
+for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH.list^sample(beta1, size=1, replace=T), na.rm=T)}
+stack <- stack(DBH[,2:6])
+stack$year <- DBH$Year
+summary(stack)
+names(test.stack) <- c("DBH", "Tree", "year")#
+summary(test.stack)
+test.stack <- stack(DBH[,2:6])#
+test.stack$year <- DBH$Year#
+names(test.stack) <- c("DBH", "Tree", "year")#
+summary(test.stack)
+for(j in 1:length(DBH$Year)){#
+#	DBH.list <- rnorm(50, mean=10, sd=2)#
+	DBH.list <- test.stack[test.stack$year==j, "DBH"]#
+	test <- rep(NA,1000)#
+	for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH.list^sample(beta1, size=1, replace=T), na.rm=T)}#
+	year$mean[j] <- mean(test)#
+	year$sd[j] <- sd(test)#
+}
+summary(year)
+DBH.list <- test.stack[test.stack$year==2010, "DBH"]
+DBH.list
+for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH.list^sample(beta1, size=1, replace=T), na.rm=T)}
+for(j in 1:length(DBH$Year)){#
+#	DBH.list <- rnorm(50, mean=10, sd=2)#
+	DBH.list <- test.stack[test.stack$year==j, "DBH"]#
+	test <- rep(NA,1000)#
+	for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH.list^sample(beta1, size=1, replace=T), na.rm=T)}#
+	year$mean[j] <- mean(test)#
+	year$sd[j] <- sd(test)#
+	return(DBH.list)#
+}
+summary(year)
+for(j in unique(test.stack$year)){#
+#	DBH.list <- rnorm(50, mean=10, sd=2)#
+	DBH.list <- test.stack[test.stack$year==j, "DBH"]#
+	test <- rep(NA,1000)#
+	for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH.list^sample(beta1, size=1, replace=T), na.rm=T)}#
+	year$mean[j] <- mean(test)#
+	year$sd[j] <- sd(test)#
+	return(DBH.list)#
+}
+summary(year)
+for(j in unique(test.stack$year)){#
+#	DBH.list <- rnorm(50, mean=10, sd=2)#
+	DBH.list <- test.stack[test.stack$year==j, "DBH"]#
+	test <- rep(NA,1000)#
+	for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH.list^sample(beta1, size=1, replace=T), na.rm=T)}#
+	year[year$year==j, "mean"] <- mean(test)#
+	year[year$year==j, "sd"] <- sd(test)#
+	return(DBH.list)#
+}
+summary(year)
+for(j in unique(test.stack$year)){#
+#	DBH.list <- rnorm(50, mean=10, sd=2)#
+	DBH.list <- test.stack[test.stack$year==j, "DBH"]#
+	test <- rep(NA,1000)#
+	for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH.list^sample(beta1, size=1, replace=T), na.rm=T)}#
+	year[year$year==j, "mean"] <- mean(test)#
+	year[year$year==j, "sd"] <- sd(test)#
+}
+summary(year)
+for(j in unique(test.stack$year)){#
+#	DBH.list <- rnorm(50, mean=10, sd=2)#
+#	DBH.list <- test.stack[test.stack$year==j, "DBH"]#
+	test <- rep(NA,1000)#
+	for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*test.stack[test.stack$year==j, "DBH"]^sample(beta1, size=1, replace=T), na.rm=T)}#
+	year[year$year==j, "mean"] <- mean(test)#
+	year[year$year==j, "sd"] <- sd(test)#
+}
+summary(test.stack)
+test.stack <- stack(DBH[,2:6])#
+test.stack$year <- DBH$Year#
+names(test.stack) <- c("DBH", "Tree", "year")#
+summary(test.stack)
+DBH <- vector(length=length(1950:2010))#
+length(DBH)#
+DBH <- data.frame(DBH)#
+summary(DBH)#
+for(j in 1:5){#
+	DBH[,j] <- rnorm(length(DBH[,1]), mean=10, sd=2)#
+}#
+names(DBH) <- paste("X", 1:5, sep="")#
+DBH$Year <- 1950:2010#
+DBH <- DBH[, c(6, 1:5)]#
+summary(DBH)#
+#
+test.stack <- stack(DBH[,2:6])#
+test.stack$year <- DBH$Year#
+names(test.stack) <- c("DBH", "Tree", "year")#
+summary(test.stack)#
+#
+#year <- all.valles$Year#
+year <- 1950:2010#
+year <- data.frame(year)
+beta0 <- rnorm(50, mean=0.054, sd=0.004)#
+beta1 <- rnorm(50, mean=2.651, sd=0.0175)#
+#
+for(j in unique(test.stack$year)){#
+#	DBH.list <- rnorm(50, mean=10, sd=2)#
+#	DBH.list <- test.stack[test.stack$year==j, "DBH"]#
+	test <- rep(NA,1000)#
+	for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*test.stack[test.stack$year==j, "DBH"]^sample(beta1, size=1, replace=T), na.rm=T)}#
+	year[year$year==j, "mean"] <- mean(test)#
+	year[year$year==j, "sd"] <- sd(test)#
+}
+summary(year)
+install.packages("Rmpi", type="source")
+install.packages(file.choose(), repos = NULL, type = "source")
+library(Rmpi)
+install.packages("Rmpi", type="source")
+temp.data <- read.csv("CARCA_Plots_Climate_Tavg_Tmin_1889_2012.csv")#
+temp.data$Plot <- as.factor(temp.data$Plot)#
+summary(temp.data)
+tmin <- read.csv("CARCA_Plots_Climate_Tmin_1900_2012_byMonth.csv")#
+names(tmin) <- c("PlotID", "Year", paste("Tmin", names(tmin[,3:14]), sep="."))#
+summary(tmin)#
+dim(tmin)#
+#
+months <- c("X01", "X02", "X03", "X04", "X05", "X06", "X07", "X08", "X09", "X10", "X11", "X12")#
+months#
+#
+years <- unique(tmin$Year)#
+summary(years)#
+#
+for(p in unique(tmin$PlotID)){#
+	for(y in (min(tmin$Year)+1):max(tmin$Year)){#
+		for(j in 9:14){#
+			tmin[tmin$PlotID==p & tmin$Year==y, paste(names(tmin[j]), "prev", sep=".")] <- tmin[tmin$PlotID==p & tmin$Year==(y-1), j]#
+		}#
+	}#
+}#
+#
+write.csv(tmin, "CARCA_Plots_Climate_Tmin_1900_2012_byMonth.csv", row.names=F)
+library(RSAGA)
+rsaga.get.libraries()
+rsaga.env()
+my.env <- rsaga.env(path='/dist/bin', modules='/dist/lib/saga')
+rsaga.get.libraries()
+rsaga.get.libraries(env=my.env)
+my.env
+my.env <- rsaga.env(workspace='~/Desktop/', path='/dist/bin', modules='/dist/lib/saga')#
+my.env
+library(raster)
+?writeRaster
+################################################################################
+# Formatting downscaled climate record#
+################################################################################
+rm(list=ls())#
+##############################
+# Libraries#
+##############################
+library(raster)#
+library(rgdal)#
+library(car)#
+library(reshape2)#
+#library(maptools)#
+#library(proj4)#
+#library(sp)#
+#library(maps)#
+#library(RghcnV3)#
+library(nlme)#
+library(MuMIn)#
+library(rasterVis)#
+library(MASS)#
+#
+##############################
+# Functions#
+##############################
+se <- function(x){#
+	sd(x, na.rm=TRUE) / sqrt((length(!is.na(x))))}#
+#
+##############################
+# Some basic vectors etc#
+##############################
+month <- c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")#
+month.num <- 1:12#
+month.data <- as.data.frame(month)#
+month.data$month.num <- month.num#
+month.data$decimal <- 1/12 * month.data$month.num - 1/12#
+month.data#
+summary(month.data)#
+#
+suff <- as.factor(c(1:12))#
+suff#
+#
+layer.names <- c("X01", "X02", "X03", "X04", "X05", "X06", "X07", "X08", "X09", "X10", "X11", "X12")#
+layer.names#
+#
+sol.pal <- colorRampPalette(c("dodgerblue1", "red"), space="Lab", bias=0.75)#
+sol.pal2 <- colorRampPalette(c("white", "red"), space="Lab", bias=0.5) #
+#
+################################################################################
+# Importing Baseline Rasters used in ClimateModels#
+################################################################################
+#
+sol <- stack("CARCA_Sol")#
+names(sol) <- layer.names#
+projection(sol) <- "+proj=longlat +datum=NAD83 +no_defs +ellps=GRS80 +towgs84=0,0,0 +units=m"#
+sol#
+#
+# Import DEM#
+elev <- raster("CARCA_DEM")#
+projection(elev) <- "+proj=longlat +datum=NAD83 +no_defs +ellps=GRS80 +towgs84=0,0,0 +units=m"#
+elev#
+#
+TPI <- raster("CARCA_TPI")#
+projection(TPI) <- "+proj=longlat +datum=NAD83 +no_defs +ellps=GRS80 +towgs84=0,0,0 +units=m"#
+TPI#
+#
+flow <- raster("CARCA_FillAcc_Max25")#
+projection(flow) <- "+proj=longlat +datum=NAD83 +no_defs +ellps=GRS80 +towgs84=0,0,0 +units=m"#
+flow#
+#
+################################################################################
+# See 30m extraction for selection of points  #
+random.points <- read.csv("RandomPoints_COOP_Location.csv")#
+coordinates(random.points) <- c("Lon", "Lat")#
+projection(random.points) <- "+proj=longlat +datum=NAD83 +no_defs +ellps=GRS80 +towgs84=0,0,0 +units=m"#
+summary(random.points)
+sqrt(1e6/pi)
+564.2^2
+(564.2^2)*pi
+3/10000
+282+33+160+201+179
+sqrt(4/pi)
+sqrt(4/pi)*2
+updates
+install.packages(c('R2jags', 'RCurl', 'RJSONIO', 'reshape2', 'fields', 'maps', 'plyr', 'maptools', 'ggplot2', 'mvtnorm', 'devtools'), repos = "http://cran.cnr.berkeley.edu")
+install.packages("neotoma")
+install_github()
+update()
+(2011-1022)/10
+(2011-1025)/12
+(2011-1025)/12/30
+install.packages(rgdal, type="source")
+install.packages("rgdal", type="source")
+install.packages("geos", type="source")
+?nls
+#############
+library(nlme)#
+library(lme4)#
+library(ggplot2)#
+library(grid)#
+#library(multcomp)#
+#############
+#
+# reading in data#
+cwd.data <- read.csv("cwd02.csv")#
+cwd.data$class <- as.ordered(cwd.data$class)#
+summary(cwd.data)#
+#
+cwd.data2 <- cwd.data#
+cwd.data2$class2 <- 1#
+summary(cwd.data2)#
+#
+class.means <- aggregate(cwd.data$years.dead, by=list(cwd.data$class), FUN=mean)#
+names(class.means) <- c("class", "mean.yrs.dead")#
+summary(class.means)#
+#
+large.axes <- theme(axis.line=element_line(color="black", size=0.5), panel.grid.major=element_blank(), panel.grid.minor= element_blank(), panel.border= element_blank(), panel.background= element_blank(), axis.text.x=element_text(angle=0, color="black", size=18), axis.text.y=element_text(color="black", size=18), axis.title.x=element_text(face="bold", size=20, vjust=-1),  axis.title.y=element_text(face="bold", size=20, vjust=0.2), plot.margin=unit(c(2,2,2,2), "lines"))#
+stat_sum_single <- function(fun, geom, ...) {#
+  stat_summary(fun.y=fun, colour="black", geom=geom, size = 3, ...)#
+}#
+ggplot(data=cwd.data, aes(factor(class), years.dead)) + geom_violin(adjust=2) + stat_summary(fun.y=mean, geom="point", size=6, color="black") + geom_point(position=position_jitter(width=0.2, height=0), aes(shape=spp, color=spp)) + scale_shape(solid=F) + large.axes + theme(legend.position=c(0.2,0.8), legend.text=element_text(size=14), legend.title=element_text(size=16)) + labs(fill="Species") + scale_y_continuous(name="Years Dead") + scale_x_discrete(name="Decay Class")
+update()
+ip <- installed.packages()
+pkgs.to.remove <- ip[!(ip[,"Priority"] %in% c("base", "recommended")), 1]#
+sapply(pkgs.to.remove, remove.packages)
+ip
+pkgs.to.remove
+path.lib
+?remove.packages
+?libPaths
+?.libPaths
+.libPaths
+.Library
+sapply(pkgs.to.removs, uninstall.packages, lib=.Library)
+?uninstall.packages
+sapply(pkgs.to.remove, remove.packages, lib=.Library)
+.Library
+ip <- installed.packags()
+ip <- installed.packages()
+ip
+pkgs.to.remove <- ip[!(ip[,"Priority"] %in% c("base", "recommended")), 1]
+pkgs.to.remove
+sapply(pkgs.to.remove, remove.packages)
+sapply(pkgs.to.remove, remove.packages, lib=.Lib)
+sapply(pkgs.to.remove, remove.packages, lib=.Library)
+installed.packages()
+install.packages("zoo")
+library(zoo)
+?install.packages
+install.packages("ncdf4", dependencies=T)
+## --------------------------------------------------------------#
+## Script to loop through the 6 sites and extract data into the 100-yr files #
+## --------------------------------------------------------------#
+source("model2netcdf.ED2.paleon.R")#
+#
+raw.path <- "ED2.HI/"#
+new.path <- "phase1a_model_output/ED2/"#
+sites <- c("PHA", "PHO", "PUN", "PBL", "PDL", "PMB")#
+site.lat <- c(42.54, 45.25, 46.22, 46.28, 47.17, 43.61)#
+site.lon <- c(-72.18, -68.73, -89.53, -94.58, -95.17, -82.83)#
+#
+start.run <- as.Date("1850-01-01", "%Y-%m-%d") #
+end.run <- as.Date("3010-01-01", "%Y-%m-%d")
+thicknet=vector()
+stretch = 2
+thicknet <- vector()
+thick <- array()
+stretch = 2#
+for(z in 1:3){#
+	thik = 1#
+	thicknet[z] = 0#
+	for(k in 1:((z+1)/2)){#
+		thick[k,z] <- thik#
+		thick[z+1-k, z] <- thik#
+		thik = thik*stretch#
+	}#
+}
+thick <- array(dim=c(3,3))
+for(z in 1:3){#
+	thik = 1#
+	thicknet[z] = 0#
+	for(k in 1:((z+1)/2)){#
+		thick[k,z] <- thik#
+		thick[z+1-k, z] <- thik#
+		thik = thik*stretch#
+	}
+}
+thick
+thicknet <- vector()#
+thick <- array(dim=c(3,3))#
+stretch = 2#
+for(z in 1:3){#
+	thik = 1#
+	thicknet[z] = 0#
+	for(k in 1:((z+1)/2)){#
+		thick[k,z] <- thik#
+		thick[z+1-k, z] <- thik#
+		thik = thik*stretch#
+	}#
+	if(!((z+1)/2 == z/2)) thicknet[z] <- thicknet[z] - thick/stretch#
+	for(k in 1:z){#
+		thick[k,z] <- thick[k,z]/thicknet[z]	#
+	}#
+}
+thicknet <- vector()#
+thick <- array(dim=c(3,3))#
+stretch = 2#
+for(z in 1:3){#
+	thik <- 1#
+	thicknet[z] <- 0#
+	for(k in 1:((z+1)/2)){#
+		thick[k,z] <- thik#
+		thick[z+1-k, z] <- thik#
+		thik = thik*stretch#
+	}#
+	if(!((z+1)/2 == z/2)) thicknet[z] <- thicknet[z] - thick/stretch#
+	# for(k in 1:z){#
+		# thick[k,z] <- thick[k,z]/thicknet[z]	#
+	# }#
+}
+thicknet <- vector()#
+thick <- array(dim=c(3,3))#
+stretch = 2#
+for(z in 1:3){#
+	thik <- 1#
+	thicknet[z] <- 0#
+	for(k in 1:((z+1)/2)){#
+		thick[k,z] <- thik#
+		thick[z+1-k, z] <- thik#
+		thik = thik*stretch#
+	}#
+	# if(!((z+1)/2 == z/2)) thicknet[z] <- thicknet[z] - thick/stretch#
+	# for(k in 1:z){#
+		# thick[k,z] <- thick[k,z]/thicknet[z]	#
+	# }#
+}
+thick
+thicknet
+z=1
+((z+1)/2 == z/2)
+z=2
+((z+1)/2 == z/2)
+z=3
+((z+1)/2 == z/2)
+z=4
+((z+1)/2 == z/2)
+!((z+1)/2 == z/2)
+z=1
+!((z+1)/2 == z/2)
+thicknet
+thicknet[z] <- thicknet[z] - thick/stretch
+thicknet[z] <- thicknet[z] - thik/stretch
+thicknet
+thicknet <- vector()#
+thick <- array(dim=c(3,3))#
+stretch = 2#
+for(z in 1:3){#
+	thik <- 1#
+	thicknet[z] <- 0#
+	for(k in 1:((z+1)/2)){#
+		thick[k,z] <- thik#
+		thick[z+1-k, z] <- thik#
+		thik = thik*stretch#
+	}#
+	if(!((z+1)/2 == z/2)) thicknet[z] <- thicknet[z] - thik/stretch#
+	for(k in 1:z){#
+		thick[k,z] <- thick[k,z]/thicknet[z]	#
+	}#
+}
+thicknet
+thick
+library(raster)
+install.packages("raster")
+library(rdgal)
+install.packages("rgdal")
+?install.packages
+intall.packages("rgdal", type="source")
+install.packages("rgdal", type="source")
+install.packages("rgeos")
+install.packages("rgeos", type="source")
+install.packages("rgdal", type="source")
+install.packages("rgdal")
+install.packages("geos", type="source")
+install.packages(geos, type="source")
+install.packages(rgeos, type="source")
+install.packages("rgeos", type="source")
+install.packages("rgeos")
+install.packages("rgeos", type="source")
+install.packages("rgdal")
+install.packages("rgdal", type="source")
+install.packages("rgeos", type="source")
+install.packages("rgdal", type="source")
+install.packages("plyr")
+library(rgeos)
+install.packages(rgeos)
+install.packages("rgeos")
+install.packages("rgeos", repos="http://R-Forge.R-project.org")
+install.packages("rgeos", repos="http://R-Forge.R-project.org", type="source")
+require(rgeos)
+install.packages("rgdal")
+install.packages("rgdal", type="source")
+library(rgdal)
+install.packages("raster")
+?log
+?exp
+test <- 1:10
+which(test) > 10
+which(test > 10)
+test > 10
+test > 5
+test[test > 5]
+?which
+which(letters == "R")
+which(letters == "r")
+test
+which(test == 1)
+which(test > 5)

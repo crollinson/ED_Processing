@@ -106,9 +106,9 @@ for(s in sites){
       css.tmp[,4] <- ncvar_get(now,'DBH')
       css.tmp[,5] <- ncvar_get(now,'HITE')
       css.tmp[,6] <- ipft
-      css.tmp[,7] <- ncvar_get(now,'NPLANT')/steps
-      css.tmp[,8] <- ncvar_get(now,'BDEAD')/steps
-      css.tmp[,9] <- ncvar_get(now,'BALIVE')/steps
+      css.tmp[,7] <- ncvar_get(now,'NPLANT')
+      css.tmp[,8] <- ncvar_get(now,'BDEAD')
+      css.tmp[,9] <- ncvar_get(now,'BALIVE')
       css.tmp[,10] <- rep(-999,length(ipft))
       colnames(css.tmp) <- c("year","patch","cohort","dbh","ht","pft","n","bdead","balive","Avgrg")
       
