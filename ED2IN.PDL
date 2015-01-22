@@ -1434,7 +1434,6 @@ $ED_NL
    !                                                                                       !
    ! If the years don't cover the entire simulation period, they will be recycled.         !
    !---------------------------------------------------------------------------------------!
-
    NL%IPHENYS1 = 2000
    NL%IPHENYSF = 2006
    NL%IPHENYF1 = 2000
