@@ -1,41 +1,15 @@
-# ------------------------------------------------------------------------------------
-# This file compiles the ensemble output from the SAS runs 
-#
-# Original SAS solution:
-# Jaclyn Hatala Matthes, 2/18/14
-# jaclyn.hatala.matthes@gmail.com
-#
-# Modified by CRR for new version of ED Jan 2015
+#This file compiles the ensemble output from the SAS runs 
+#Jaclyn Hatala Matthes, 2/18/14
+#jaclyn.hatala.matthes@gmail.com
+
+# Modified by CRR for new version of ED 17 Jan 2015
 ## Changes mostly modify units to fit in with unit changes in new version of ED
-## Changes are to assign geometric distribution & reporportion patch area based on the distribution
-# ------------------------------------------------------------------------------------
 
-# ------------------------------------------------------------------------------------
-# NOTES ON THE SAS SPINUP:
-# ------------------------------------------------------------------------------------
-# The SAS (semi-analytical solution(?)) should be perfomed on ED runs *******WITH 
-# 	DISTURBANCE TURNED OFF*******
-# Turning off the disturbance (both treefall & fire) means the model will run with a 
-# single patch AND we have a robust patch saying what a theoretical old growth looks like
-# ------------------------------------------------------------------------------------
-
-
-
-# ------------------------------------------------------------------------------------
-# Setting things up to run equations, etc
-# ------------------------------------------------------------------------------------
-#---------------------------------------
 #Load libraries
-#---------------------------------------
 library(chron)
 library(ncdf4)
 library(colorspace)
-#---------------------------------------
 
-#---------------------------------------
-# Define File Structures & steps
-#---------------------------------------
-# Sites
 sites <- c("PHA", "PHO", "PUN", "PBL", "PDL", "PMB")
 site.lat <- c(42.5, 45.5, 46.5, 46.5, 47.5, 43.5)
 site.lon <- c(-72.5, -68.5, -89.5, -94.5, -95.5, -82.5)
@@ -43,21 +17,13 @@ site.lon <- c(-72.5, -68.5, -89.5, -94.5, -95.5, -82.5)
 #Setup analysis file structure
 base  <- "/projectnb/dietzelab/paleon/ED_runs/phase1a_spininitial.v2/"
 out   <- "/projectnb/dietzelab/paleon/ED_runs/SAS_spinup/phase1a_spinup.v2/"
-
-# Steps used to describe the steady state
-blckyr<- 5 #number of years to chunk data by
-nsteps <- (2000-1850)/blckyr # The number of blocks = the number steps we'll have
-niter <- length(list.dirs(paste(base,sites[1],"/",sep=""),recursive=FALSE)) #iterations/site 
-disturb <- 0.01 # the treefall disturbance rate you will prescribe in the actual runs (in ED2IN)
-
+#sites <- c("PBL","PHA","PMB","PDL","PHO","PUN")
+blckyr<- 10 #number of years to chunk data by
+niter <- length(list.dirs(paste(base,sites[2],"/",sep=""),recursive=FALSE)) #iterations/site 
 pft   <- c(5,6,8,9,10,11) #set of PFTs used in analysis
 dpm <- c(31,28,31,30,31,30,31,31,30,31,30,31) # days per month
 sufx  <- "g01.h5"
-#---------------------------------------
 
-#---------------------------------------
-# Set up constants taken from ED structure
-#---------------------------------------
 yr_day <- 365.2425
 day_sec <- 60*60*24
 
@@ -70,12 +36,12 @@ decay_rate_fsc <- 11 / yr_day
 decay_rate_stsc <- 4.5 / yr_day
 decay_rate_ssc <- 100.2 / yr_day
 
-# Jackie's original equations
+# Jackie's equations
 #fsc_loss <- 1/11.0 	# decay_rate_fsc (new version is not 1/fsc)
 #ssc_loss <- 1.0/100.2	# decay_rate_ssc 			" "
 #ssl_loss <- 1.0/4.5 	# decay_rate_stsc 			" "
 
-# new calculations (soil_respiration.f90) -- note to part of this step is done later
+# new calculations (soil_respiration.f90) -- note to minimize altering of Jackie's Code only doing part of this step
 # fast_C_loss <- kgCday_2_umols * A_decomp * decay_rate_fsc * fast_soil_C
 # struc_C_loss <- kgCday_2_umols * A_decomp * Lc * decay_rate_stsc * struct_soil_C * f_decomp
 # slow_C_loss <- kcCday_2_umols * A_decomp * decay_rate_ssc * slow_soil_C
@@ -84,10 +50,9 @@ fsc_loss <- kgCday_2_umols *  decay_rate_fsc
 ssc_loss <- kgCday_2_umols *  decay_rate_ssc
 ssl_loss <- kgCday_2_umols *  decay_rate_stsc
 
-# Constants found in the code
 resp_opt_water            <- 0.8938
 resp_water_below_opt      <- 5.0786
-resp_water_above_opt	  <- 4.5139
+resp_water_above_opt		  <- 4.5139
 resp_temperature_increase <- 0.0757 # Jackie had greatly modified this value
 
 rel_soil_moist 			  <- 0.5
@@ -103,51 +68,39 @@ temperature_limitation = exp(resp_temperature_increase * (soil_tempk-318.15))
 water_limitation <- exp((rel_soil_moist - resp_opt_water) * resp_water_below_opt)
 #water_limitation <- rel_soil_moist*4.0893 + rel_soil_moist^2*-3.1681 - 0.3195897 # This is Jackie's Moyano et al equation
 A_decomp <- temperature_limitation * water_limitation # aka het_resp_weight
-#---------------------------------------
 
-# ------------------------------------------------------------------------------------
-# Running the SAS Solution
-# ------------------------------------------------------------------------------------
-#---------------------------------------
-# First loop over analy files (faster than histo) to aggregate initial 
-# 	.css and .pss files for each site
-#---------------------------------------
+#First loop over analy files (faster than histo) to aggregate initial 
+#.css and .pss files for each site
 for(s in sites){
   
   #Set directories
   dat.dir    <- paste(base,s,"/analy/",sep="")
-  ann.files  <- dir(dat.dir, "-Y-") #yearly files only  
-
-
+  match.files <- grep("-Y-",list.files(dat.dir))
+  files <- list.files(dat.dir)
+  ann.files  <- files[match.files] #yearly files only
+  
   #Get time window
   yeara <- as.numeric(strsplit(ann.files,"-")[[1]][3]) #first year
-  yearz <- as.numeric(strsplit(ann.files,"-")[[length(ann.files)]][3]) #last year
-  stand.age <- seq(yeara+blckyr, yearz, by=blckyr) # We're paramterizing with the upper limit for each bin, so we're starting with a 10-year old forest
-
+#  yearz <- as.numeric(strsplit(ann.files,"-")[[length(ann.files)]][3]) #last year
+  yearz <- 1999
 
   #storage
   pss.big <- matrix(nrow=floor((yearz-yeara+1)/blckyr)+1,ncol=14) # save every X yrs according to chunks specified above
   colnames(pss.big) <- c("site","year","patch","dst","age","area","water","fsc","stsc","stsl",
                          "ssc","psc","msn","fsn")
   
-#  for(y in yeara:yearz){
-  for (y in 1:length(stand.age)){
+  for (y in yeara:yearz){
     if(y%%blckyr == 0){
-      # cat(" - Reading file :",ann.files[y-yeara+1],"...","\n")
-      # now <- nc_open(paste(dat.dir,ann.files[y-yeara+1],sep=""))
-      cat(" - Reading file :",dir(dat.dir, paste0("-Y-", stand.age[1])),"...","\n")
-      now <- nc_open(file.path(dat.dir, dir(dat.dir, paste0("-Y-", stand.age[1]))))
+      cat(" - Reading file :",ann.files[y-yeara+1],"...","\n")
+      now <- nc_open(paste(dat.dir,ann.files[y-yeara+1],sep=""))
       
       #Grab variable to see how many cohorts there are
       ipft      <- ncvar_get(now,'PFT')
       
-      #---------------------------------------
-      # organize into .css variables (Cohorts)
-      # Note: all cohorts from a time slice are assigned to a single patch representing a stand of age X
-      #---------------------------------------
+      #organize into .css variables (Cohorts)
       css.tmp <- matrix(nrow=length(ipft),ncol=10)
       css.tmp[,1] <- rep(1850,length(ipft))
-      css.tmp[,2] <- rep(y,length(ipft))
+      css.tmp[,2] <- rep(floor((y-yeara)/blckyr)+1,length(ipft))
       css.tmp[,3] <- 1:length(ipft)
       css.tmp[,4] <- ncvar_get(now,'DBH')
       css.tmp[,5] <- ncvar_get(now,'HITE')
@@ -164,15 +117,11 @@ for(s in sites){
       } else{
         css.big <- rbind(css.big,css.tmp)
       }
-      #---------------------------------------
       
-	
-      #---------------------------------------
-      # save .pss variables (Patches)
-	  # NOTE: patch AREA needs to be adjusted to be equal to the probability of a stand of age x on the landscape
-      #---------------------------------------
+      #save .pss variables (Patches)
+	  ## Note: Adjusting for a single patch at a time, representative of the weighted average
 	  ncvar_get(now, "NPATCHES_GLOBAL")
-      ind <- y
+      ind <- (y-yeara)/blckyr + 1
 
 	  pss.temp <- matrix(nrow=ncvar_get(now, "NPATCHES_GLOBAL"),ncol=14) 
 	  colnames(pss.temp) <- c("site","year","patch","dst","age","area","water","fsc","stsc","stsl",
@@ -180,18 +129,11 @@ for(s in sites){
 
       pss.big[ind,1]  <- 1
       pss.big[ind,2]  <- 1850
-      pss.big[ind,3]  <- y # The floor function just makes sure it's an integer
+      pss.big[ind,3]  <- floor((y-yeara)/blckyr)+1
       pss.big[ind,4]  <- 1
-      pss.big[ind,5]  <- stand.age[y]-year.a
-
-	  # the area should be the weight of the geometric distribution
-	  pss.big[ind,6] <- if(y==1){ sum(dgeom(0:(stand.age[y]-yeara), disturb))
-	  	} else if(y==length(stand.age)){ 1-sum(degom(0:(stand.age[y-1]-yeara), disturb))
-	  	} else sum(dgeom((stand.age[y-1]-yeara+1):(stand.age[y]-yeara), disturb))
-
+      pss.big[ind,5]  <- y-yeara+1
+      pss.big[ind,6]  <- sum(ncvar_get(now,"AREA"))
       pss.big[ind,7]  <- 0.5 # This is supposedly not read, but changing to see if it fixes things (was 0.1)
-	
-	  # Note: thiese are just place holders that will be overwritten post-SAS
       pss.big[ind,8]  <- mean(ncvar_get(now,"FAST_SOIL_C")*ncvar_get(now, "AREA")/sum(ncvar_get(now, "AREA")))
       pss.big[ind,9]  <- mean(ncvar_get(now,"STRUCTURAL_SOIL_C")*ncvar_get(now, "AREA")/sum(ncvar_get(now, "AREA")))
       pss.big[ind,10] <- mean(ncvar_get(now,"STRUCTURAL_SOIL_L")*ncvar_get(now, "AREA")/sum(ncvar_get(now, "AREA")))
@@ -204,13 +146,8 @@ for(s in sites){
     }
   }
 #}
-#---------------------------------------
-
-
-#---------------------------------------
-# Second loop over histo files (much slower than analy) to aggregate soil inputs
-# for steady-state solution
-#---------------------------------------
+#Second loop over histo files (much slower than analy) to aggregate soil inputs
+#for steady-state solution
 pss.big <- pss.big[complete.cases(pss.big),]
 #storage
 fsc_in_y <- ssc_in_y <- ssl_in_y <- fsn_in_y <- pln_up_y <- vector()
@@ -218,26 +155,28 @@ fsc_in_m <- ssc_in_m <- ssl_in_m <- fsn_in_m <- pln_up_m <-  vector()
 
 #for(s in sites){
   dat.dir    <- paste(base,s,"/histo/",sep="")
-  mon.files  <- dir(dat.dir, "-S-") # monthly files only  
+  match.files <- grep("-S-",list.files(dat.dir))
+  files <- list.files(dat.dir)
+  mon.files  <- files[match.files] #monthly files only
   
   #Get time window
   yeara <- as.numeric(strsplit(mon.files,"-")[[1]][3]) #first year
-  yearz <- as.numeric(strsplit(mon.files,"-")[[length(mon.files)]][3]) #last year
-  stand.age <- seq(yeara+blckyr, yearz, by=blckyr) # We're paramterizing with the upper limit for each bin, so we're starting with a 10-year old forest
-
+#  yearz <- as.numeric(strsplit(mon.files,"-")[[length(mon.files)]][3]) #last year
+  yearz  <- 1999
+  monthz <- 12
   montha <- as.numeric(strsplit(mon.files,"-")[[1]][4]) #first month
-  monthz <- as.numeric(strsplit(mon.files,"-")[[length(mon.files)]][4]) #last month
+#  monthz <- as.numeric(strsplit(mon.files,"-")[[length(mon.files)]][4]) #first month
   
-  for (y in 1:length(stand.age)){
+  for (y in yeara:yearz){
     if(y%%blckyr == 0){
       
       #calculate month start/end based on year 
-      if (stand.age[y] == yeara){
+      if (y == yeara){
         month.begin = montha
       }else{
         month.begin = 1
       }
-      if (stand.age[y] == yearz){
+      if (y == yearz){
         month.end = monthz
       }else{
         month.end = 12
@@ -245,7 +184,7 @@ fsc_in_m <- ssc_in_m <- ssl_in_m <- fsn_in_m <- pln_up_m <-  vector()
       
       for(m in month.begin:month.end){
         #Make the file name. 
-        year.now  <-sprintf("%4.4i",stand.age[y])
+        year.now  <-sprintf("%4.4i",y)
         month.now <- sprintf("%2.2i",m)
         day.now   <- sprintf("%2.2i",1)
         hour.now  <- sprintf("%6.6i",0)
@@ -272,11 +211,8 @@ fsc_in_m <- ssc_in_m <- ssl_in_m <- fsn_in_m <- pln_up_m <-  vector()
       pln_up_y[ind] <- sum(pln_up_m,na.rm=TRUE)
     }
   }
-#---------------------------------------
-
-#---------------------------------------  
-# Calculate steady-state soil pools
-#---------------------------------------
+  
+  #Calculate steady-state soil pools
 #  fsc_ss <- median(fsc_in_y)/(fsc_loss * A_decomp)
 #  ssc_ss <- median(ssc_in_y)/(ssc_loss * A_decomp)
 #  ssl_ss <- median(ssl_in_y)/(ssl_loss * A_decomp * Lc)
@@ -298,13 +234,9 @@ fsc_in_m <- ssc_in_m <- ssl_in_m <- fsn_in_m <- pln_up_m <-  vector()
   
   msn_ss   <- msn_med/msn_loss
 #}
-#---------------------------------------
 
-#---------------------------------------
-# Replace values with steady state & write to file
-#---------------------------------------
 pss.big[,3] <- 1:nrow(pss.big)
-# pss.big[,6] <- dgeom(seq(1,nrow(pss.big)*blckyr,by=blckyr),0.05)/sum(dgeom(seq(1,nrow(pss.big)*blckyr,by=blckyr),0.05)) # normalizing to sum to 1 like actual data does; NOTE: this part was Jackie's original code for doing geometric distribution and I didn't figure out that I had screwed things up until after I did basically the same calculation above
+pss.big[,6] <- dgeom(seq(1,nrow(pss.big)*blckyr,by=blckyr),0.05)/sum(dgeom(seq(1,nrow(pss.big)*blckyr,by=blckyr),0.05)) # normalizing to sum to 1 like actual data does
 pss.big[,8] <- rep(fsc_ss[1],nrow(pss.big))
 pss.big[,9] <- rep(ssl_ss[1],nrow(pss.big))
 pss.big[,10] <- rep(ssl_ss[1],nrow(pss.big))
@@ -315,5 +247,4 @@ write.table(css.big,file=paste(out,s,"spin","lat", site.lat[which(sites==s)],"lo
             col.names=TRUE,quote=FALSE)
 write.table(pss.big,file=paste(out,s,"spin","lat", site.lat[which(sites==s)],"lon", site.lon[which(sites==s)],".pss",sep=""),row.names=FALSE,append=FALSE,
             col.names=TRUE,quote=FALSE)
-}
-#---------------------------------------
+} 
