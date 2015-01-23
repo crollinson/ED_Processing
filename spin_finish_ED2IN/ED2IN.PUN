@@ -8,7 +8,7 @@
 $ED_NL
 
    !----- Simulation title (64 characters). -----------------------------------------------!
-   NL%EXPNME = 'ED version 2.1 test'
+   NL%EXPNME = 'ED version 2.1 PalEON SAS Spin Finish'
    !---------------------------------------------------------------------------------------!
 
 
@@ -1314,7 +1314,7 @@ $ED_NL
    !                              TREEFALL_DISTURBANCE_RATE is internally adjusted so the  !
    !                              average patch age is still 1/TREEFALL_DISTURBANCE_RATE   !
    !---------------------------------------------------------------------------------------!
-   NL%TREEFALL_DISTURBANCE_RATE  = 0.005
+   NL%TREEFALL_DISTURBANCE_RATE  = 0.01
    NL%TIME2CANOPY                = 0.
    !---------------------------------------------------------------------------------------!
 
