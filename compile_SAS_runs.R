@@ -1,15 +1,30 @@
-#This file compiles the ensemble output from the SAS runs 
-#Jaclyn Hatala Matthes, 2/18/14
-#jaclyn.hatala.matthes@gmail.com
-
-# Modified by CRR for new version of ED 17 Jan 2015
+# ------------------------------------------------------------------------------------
+# This file compiles the ensemble output from the SAS runs 
+#
+# Original SAS solution:
+# Jaclyn Hatala Matthes, 2/18/14
+# jaclyn.hatala.matthes@gmail.com
+#
+# Modified by CRR for new version of ED Jan 2015
 ## Changes mostly modify units to fit in with unit changes in new version of ED
+## Changes are to assign geometric distribution & reporportion patch area based on the distribution
+# ------------------------------------------------------------------------------------
 
+# ------------------------------------------------------------------------------------
+# Setting things up to run equations, etc
+# ------------------------------------------------------------------------------------
+#---------------------------------------
 #Load libraries
+#---------------------------------------
 library(chron)
 library(ncdf4)
 library(colorspace)
+#---------------------------------------
 
+#---------------------------------------
+# Define File Structures & steps
+#---------------------------------------
+# Sites
 sites <- c("PHA", "PHO", "PUN", "PBL", "PDL", "PMB")
 site.lat <- c(42.5, 45.5, 46.5, 46.5, 47.5, 43.5)
 site.lon <- c(-72.5, -68.5, -89.5, -94.5, -95.5, -82.5)
@@ -17,14 +32,20 @@ site.lon <- c(-72.5, -68.5, -89.5, -94.5, -95.5, -82.5)
 #Setup analysis file structure
 base  <- "/projectnb/dietzelab/paleon/ED_runs/phase1a_spininitial.v2/"
 out   <- "/projectnb/dietzelab/paleon/ED_runs/SAS_spinup/phase1a_spinup.v2/"
-#sites <- c("PBL","PHA","PMB","PDL","PHO","PUN")
+
+# Steps used to describe the steady state
 blckyr<- 10 #number of years to chunk data by
-steps <- (2000-1850)/blckyr
-niter <- length(list.dirs(paste(base,sites[2],"/",sep=""),recursive=FALSE)) #iterations/site 
+nsteps <- (2000-1850)/blckyr # The number of blocks = the number steps we'll have
+niter <- length(list.dirs(paste(base,sites[1],"/",sep=""),recursive=FALSE)) #iterations/site 
+disturb <- 0.005 # the treefall disturbance rate you will prescribe in the actual runs (in ED2IN)
 pft   <- c(5,6,8,9,10,11) #set of PFTs used in analysis
 dpm <- c(31,28,31,30,31,30,31,31,30,31,30,31) # days per month
 sufx  <- "g01.h5"
+#---------------------------------------
 
+#---------------------------------------
+# Set up constants taken from ED structure
+#---------------------------------------
 yr_day <- 365.2425
 day_sec <- 60*60*24
 
@@ -37,12 +58,12 @@ decay_rate_fsc <- 11 / yr_day
 decay_rate_stsc <- 4.5 / yr_day
 decay_rate_ssc <- 100.2 / yr_day
 
-# Jackie's equations
+# Jackie's original equations
 #fsc_loss <- 1/11.0 	# decay_rate_fsc (new version is not 1/fsc)
 #ssc_loss <- 1.0/100.2	# decay_rate_ssc 			" "
 #ssl_loss <- 1.0/4.5 	# decay_rate_stsc 			" "
 
-# new calculations (soil_respiration.f90) -- note to minimize altering of Jackie's Code only doing part of this step
+# new calculations (soil_respiration.f90) -- note to part of this step is done later
 # fast_C_loss <- kgCday_2_umols * A_decomp * decay_rate_fsc * fast_soil_C
 # struc_C_loss <- kgCday_2_umols * A_decomp * Lc * decay_rate_stsc * struct_soil_C * f_decomp
 # slow_C_loss <- kcCday_2_umols * A_decomp * decay_rate_ssc * slow_soil_C
@@ -51,9 +72,10 @@ fsc_loss <- kgCday_2_umols *  decay_rate_fsc
 ssc_loss <- kgCday_2_umols *  decay_rate_ssc
 ssl_loss <- kgCday_2_umols *  decay_rate_stsc
 
+# Constants found in the code
 resp_opt_water            <- 0.8938
 resp_water_below_opt      <- 5.0786
-resp_water_above_opt		  <- 4.5139
+resp_water_above_opt	  <- 4.5139
 resp_temperature_increase <- 0.0757 # Jackie had greatly modified this value
 
 rel_soil_moist 			  <- 0.5
@@ -69,9 +91,15 @@ temperature_limitation = exp(resp_temperature_increase * (soil_tempk-318.15))
 water_limitation <- exp((rel_soil_moist - resp_opt_water) * resp_water_below_opt)
 #water_limitation <- rel_soil_moist*4.0893 + rel_soil_moist^2*-3.1681 - 0.3195897 # This is Jackie's Moyano et al equation
 A_decomp <- temperature_limitation * water_limitation # aka het_resp_weight
+#---------------------------------------
 
-#First loop over analy files (faster than histo) to aggregate initial 
-#.css and .pss files for each site
+# ------------------------------------------------------------------------------------
+# Running the SAS Solution
+# ------------------------------------------------------------------------------------
+#---------------------------------------
+# First loop over analy files (faster than histo) to aggregate initial 
+# 	.css and .pss files for each site
+#---------------------------------------
 for(s in sites){
   
   #Set directories
@@ -133,7 +161,7 @@ for(s in sites){
       pss.big[ind,3]  <- floor((y-yeara)/blckyr)+1
       pss.big[ind,4]  <- 1
       pss.big[ind,5]  <- y-yeara+1
-      pss.big[ind,6]  <- sum(ncvar_get(now,"AREA"))
+      pss.big[ind,6]  <- sum(ncvar_get(now,"AREA"))/nsteps
       pss.big[ind,7]  <- 0.5 # This is supposedly not read, but changing to see if it fixes things (was 0.1)
       pss.big[ind,8]  <- mean(ncvar_get(now,"FAST_SOIL_C")*ncvar_get(now, "AREA")/sum(ncvar_get(now, "AREA")))
       pss.big[ind,9]  <- mean(ncvar_get(now,"STRUCTURAL_SOIL_C")*ncvar_get(now, "AREA")/sum(ncvar_get(now, "AREA")))
@@ -147,8 +175,13 @@ for(s in sites){
     }
   }
 #}
-#Second loop over histo files (much slower than analy) to aggregate soil inputs
-#for steady-state solution
+#---------------------------------------
+
+
+#---------------------------------------
+# Second loop over histo files (much slower than analy) to aggregate soil inputs
+# for steady-state solution
+#---------------------------------------
 pss.big <- pss.big[complete.cases(pss.big),]
 #storage
 fsc_in_y <- ssc_in_y <- ssl_in_y <- fsn_in_y <- pln_up_y <- vector()
@@ -212,8 +245,11 @@ fsc_in_m <- ssc_in_m <- ssl_in_m <- fsn_in_m <- pln_up_m <-  vector()
       pln_up_y[ind] <- sum(pln_up_m,na.rm=TRUE)
     }
   }
-  
-  #Calculate steady-state soil pools
+#---------------------------------------
+
+#---------------------------------------  
+# Calculate steady-state soil pools
+#---------------------------------------
 #  fsc_ss <- median(fsc_in_y)/(fsc_loss * A_decomp)
 #  ssc_ss <- median(ssc_in_y)/(ssc_loss * A_decomp)
 #  ssl_ss <- median(ssl_in_y)/(ssl_loss * A_decomp * Lc)
@@ -235,7 +271,11 @@ fsc_in_m <- ssc_in_m <- ssl_in_m <- fsn_in_m <- pln_up_m <-  vector()
   
   msn_ss   <- msn_med/msn_loss
 #}
+#---------------------------------------
 
+#---------------------------------------
+# Replace values with steady state & write to file
+#---------------------------------------
 pss.big[,3] <- 1:nrow(pss.big)
 pss.big[,6] <- dgeom(seq(1,nrow(pss.big)*blckyr,by=blckyr),0.05)/sum(dgeom(seq(1,nrow(pss.big)*blckyr,by=blckyr),0.05)) # normalizing to sum to 1 like actual data does
 pss.big[,8] <- rep(fsc_ss[1],nrow(pss.big))
@@ -249,3 +289,4 @@ write.table(css.big,file=paste(out,s,"spin","lat", site.lat[which(sites==s)],"lo
 write.table(pss.big,file=paste(out,s,"spin","lat", site.lat[which(sites==s)],"lon", site.lon[which(sites==s)],".pss",sep=""),row.names=FALSE,append=FALSE,
             col.names=TRUE,quote=FALSE)
 }
+#---------------------------------------
