@@ -585,7 +585,7 @@ $ED_NL
    !            3.  Aquifer.  Soil moisture of the ficticious layer beneath the bottom is  !
    !                always at saturation.                                                  !
    !---------------------------------------------------------------------------------------!
-   NL%ISOILBC        = 0
+   NL%ISOILBC        = 1
    !---------------------------------------------------------------------------------------!
 
 
@@ -771,7 +771,7 @@ $ED_NL
    !  New scheme: plants shed their leaves once a 10-day running average of available      !
    !              water becomes less than a critical value.                                !
    !---------------------------------------------------------------------------------------!
-   NL%IPHEN_SCHEME    = 2
+   NL%IPHEN_SCHEME    = 0     
    !---------------------------------------------------------------------------------------!
 
 
@@ -870,9 +870,9 @@ $ED_NL
    NL%LTRANS_NIR     =  0.270
    NL%LREFLECT_VIS   =  0.150
    NL%LREFLECT_NIR   =  0.540
-   NL%ORIENT_TREE    =  0.150
-   NL%ORIENT_GRASS   = -0.150
-   NL%CLUMP_TREE     =  1.000
+   NL%ORIENT_TREE    =  0.100
+   NL%ORIENT_GRASS   = -0.100
+   NL%CLUMP_TREE     =  0.800
    NL%CLUMP_GRASS    =  1.000
    !---------------------------------------------------------------------------------------!
 
@@ -915,7 +915,7 @@ $ED_NL
    !                      depth, H it the crown height and psi_fc and psi_wp are the       !
    !                      matric potentials at wilting point and field capacity.           !
    !---------------------------------------------------------------------------------------!
-   NL%H2O_PLANT_LIM   = 2
+   NL%H2O_PLANT_LIM   = 1
    !---------------------------------------------------------------------------------------!
 
 
@@ -942,7 +942,7 @@ $ED_NL
    !                             CB_lightmax             CB_watermax                       !
    !---------------------------------------------------------------------------------------!
    NL%IDDMORT_SCHEME  = 0
-   NL%DDMORT_CONST    = 1
+   NL%DDMORT_CONST    = 0.8
    !---------------------------------------------------------------------------------------!
 
 
@@ -987,22 +987,22 @@ $ED_NL
    ! Q10_C3        -- Q10 factor for C3 plants (used only if IPHYSIOL is set to 2 or 3).   !
    ! Q10_C4        -- Q10 factor for C4 plants (used only if IPHYSIOL is set to 2 or 3).   !
    !---------------------------------------------------------------------------------------!
-   NL%VMFACT_C3       = 1.25
+   NL%VMFACT_C3       = 1.00
    NL%VMFACT_C4       = 1.00
    NL%MPHOTO_TRC3     = 9.0
    NL%MPHOTO_TEC3     = 7.2
-   NL%MPHOTO_C4       = 5.0
+   NL%MPHOTO_C4       = 5.2
    NL%BPHOTO_BLC3     = 10000.
    NL%BPHOTO_NLC3     = 1000.
-   NL%BPHOTO_C4       = 8000.
-   NL%KW_GRASS        = 300.
-   NL%KW_TREE         = 300.
+   NL%BPHOTO_C4       = 10000.
+   NL%KW_GRASS        = 900.
+   NL%KW_TREE         = 600.
    NL%GAMMA_C3        = 0.015
-   NL%GAMMA_C4        = 0.036
-   NL%D0_GRASS        = 0.015
-   NL%D0_TREE         = 0.015
+   NL%GAMMA_C4        = 0.040
+   NL%D0_GRASS        = 0.016
+   NL%D0_TREE         = 0.016
    NL%ALPHA_C3        = 0.080
-   NL%ALPHA_C4        = 0.053
+   NL%ALPHA_C4        = 0.055
    NL%KLOWCO2IN       = 4000.
    NL%RRFFACT         = 1.000
    NL%GROWTHRESP      = 0.333

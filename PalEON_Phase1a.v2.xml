@@ -230,7 +230,7 @@
       <leaf_turnover_rate>
                  0.3330000043      </leaf_turnover_rate>
       <root_respiration_factor>
-                 0.52800		   </root_respiration_factor> <!-- Modified -->
+                 1.39838		   </root_respiration_factor> <!-- Pecan, Late Con -->
       <root_turnover_rate>
                  3.92722		   </root_turnover_rate> <!-- Modified -->
       <storage_turnover_rate>
@@ -344,7 +344,7 @@
       <leaf_turnover_rate>
                  0.3330000043      </leaf_turnover_rate>
       <root_respiration_factor>
-                 0.52800		   </root_respiration_factor> <!-- Modified -->
+                 1.39838		   </root_respiration_factor> <!-- Pecab -->
       <root_turnover_rate>
                  3.80013		   </root_turnover_rate> <!-- Modified -->
       <storage_turnover_rate>

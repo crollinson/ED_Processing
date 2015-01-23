@@ -22,7 +22,7 @@ $ED_NL
    !            initial in the sense that exactly the same information written in the      !
    !            history will be used here.                                                 !
    !---------------------------------------------------------------------------------------!
-   NL%RUNTYPE  = 'HISTORY'
+   NL%RUNTYPE  = 'INITIAL'
    !---------------------------------------------------------------------------------------!
 
 
@@ -30,9 +30,9 @@ $ED_NL
    !---------------------------------------------------------------------------------------!
    !     Start of simulation. Information must be given in UTC time.                       !
    !---------------------------------------------------------------------------------------!
-   NL%IMONTHA  = 05
+   NL%IMONTHA  = 06
    NL%IDATEA   = 01
-   NL%IYEARA   = 1851
+   NL%IYEARA   = 1850
    NL%ITIMEA   = 0000
    !---------------------------------------------------------------------------------------!
 
@@ -356,7 +356,7 @@ $ED_NL
    !
    !
    !---------------------------------------------------------------------------------------!
-   NL%IED_INIT_MODE   = 5
+   NL%IED_INIT_MODE   = 3
    !---------------------------------------------------------------------------------------!
 
 
@@ -383,8 +383,8 @@ $ED_NL
    !              path+prefix will be used, as the history for every grid must have come   !
    !              from the same simulation.                                                !
    !---------------------------------------------------------------------------------------!
-!   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/SAS_spinup/phase1a_spinup.v2/PHAspin'
-   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.v2/PHA/histo/PHAspin'
+   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/SAS_spinup/phase1a_spinup.v2/PHAspin'
+!   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.v2/PHA/histo/PHAspin'
    !---------------------------------------------------------------------------------------!
 
 
@@ -399,10 +399,10 @@ $ED_NL
    ! IYEARH     want to extend the run, but yo should NOT change IMONTHA and related.      !
    ! ITIMEH                                                                                !
    !---------------------------------------------------------------------------------------!
-   NL%ITIMEH   = 0000   ! UTC
-   NL%IDATEH   = 01     ! Day
-   NL%IMONTHH  = 05     ! Month
-   NL%IYEARH   = 1851   ! Year
+!   NL%ITIMEH   = 0000   ! UTC
+!   NL%IDATEH   = 01     ! Day
+!   NL%IMONTHH  = 01     ! Month
+!   NL%IYEARH   = 1850   ! Year
    !---------------------------------------------------------------------------------------!
 
 
@@ -943,7 +943,7 @@ $ED_NL
    !                             CB_lightmax             CB_watermax                       !
    !---------------------------------------------------------------------------------------!
    NL%IDDMORT_SCHEME  = 0
-   NL%DDMORT_CONST    = 1
+   NL%DDMORT_CONST    = 0.8
    !---------------------------------------------------------------------------------------!
 
 
@@ -1327,7 +1327,7 @@ $ED_NL
    !                -folding lifetime" of the TSW in seconds due to runoff.  If you don't  !
    !                want runoff to happen, set this to 0.                                  !
    !---------------------------------------------------------------------------------------!
-   NL%RUNOFF_TIME    = 60
+   NL%RUNOFF_TIME    = 60.
    !---------------------------------------------------------------------------------------!
 
 
