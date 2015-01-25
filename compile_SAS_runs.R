@@ -45,10 +45,10 @@ base  <- "/projectnb/dietzelab/paleon/ED_runs/phase1a_spininitial.v2/"
 out   <- "/projectnb/dietzelab/paleon/ED_runs/SAS_spinup/phase1a_spinup.v2/"
 
 # Steps used to describe the steady state
-blckyr<- 5 #number of years to chunk data by
+blckyr <- 10 #number of years to chunk data by
 nsteps <- (2000-1850)/blckyr # The number of blocks = the number steps we'll have
 niter <- length(list.dirs(paste(base,sites[1],"/",sep=""),recursive=FALSE)) #iterations/site 
-disturb <- 0.01 # the treefall disturbance rate you will prescribe in the actual runs (in ED2IN)
+disturb <- 0.02 # the treefall disturbance rate you will prescribe in the actual runs (or close to it)
 
 pft   <- c(5,6,8,9,10,11) #set of PFTs used in analysis
 dpm <- c(31,28,31,30,31,30,31,31,30,31,30,31) # days per month
@@ -122,7 +122,7 @@ for(s in sites){
   #Get time window
   yeara <- as.numeric(strsplit(ann.files,"-")[[1]][3]) #first year
   yearz <- as.numeric(strsplit(ann.files,"-")[[length(ann.files)]][3]) #last year
-  stand.age <- seq(yeara+blckyr, yearz, by=blckyr) # We're paramterizing with the upper limit for each bin, so we're starting with a 10-year old forest
+  stand.age <- seq(yeara, yearz, by=blckyr) # We're paramterizing with the upper limit for each bin, so we're starting with a 10-year old forest
 
 
   #storage
@@ -130,13 +130,10 @@ for(s in sites){
   colnames(pss.big) <- c("site","year","patch","dst","age","area","water","fsc","stsc","stsl",
                          "ssc","psc","msn","fsn")
   
-#  for(y in yeara:yearz){
-  for (y in 1:length(stand.age)){
+  for (y in yeara:yearz){
     if(y%%blckyr == 0){
-      # cat(" - Reading file :",ann.files[y-yeara+1],"...","\n")
-      # now <- nc_open(paste(dat.dir,ann.files[y-yeara+1],sep=""))
-      cat(" - Reading file :",dir(dat.dir, paste0("-Y-", stand.age[1])),"...","\n")
-      now <- nc_open(file.path(dat.dir, dir(dat.dir, paste0("-Y-", stand.age[1]))))
+      cat(" - Reading file :",ann.files[y-yeara+1],"...","\n")
+      now <- nc_open(paste(dat.dir,ann.files[y-yeara+1],sep=""))
       
       #Grab variable to see how many cohorts there are
       ipft      <- ncvar_get(now,'PFT')
@@ -146,8 +143,8 @@ for(s in sites){
       # Note: all cohorts from a time slice are assigned to a single patch representing a stand of age X
       #---------------------------------------
       css.tmp <- matrix(nrow=length(ipft),ncol=10)
-      css.tmp[,1] <- rep(1850,length(ipft))
-      css.tmp[,2] <- rep(y,length(ipft))
+      css.tmp[,1] <- rep(yeara,length(ipft))
+      css.tmp[,2] <- rep(floor((y-yeara)/blckyr)+1,length(ipft))
       css.tmp[,3] <- 1:length(ipft)
       css.tmp[,4] <- ncvar_get(now,'DBH')
       css.tmp[,5] <- ncvar_get(now,'HITE')
@@ -172,7 +169,7 @@ for(s in sites){
 	  # NOTE: patch AREA needs to be adjusted to be equal to the probability of a stand of age x on the landscape
       #---------------------------------------
 	  ncvar_get(now, "NPATCHES_GLOBAL")
-      ind <- y
+      ind <- (y-yeara)/blckyr + 1
 
 	  pss.temp <- matrix(nrow=ncvar_get(now, "NPATCHES_GLOBAL"),ncol=14) 
 	  colnames(pss.temp) <- c("site","year","patch","dst","age","area","water","fsc","stsc","stsl",
@@ -180,18 +177,12 @@ for(s in sites){
 
       pss.big[ind,1]  <- 1
       pss.big[ind,2]  <- 1850
-      pss.big[ind,3]  <- y # The floor function just makes sure it's an integer
+      pss.big[ind,3]  <- floor((y-yeara)/blckyr)+1
       pss.big[ind,4]  <- 1
-      pss.big[ind,5]  <- stand.age[y]-year.a
-
-	  # the area should be the weight of the geometric distribution
-	  pss.big[ind,6] <- if(y==1){ sum(dgeom(0:(stand.age[y]-yeara), disturb))
-	  	} else if(y==length(stand.age)){ 1-sum(degom(0:(stand.age[y-1]-yeara), disturb))
-	  	} else sum(dgeom((stand.age[y-1]-yeara+1):(stand.age[y]-yeara), disturb))
-
-      pss.big[ind,7]  <- 0.5 # This is supposedly not read, but changing to see if it fixes things (was 0.1)
-	
+      pss.big[ind,5]  <- y-yeara+1
 	  # Note: thiese are just place holders that will be overwritten post-SAS
+      pss.big[ind,6]  <- sum(ncvar_get(now,"AREA"))
+      pss.big[ind,7]  <- 0.5 # This is supposedly not read, but changing to see if it fixes things (was 0.1)
       pss.big[ind,8]  <- mean(ncvar_get(now,"FAST_SOIL_C")*ncvar_get(now, "AREA")/sum(ncvar_get(now, "AREA")))
       pss.big[ind,9]  <- mean(ncvar_get(now,"STRUCTURAL_SOIL_C")*ncvar_get(now, "AREA")/sum(ncvar_get(now, "AREA")))
       pss.big[ind,10] <- mean(ncvar_get(now,"STRUCTURAL_SOIL_L")*ncvar_get(now, "AREA")/sum(ncvar_get(now, "AREA")))
@@ -223,21 +214,20 @@ fsc_in_m <- ssc_in_m <- ssl_in_m <- fsn_in_m <- pln_up_m <-  vector()
   #Get time window
   yeara <- as.numeric(strsplit(mon.files,"-")[[1]][3]) #first year
   yearz <- as.numeric(strsplit(mon.files,"-")[[length(mon.files)]][3]) #last year
-  stand.age <- seq(yeara+blckyr, yearz, by=blckyr) # We're paramterizing with the upper limit for each bin, so we're starting with a 10-year old forest
 
   montha <- as.numeric(strsplit(mon.files,"-")[[1]][4]) #first month
   monthz <- as.numeric(strsplit(mon.files,"-")[[length(mon.files)]][4]) #last month
   
-  for (y in 1:length(stand.age)){
+  for (y in yeara:yearz){
     if(y%%blckyr == 0){
       
       #calculate month start/end based on year 
-      if (stand.age[y] == yeara){
+      if (y == yeara){
         month.begin = montha
       }else{
         month.begin = 1
       }
-      if (stand.age[y] == yearz){
+      if (y == yearz){
         month.end = monthz
       }else{
         month.end = 12
@@ -245,7 +235,7 @@ fsc_in_m <- ssc_in_m <- ssl_in_m <- fsn_in_m <- pln_up_m <-  vector()
       
       for(m in month.begin:month.end){
         #Make the file name. 
-        year.now  <-sprintf("%4.4i",stand.age[y])
+        year.now  <-sprintf("%4.4i",y)
         month.now <- sprintf("%2.2i",m)
         day.now   <- sprintf("%2.2i",1)
         hour.now  <- sprintf("%6.6i",0)
@@ -300,11 +290,25 @@ fsc_in_m <- ssc_in_m <- ssl_in_m <- fsn_in_m <- pln_up_m <-  vector()
 #}
 #---------------------------------------
 
+#---------------------------------------  
+# Calculate area distribution
+# This varies from Jackie's in that it lets you have a larger bin of old, 
+#	undisturbed to re
+#---------------------------------------
+stand.age <- seq(1,nrow(pss.big)*blckyr,by=blckyr)
+area.dist <- vector(length=nrow(pss.big))
+area.dist[1] <- sum(dgeom(0:(stand.age[2]-1), disturb))
+for(i in 2:(length(area.dist)-1)){
+	area.dist[i] <- sum(dgeom((stand.age[i]):(stand.age[i+1]-1),disturb))
+}
+area.dist[length(area.dist)] <- 1 - sum(area.dist[1:(length(area.dist)-1)])
+#---------------------------------------  
+
 #---------------------------------------
 # Replace values with steady state & write to file
 #---------------------------------------
 pss.big[,3] <- 1:nrow(pss.big)
-# pss.big[,6] <- dgeom(seq(1,nrow(pss.big)*blckyr,by=blckyr),0.05)/sum(dgeom(seq(1,nrow(pss.big)*blckyr,by=blckyr),0.05)) # normalizing to sum to 1 like actual data does; NOTE: this part was Jackie's original code for doing geometric distribution and I didn't figure out that I had screwed things up until after I did basically the same calculation above
+pss.big[,6] <- area.dist
 pss.big[,8] <- rep(fsc_ss[1],nrow(pss.big))
 pss.big[,9] <- rep(ssl_ss[1],nrow(pss.big))
 pss.big[,10] <- rep(ssl_ss[1],nrow(pss.big))

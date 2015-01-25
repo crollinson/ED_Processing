@@ -782,8 +782,8 @@ $ED_NL
    ! RADINT -- Intercept                                                                   !
    ! RADSLP -- Slope.                                                                      !
    !---------------------------------------------------------------------------------------!
-   NL%RADINT          = 0.
-   NL%RADSLP          = 0.
+   NL%RADINT          = -11.3868
+   NL%RADSLP          = 0.0824
    !---------------------------------------------------------------------------------------!
 
 
@@ -1095,8 +1095,8 @@ $ED_NL
    !                   past 12 months, to trigger fires.                                   !
    !---------------------------------------------------------------------------------------!
    NL%INCLUDE_FIRE    = 2
-   NL%FIRE_PARAMETER  = 0.5
-   NL%SM_FIRE         = 0.07
+   NL%FIRE_PARAMETER  = 0.10 ! There is No actual Fuel Threshold, so the default makes WAY too much fire
+   NL%SM_FIRE         = 0.01 ! Also lowering the Prevention threshold
    !---------------------------------------------------------------------------------------!
 
 

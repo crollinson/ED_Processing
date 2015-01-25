@@ -1096,8 +1096,8 @@ $ED_NL
    !                   past 12 months, to trigger fires.                                   !
    !---------------------------------------------------------------------------------------!
    NL%INCLUDE_FIRE    = 2
-   NL%FIRE_PARAMETER  = 0.5
-   NL%SM_FIRE         = 0.07
+   NL%FIRE_PARAMETER  = 0.10 ! There is No actual Fuel Threshold, so the default makes WAY too much fire
+   NL%SM_FIRE         = 0.01 ! Also lowering the Prevention threshold
    !---------------------------------------------------------------------------------------!
 
 

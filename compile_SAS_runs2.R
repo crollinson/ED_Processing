@@ -236,6 +236,7 @@ fsc_in_m <- ssc_in_m <- ssl_in_m <- fsn_in_m <- pln_up_m <-  vector()
 #}
 
 pss.big[,3] <- 1:nrow(pss.big)
+
 pss.big[,6] <- dgeom(seq(1,nrow(pss.big)*blckyr,by=blckyr),0.05)/sum(dgeom(seq(1,nrow(pss.big)*blckyr,by=blckyr),0.05)) # normalizing to sum to 1 like actual data does
 pss.big[,8] <- rep(fsc_ss[1],nrow(pss.big))
 pss.big[,9] <- rep(ssl_ss[1],nrow(pss.big))
@@ -247,4 +248,4 @@ write.table(css.big,file=paste(out,s,"spin","lat", site.lat[which(sites==s)],"lo
             col.names=TRUE,quote=FALSE)
 write.table(pss.big,file=paste(out,s,"spin","lat", site.lat[which(sites==s)],"lon", site.lon[which(sites==s)],".pss",sep=""),row.names=FALSE,append=FALSE,
             col.names=TRUE,quote=FALSE)
-} 
+} 

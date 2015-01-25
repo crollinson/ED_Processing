@@ -8,7 +8,7 @@
 $ED_NL
 
    !----- Simulation title (64 characters). -----------------------------------------------!
-   NL%EXPNME = 'ED version 2.1 PalEON SAS Spin Finish'
+   NL%EXPNME = 'ED version 2.1 test'
    !---------------------------------------------------------------------------------------!
 
 
@@ -303,8 +303,8 @@ $ED_NL
    ! FFILOUT -- Path and prefix for analysis files (all but history/restart).              !
    ! SFILOUT -- Path and prefix for history files.                                         !
    !---------------------------------------------------------------------------------------!
-   NL%FFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.v2/PHO/analy/PHOspin'
-   NL%SFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.v2/PHO/histo/PHOspin'
+   NL%FFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spininitial.v2/PHO/analy/PHOspin'
+   NL%SFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spininitial.v2/PHO/histo/PHOspin'
    !---------------------------------------------------------------------------------------!
 
 
@@ -356,7 +356,7 @@ $ED_NL
    !
    !
    !---------------------------------------------------------------------------------------!
-   NL%IED_INIT_MODE   = 3
+   NL%IED_INIT_MODE   = 0
    !---------------------------------------------------------------------------------------!
 
 
@@ -383,8 +383,7 @@ $ED_NL
    !              path+prefix will be used, as the history for every grid must have come   !
    !              from the same simulation.                                                !
    !---------------------------------------------------------------------------------------!
-   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/SAS_spinup/phase1a_spinup.v2/PHOspin'
-!   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.v2/PHO/histo/PHOspin'
+!   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spininitial.v2/PHO/histo/PHOspin'
    !---------------------------------------------------------------------------------------!
 
 
@@ -401,8 +400,8 @@ $ED_NL
    !---------------------------------------------------------------------------------------!
 !   NL%ITIMEH   = 0000   ! UTC
 !   NL%IDATEH   = 01     ! Day
-!   NL%IMONTHH  = 01     ! Month
-!   NL%IYEARH   = 1874   ! Year
+!   NL%IMONTHH  = 06     ! Month
+!   NL%IYEARH   = 1879   ! Year
    !---------------------------------------------------------------------------------------!
 
 
@@ -783,8 +782,8 @@ $ED_NL
    ! RADINT -- Intercept                                                                   !
    ! RADSLP -- Slope.                                                                      !
    !---------------------------------------------------------------------------------------!
-   NL%RADINT          = -11.3868
-   NL%RADSLP          = 0.0824
+   NL%RADINT          = 0.
+   NL%RADSLP          = 0.
    !---------------------------------------------------------------------------------------!
 
 
@@ -1095,9 +1094,9 @@ $ED_NL
    !                   the minimum water deficit relative to the total rainfall, over the  !
    !                   past 12 months, to trigger fires.                                   !
    !---------------------------------------------------------------------------------------!
-   NL%INCLUDE_FIRE    = 2
-   NL%FIRE_PARAMETER  = 0.10 ! There is No actual Fuel Threshold, so the default makes WAY too much fire
-   NL%SM_FIRE         = 0.01 ! Also lowering the Prevention threshold
+   NL%INCLUDE_FIRE    = 0
+   NL%FIRE_PARAMETER  = 0.5
+   NL%SM_FIRE         = 0.07
    !---------------------------------------------------------------------------------------!
 
 
@@ -1315,7 +1314,7 @@ $ED_NL
    !                              TREEFALL_DISTURBANCE_RATE is internally adjusted so the  !
    !                              average patch age is still 1/TREEFALL_DISTURBANCE_RATE   !
    !---------------------------------------------------------------------------------------!
-   NL%TREEFALL_DISTURBANCE_RATE  = 0.01
+   NL%TREEFALL_DISTURBANCE_RATE  = 0.000
    NL%TIME2CANOPY                = 0.
    !---------------------------------------------------------------------------------------!
 
