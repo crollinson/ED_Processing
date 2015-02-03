@@ -551,7 +551,7 @@
       <Vm_low_temp>
                  4.7136998177      </Vm_low_temp>
       <Vm0>
-                45.0		       </Vm0> <!-- Modified -->
+                55.0		       </Vm0> <!-- Modified; more competitive with other hardwoods -->
       <water_conductance>
                  0.0046734586      </water_conductance>
 
