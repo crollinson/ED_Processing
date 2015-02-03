@@ -22,7 +22,7 @@ $ED_NL
    !            initial in the sense that exactly the same information written in the      !
    !            history will be used here.                                                 !
    !---------------------------------------------------------------------------------------!
-   NL%RUNTYPE  = 'INITIAL'
+   NL%RUNTYPE  = 'HISTORY'
    !---------------------------------------------------------------------------------------!
 
 
@@ -30,9 +30,9 @@ $ED_NL
    !---------------------------------------------------------------------------------------!
    !     Start of simulation. Information must be given in UTC time.                       !
    !---------------------------------------------------------------------------------------!
-   NL%IMONTHA  = 01
+   NL%IMONTHA  = 04
    NL%IDATEA   = 01
-   NL%IYEARA   = 1850
+   NL%IYEARA   = 1975
    NL%ITIMEA   = 0000
    !---------------------------------------------------------------------------------------!
 
@@ -356,7 +356,7 @@ $ED_NL
    !
    !
    !---------------------------------------------------------------------------------------!
-   NL%IED_INIT_MODE   = 3
+   NL%IED_INIT_MODE   = 5
    !---------------------------------------------------------------------------------------!
 
 
@@ -383,8 +383,8 @@ $ED_NL
    !              path+prefix will be used, as the history for every grid must have come   !
    !              from the same simulation.                                                !
    !---------------------------------------------------------------------------------------!
-   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/SAS_spinup/phase1a_spinup.v2/PHOspin'
-!   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.v2/PHO/histo/PHOspin'
+!   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/SAS_spinup/phase1a_spinup.v2/PHOspin'
+   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.v2/PHO/histo/PHOspin'
    !---------------------------------------------------------------------------------------!
 
 
@@ -399,10 +399,10 @@ $ED_NL
    ! IYEARH     want to extend the run, but yo should NOT change IMONTHA and related.      !
    ! ITIMEH                                                                                !
    !---------------------------------------------------------------------------------------!
-!   NL%ITIMEH   = 0000   ! UTC
-!   NL%IDATEH   = 01     ! Day
-!   NL%IMONTHH  = 12     ! Month
-!   NL%IYEARH   = 1909   ! Year
+   NL%ITIMEH   = 0000   ! UTC
+   NL%IDATEH   = 01     ! Day
+   NL%IMONTHH  = 04     ! Month
+   NL%IYEARH   = 1975   ! Year
    !---------------------------------------------------------------------------------------!
 
 

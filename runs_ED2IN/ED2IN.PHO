@@ -22,7 +22,7 @@ $ED_NL
    !            initial in the sense that exactly the same information written in the      !
    !            history will be used here.                                                 !
    !---------------------------------------------------------------------------------------!
-   NL%RUNTYPE  = 'INITIAL'
+   NL%RUNTYPE  = 'HISTORY'
    !---------------------------------------------------------------------------------------!
 
 
@@ -43,7 +43,7 @@ $ED_NL
    !---------------------------------------------------------------------------------------!
    NL%IMONTHZ  = 01    ! Month
    NL%IDATEZ   = 01    ! Day
-   NL%IYEARZ   = 2000  ! Year
+   NL%IYEARZ   = 3011  ! Year
    NL%ITIMEZ   = 0000  ! UTC
    !---------------------------------------------------------------------------------------!
 
@@ -303,8 +303,8 @@ $ED_NL
    ! FFILOUT -- Path and prefix for analysis files (all but history/restart).              !
    ! SFILOUT -- Path and prefix for history files.                                         !
    !---------------------------------------------------------------------------------------!
-   NL%FFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.v2/PHO/analy/PHOspin'
-   NL%SFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.v2/PHO/histo/PHOspin'
+   NL%FFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/PHO/analy/PHO'
+   NL%SFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/PHO/histo/PHO'
    !---------------------------------------------------------------------------------------!
 
 
@@ -356,7 +356,7 @@ $ED_NL
    !
    !
    !---------------------------------------------------------------------------------------!
-   NL%IED_INIT_MODE   = 3
+   NL%IED_INIT_MODE   = 5
    !---------------------------------------------------------------------------------------!
 
 
@@ -383,8 +383,7 @@ $ED_NL
    !              path+prefix will be used, as the history for every grid must have come   !
    !              from the same simulation.                                                !
    !---------------------------------------------------------------------------------------!
-   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/SAS_spinup/phase1a_spinup.v2/PHOspin'
-!   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.v2/PHO/histo/PHOspin'
+   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/PHO/histo/PHOspin'
    !---------------------------------------------------------------------------------------!
 
 
@@ -399,10 +398,10 @@ $ED_NL
    ! IYEARH     want to extend the run, but yo should NOT change IMONTHA and related.      !
    ! ITIMEH                                                                                !
    !---------------------------------------------------------------------------------------!
-!   NL%ITIMEH   = 0000   ! UTC
-!   NL%IDATEH   = 01     ! Day
-!   NL%IMONTHH  = 12     ! Month
-!   NL%IYEARH   = 1909   ! Year
+   NL%ITIMEH   = 0000   ! UTC
+   NL%IDATEH   = 01     ! Day
+   NL%IMONTHH  = 01     ! Month
+   NL%IYEARH   = 1850   ! Year
    !---------------------------------------------------------------------------------------!
 
 
@@ -549,7 +548,7 @@ $ED_NL
    NL%LU_DATABASE      = '/projectnb/dietzelab/EDI/ed_inputs/glu/glu-'
    NL%PLANTATION_FILE  = ''
    NL%THSUMS_DATABASE  = '/projectnb/dietzelab/EDI/ed_inputs/'
-   NL%ED_MET_DRIVER_DB = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spininitial.v2/PHO/PL_MET_HEADER'
+   NL%ED_MET_DRIVER_DB = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/PHO/PL_MET_HEADER'
    NL%SOILSTATE_DB     = '/projectnb/dietzelab/EDI/ed_inputs/STW1996OCT.dat'
    NL%SOILDEPTH_DB     = '/projectnb/dietzelab/EDI/ed_inputs/soil_depths.dat'
    !---------------------------------------------------------------------------------------!
