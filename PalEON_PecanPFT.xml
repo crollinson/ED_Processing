@@ -1,0 +1,129 @@
+<!-- New PFT Parameterizations created by C. Rollinson
+		Most Parameters based on Meta-Analysis of PFT traits done in Pecan 1.4.0
+		Min Temps  = 2x extreme min temp at northern range of component speciess in Silvics
+			* Note this is a real fudgey way of getting numbers on par with what is 
+			  already in ED; want to find a better way to base it off of forest type climate
+			  envelopes
+-->
+
+ <config>
+  <!-- PFT  5 = Temperate C3 Grass -->
+   <pft>
+      <num>			 5	</num>
+      <include_pft>	 1	</include_pft>
+
+	  <!-- Allocation Params -->	
+<!--    	  <SLA>						30.89583	</SLA> -->
+	  <!-- Mortality Params -->	
+    	  <plant_min_temp>		    223			</plant_min_temp> <!-- a bit higher than Jackie's min temp -->
+	  <!-- Photosynthesis Params -->	
+      	  <dark_respiration_factor>	 0.01793	</dark_respiration_factor>
+      	  <quantum_efficiency>	 	 0.06055	</quantum_efficiency>
+	      <Vm0> 					20.60862	</Vm0> <!-- Manually tweaked, closer to Jackie's -->
+   </pft>
+  
+   <!-- PFT  6 = Northern Pine	 -->
+   <pft>
+      <num>			 6	</num>
+      <include_pft>	 1	</include_pft>
+	  <!-- Allocation Params -->	
+	      <SLA>						11.72458	</SLA>
+	  <!-- Mortality Params -->	
+    	  <plant_min_temp>		    192			</plant_min_temp>
+	  <!-- Nitrogen Params -->	
+		  <c2n_leaf>				39.46400	</c2n_leaf>
+	  <!-- Photosynthesis Params -->	
+		  <quantum_efficiency>		 0.05811	</quantum_efficiency>
+		  <Vm0> 					37.56615	</Vm0> <!-- 75th percentile from Pecan -->
+	  <!-- Respiration Params -->	
+		  <leaf_turnover_rate>		 0.32760	</leaf_turnover_rate>
+		  <root_respiration_factor>	 1.39838	</root_respiration_factor> <!-- Copied from Late Conifer -->
+   </pft>
+
+
+   <!-- PFT  8 = Late Conifer	 -->
+   <pft>
+      <num>			 8	</num>
+      <include_pft>	 1	</include_pft>
+      
+	  <!-- Allocation Params -->	
+	      <SLA>						10.70833	</SLA>
+	  <!-- Mortality Params -->	
+    	  <plant_min_temp>		    192			</plant_min_temp> <!-- Copied from North. Pine -->
+	  <!-- Photosynthesis Params -->	
+		  <quantum_efficiency>		 0.07305	</quantum_efficiency>
+		  <Vm0> 					72.38039	</Vm0> <!-- Pecan percentile -->
+	  <!-- Respiration Params -->	
+		  <leaf_turnover_rate>		0.32760		</leaf_turnover_rate> <!-- Copied from North. Pine -->
+		  <root_respiration_factor>	 1.39838	</root_respiration_factor>
+   </pft>
+
+
+   <!-- PFT  9 = Early Hardwood	 -->
+   <pft>
+      <num>			 9	</num>
+      <include_pft>	 1	</include_pft>
+	  <!-- Allocation Params -->	
+	      <q>						 0.63580	</q>
+	      <SLA>						42.80167	</SLA>
+	  <!-- Mortality Params -->	
+    	  <plant_min_temp>		    209			</plant_min_temp>
+	  <!-- Nitrogen Params -->	
+		  <c2n_leaf>				19.68100	</c2n_leaf>
+	  <!-- Photosynthesis Params -->	
+		  <dark_respiration_factor>	 0.01913	</dark_respiration_factor>
+		  <leaf_width>				 0.08699	</leaf_width> <!-- Copied from Late Hard. -->
+		  <quantum_efficiency>		 0.05733	</quantum_efficiency>
+		  <stomatal_slope>			 6.18200	</stomatal_slope>
+		  <Vm0> 					56.31326	</Vm0>
+	  <!-- Respiration Params -->	
+		  <root_respiration_factor>	 1.45212	</root_respiration_factor>
+		  <root_turnover_rate>		 1.29750	</root_turnover_rate>
+   </pft>
+
+
+   <!-- PFT 10 = Mid Hardwood	 -->
+   <pft>
+      <num>			10	</num>
+      <include_pft>	 1	</include_pft>
+	  <!-- Allocation Params -->	
+	      <q>						 0.99521	</q>
+	      <SLA>						29.34375	</SLA>
+	  <!-- Mortality Params -->	
+    	  <plant_min_temp>		    211			</plant_min_temp>
+	  <!-- Photosynthesis Params -->	
+		  <dark_respiration_factor>	 0.01209	</dark_respiration_factor>
+		  <leaf_width>				 0.08699	</leaf_width> <!-- Copied from Late Hard. -->
+		  <quantum_efficiency>		 0.03769	</quantum_efficiency>
+		  <stomatal_slope>			 6.18200	</stomatal_slope> <!-- Copied from Early Hard. -->
+		  <Vm0>						41.27156	</Vm0> <!-- 97th percentile from Pecan -->
+	  <!-- Respiration Params -->	
+		  <root_respiration_factor>  1.83895	</root_respiration_factor>
+		  <root_turnover_rate> 		 1.29750	</root_turnover_rate> <!-- Copied from Early Hard. -->		  
+   </pft>
+
+
+   <!-- PFT 11 = Late Hardwood	 -->
+   <pft>
+      <num>			11	</num>
+      <include_pft>	 1	</include_pft>
+	  <!-- Allocation Params -->	
+	      <q>						 0.99734	</q>
+	      <SLA>						39.38542	</SLA>
+	  <!-- Mortality Params -->	
+    	  <plant_min_temp>		    192			</plant_min_temp>
+	  <!-- Nitrogen Params -->	
+		  <c2n_leaf>				21.37300	</c2n_leaf>
+	  <!-- Photosynthesis Params -->	
+		  <dark_respiration_factor>	 0.03053	</dark_respiration_factor>
+		  <leaf_width>				 0.08699	</leaf_width>
+		  <quantum_efficiency>		 0.04460	</quantum_efficiency>
+		  <stomatal_slope>			 6.18200	</stomatal_slope> <!-- Copied from Early Hard. -->
+		  <Vm0>						69.78505	</Vm0>
+	  <!-- Respiration Params -->	
+		  <root_respiration_factor>  1.87288	</root_respiration_factor>
+		  <root_turnover_rate> 		 1.29750	</root_turnover_rate> <!-- Copied from Early Hard. -->		  
+   </pft>
+  
+  
+ </config>

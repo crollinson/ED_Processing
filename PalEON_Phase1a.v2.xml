@@ -1,0 +1,714 @@
+<?xml version="1.0"?>
+<!DOCTYPE config SYSTEM "ed.dtd">
+ <config>
+   <pft>
+      <num>       		5      </num>
+      <include_pft_ag>  1      </include_pft_ag>
+      <include_pft>     1      </include_pft>
+
+	  <!-- Allocation Params -->	
+      <b1Bl>
+                 0.0799999982      </b1Bl>
+      <b2Bl>
+                 1.0000000000      </b2Bl>
+      <b1Bs>
+                 0.0000100000      </b1Bs>
+      <b2Bs>
+                 1.0000000000      </b2Bs>
+      <b1Ht>
+                 0.4778000116      </b1Ht>
+      <b2Ht>
+                -0.7500000000      </b2Ht>
+      <hgt_min>
+                 0.1500000060      </hgt_min>
+      <q>
+                 1.0000000000      </q>
+      <qsw>
+                 0.0056410255      </qsw>
+      <rho>
+                 0.5299999714      </rho>
+      <SLA>
+                22.0000000000      </SLA>
+
+	  <!-- Derived Params -->	
+      <c2n_recruit>
+                18.3132781982      </c2n_recruit>
+
+	  <!-- Leaf Params -->	
+      <phenology>
+                   2      			</phenology>
+
+	  <!-- Mortality Params -->	
+      <mort1>
+                 1.0000000000      </mort1>
+      <mort2>
+                20.0000000000      </mort2>
+      <mort3>
+                 0.0659999996      </mort3>
+      <plant_min_temp>
+                 213.00000000      </plant_min_temp>
+      <seedling_mortality>
+                 0.9499999881      </seedling_mortality>
+      <treefall_gt>
+                 0.0000000000      </treefall_gt>
+      <treefall_lt>
+                 0.2500000000      </treefall_lt>
+
+	  <!-- Nitrogen Params -->	
+      <c2n_leaf>
+                18.3122673035      </c2n_leaf>
+
+	  <!-- Photosynthesis Params -->	
+      <cuticular_cond>
+             	 10000.0000000000      </cuticular_cond>
+      <D0>
+                 0.0099999998      </D0>
+      <dark_respiration_factor>
+                 0.0399999991      </dark_respiration_factor>
+      <leaf_width>
+                 0.0500000007      </leaf_width>
+      <photosyn_pathway>
+                 3      </photosyn_pathway>
+      <quantum_efficiency>
+                 0.0799999982      </quantum_efficiency>
+      <stomatal_slope>
+                 6.3948998451      </stomatal_slope>
+      <Vm_low_temp>
+                 4.7136998177      </Vm_low_temp>
+      <Vm0>
+                18.2999992371      </Vm0>
+      <water_conductance>
+                 0.0047599999      </water_conductance>
+                 
+	  <!-- Radiation Params -->	
+      <clumping>
+                 0.83999999999999996891      </clumping>
+      <diffuse_backscatter_vis>
+                 0.0740740821      </diffuse_backscatter_vis>
+      <emis_v>
+                 0.95999999999999996447      </emis_v>
+      <leaf_scatter_vis>
+                 0.2699999809      </leaf_scatter_vis>
+
+	  <!-- Reproduction Params -->	
+      <nonlocal_dispersal>
+                 1.0000000000      </nonlocal_dispersal>
+      <r_fract>
+                 1.0000000000      </r_fract>
+      <repro_min_h>
+                 0.0000000000      </repro_min_h>
+      <seed_rain>
+                 0.001      </seed_rain>
+
+	  <!-- Respiration Params -->	
+      <f_labile>
+                 1.0000000000      </f_labile>
+      <growth_resp_factor>
+                 0.3330000043      </growth_resp_factor>
+      <leaf_turnover_rate>
+                 2.0000000000      </leaf_turnover_rate>
+      <root_turnover_rate>
+                 0.3330000043      </root_turnover_rate>
+      <root_respiration_factor>
+                 0.5279999971      </root_respiration_factor>
+      <storage_turnover_rate>
+                 0.0000000000      </storage_turnover_rate>
+
+
+	  <!-- ??? Params -->	
+      <max_dbh>
+                 0.3979999959      </max_dbh>
+   </pft>
+  
+
+
+
+
+
+  <pft>
+      <num>      		6      </num>
+      <include_pft_ag>  0      </include_pft_ag>
+      <include_pft>		1      </include_pft>
+
+	  <!-- Allocation Params -->	
+      <b1Bl>
+                 0.0240000002      </b1Bl>
+      <b2Bl>
+                 1.8990000486      </b2Bl>
+      <b1Bs>
+                 0.1469999999      </b1Bs>
+      <b2Bs>
+                 2.2379999161      </b2Bs>
+      <b1Ht>
+                27.1399993896      </b1Ht>
+      <b2Ht>
+                -0.0388399996      </b2Ht>
+      <hgt_min>
+                 1.5000000000      </hgt_min>
+      <q>
+                 0.3463000059      </q>
+      <qsw>
+                 0.0015384615      </qsw>
+      <rho>
+                 0.0000000000      </rho>
+      <SLA>
+                 11.72458	       </SLA> <!-- Pecan -->
+
+	  <!-- Derived Params -->	
+      <c2n_recruit>
+               124.6847686768      </c2n_recruit>
+
+	  <!-- Leaf Params -->	
+      <phenology>
+                   0      </phenology>
+
+	  <!-- Mortality Params -->	
+      <mort1>
+                 1.0000000000      </mort1>
+      <mort2>
+                20.0000000000      </mort2>
+      <mort3>
+                 0.0033928000      </mort3>
+      <plant_min_temp>
+                 193.00000000      </plant_min_temp>
+      <seedling_mortality>
+                 0.9499999881      </seedling_mortality>
+      <treefall_gt>
+                 0.0000000000      </treefall_gt>
+      <treefall_lt>
+                 0.1000000015      </treefall_lt>
+
+	  <!-- Nitrogen Params -->	
+      <c2n_leaf>
+                78.0326232910      </c2n_leaf>
+
+	  <!-- Photosynthesis Params -->	
+      <cuticular_cond>
+              1000.0000000000      </cuticular_cond>
+      <D0>
+                 0.0099999998      </D0>
+      <dark_respiration_factor>
+                 0.0199999996      </dark_respiration_factor>
+      <leaf_width>
+                 0.0500000007      </leaf_width>
+      <photosyn_pathway>
+                   3 		       </photosyn_pathway>
+      <quantum_efficiency>
+                 0.0799999982      </quantum_efficiency>
+      <stomatal_slope>
+                 6.3948998451      </stomatal_slope>
+      <Vm_low_temp>
+                 4.7136998177      </Vm_low_temp>
+      <Vm0>
+                36.38837      		   </Vm0>	<!-- Pecan -->
+      <water_conductance>
+                 0.0047599999      </water_conductance>
+
+	  <!-- Radiation Params -->	
+      <clumping>
+                           0.73499999999999998668      </clumping>
+      <diffuse_backscatter_vis>
+                 0.0740740821      </diffuse_backscatter_vis>
+      <emis_v>
+                 0.96999999999999997335      </emis_v>
+      <leaf_scatter_vis>
+                 0.2699999809      </leaf_scatter_vis>
+
+	  <!-- Reproduction Params -->	
+      <nonlocal_dispersal>
+                 0.7659999728      </nonlocal_dispersal>
+      <r_fract>
+                 0.3000000119      </r_fract>
+      <repro_min_h>
+                 5.0000000000      </repro_min_h>
+      <seed_rain>
+                 0.05      </seed_rain>
+      <f_labile>
+                 0.7900000215      </f_labile>
+
+	  <!-- Respiration Params -->	
+      <growth_resp_factor>
+                 0.4503000081      </growth_resp_factor>
+      <leaf_turnover_rate>
+                 0.3330000043      </leaf_turnover_rate>
+      <root_respiration_factor>
+                 1.39838		   </root_respiration_factor> <!-- Pecan, Late Con -->
+      <root_turnover_rate>
+                 3.92722		   </root_turnover_rate> <!-- Modified -->
+      <storage_turnover_rate>
+                 0.0000000000      </storage_turnover_rate>
+
+      <max_dbh>
+               250.00      </max_dbh>
+
+   </pft>
+
+<pft>
+      <num>				8      </num>
+      <include_pft_ag>	0      </include_pft_ag>
+      <include_pft>		1      </include_pft>
+
+	  <!-- Allocation Params -->	
+      <b1Bl>
+                 0.0454000011      </b1Bl>
+      <b2Bl>
+                 1.6828999519      </b2Bl>
+      <b1Bs>
+                 0.1616999954      </b1Bs>
+      <b2Bs>
+                 2.1535999775      </b2Bs>
+      <b1Ht>
+                22.7900009155      </b1Ht>
+      <b2Ht>
+                -0.0444499999      </b2Ht>
+      <hgt_min>
+                 1.5000000000      </hgt_min>
+      <q>
+                 0.3463000059      </q>
+      <qsw>
+                 0.0025641026      </qsw>
+      <rho>
+                 0.0000000000      </rho>
+      <SLA>
+                10.70833	       </SLA> <!-- Pecan --> 
+
+	  <!-- Derived Params -->	
+      <c2n_recruit>
+               132.0868988037      </c2n_recruit>
+
+	  <!-- Leaf Params -->	
+      <phenology>
+                   0      </phenology>
+	  <!-- Mortality Params -->	
+      <mort1>
+                 1.0000000000      </mort1>
+      <mort2>
+                20.0000000000      </mort2>
+      <mort3>
+                 0.0023568000      </mort3>
+      <plant_min_temp>
+                 203.000000000      </plant_min_temp>	<!-- Modfied -->
+      <seedling_mortality>
+                 0.9499999881      </seedling_mortality>
+      <treefall_gt>
+                 0.0000000000      </treefall_gt>
+      <treefall_lt>
+                 0.1000000015      </treefall_lt>
+	  <!-- Nitrogen Params -->	
+      <c2n_leaf>
+               108.4507446289      </c2n_leaf>
+
+	  <!-- Photosynthesis Params -->	
+      <cuticular_cond>
+              1000.0000000000      </cuticular_cond>
+      <D0>
+                 0.0099999998      </D0>
+      <dark_respiration_factor>
+                 0.0199999996      </dark_respiration_factor>
+      <leaf_width>
+                 0.0500000007      </leaf_width>
+      <photosyn_pathway>
+                 3			       </photosyn_pathway>
+      <quantum_efficiency>
+                 0.0799999982      </quantum_efficiency>
+      <stomatal_slope>
+                 6.3948998451      </stomatal_slope>
+      <Vm_low_temp>
+                 4.7136998177      </Vm_low_temp>
+      <Vm0>
+                 72.38039		   </Vm0>	<!-- Pecan -->
+      <water_conductance>
+                 0.0047599999      </water_conductance>
+
+	  <!-- Radiation Params -->	
+      <clumping>
+                 0.73499999999999998668      </clumping>
+      <diffuse_backscatter_vis>
+                 0.0740740821      </diffuse_backscatter_vis>
+      <emis_v>
+                 0.96999999999999997335      </emis_v>
+      <leaf_scatter_vis>
+                 0.2699999809      </leaf_scatter_vis>
+	  <!-- Reproduction Params -->	
+      <nonlocal_dispersal>
+                 0.0010000000      </nonlocal_dispersal>
+      <r_fract>
+                 0.3000000119      </r_fract>
+      <repro_min_h>
+                 5.0000000000      </repro_min_h>
+      <seed_rain>
+                 0.05      </seed_rain>
+	  <!-- Respiration Params -->	
+      <f_labile>
+                 0.7900000215      </f_labile>
+      <growth_resp_factor>
+                 0.4503000081      </growth_resp_factor>
+      <leaf_turnover_rate>
+                 0.3330000043      </leaf_turnover_rate>
+      <root_respiration_factor>
+                 1.39838		   </root_respiration_factor> <!-- Pecab -->
+      <root_turnover_rate>
+                 3.80013		   </root_turnover_rate> <!-- Modified -->
+      <storage_turnover_rate>
+                 0.0000000000      </storage_turnover_rate>
+
+
+      <max_dbh>
+               250.0     </max_dbh>
+   </pft>
+
+<pft>
+      <num>				9	</num>
+      <include_pft_ag>	0   </include_pft_ag>
+      <include_pft>		1	</include_pft>
+
+
+	  <!-- Allocation Params -->	
+      <b1Bl>
+                 0.0129000004      </b1Bl>
+      <b2Bl>
+                 1.7476999760      </b2Bl>
+      <b1Bs>
+                 0.0264800005      </b1Bs>
+      <b2Bs>
+                 2.9595398903      </b2Bs>
+      <b1Ht>
+                22.6798992157      </b1Ht>
+      <b2Ht>
+                -0.0653399974      </b2Ht>
+      <hgt_min>
+                 1.5000000000      </hgt_min>
+      <q>
+                 0.6357867718      </q>
+      <qsw>
+                 0.0076923077      </qsw>
+      <rho>
+                 0.0000000000      </rho>
+      <SLA>
+                42.80167		   </SLA> <!-- Pecan -->
+
+	  <!-- Derived Params -->	
+      <c2n_recruit>
+                17.8949623108      </c2n_recruit>
+
+	  <!-- Leaf Params -->	
+      <phenology>
+                   2      </phenology>
+	  <!-- Mortality Params -->	
+      <mort1>
+                 1.0000000000      </mort1>
+      <mort2>
+                 20.000000000      </mort2>
+      <mort3>
+                 0.0061440002      </mort3>
+      <plant_min_temp>
+               193.0000000000      </plant_min_temp>
+      <seedling_mortality>
+                 0.9499999881      </seedling_mortality>
+      <treefall_gt>
+                 0.0000000000      </treefall_gt>
+      <treefall_lt>
+                 0.1000000015      </treefall_lt>
+
+	  <!-- Nitrogen Params -->	
+      <c2n_leaf>
+                13.4641094208      </c2n_leaf>
+
+	  <!-- Photosynthesis Params -->	
+      <cuticular_cond>
+             20000.0000000000      </cuticular_cond>
+      <D0>
+                 0.0099999998      </D0>
+      <dark_respiration_factor>
+                 0.0339853056      </dark_respiration_factor>
+      <leaf_width>
+                 0.0500000007      </leaf_width>
+      <photosyn_pathway>
+                   3      </photosyn_pathway>
+      <quantum_efficiency>
+                 0.0799999982      </quantum_efficiency>
+      <stomatal_slope>
+                 5.8748331070      </stomatal_slope>
+      <Vm_low_temp>
+                 4.7136998177      </Vm_low_temp>
+      <Vm0>
+                56.31326		       </Vm0> <!-- Pecan -->
+      <water_conductance>
+                 0.0049651670      </water_conductance>
+
+	  <!-- Radiation Params -->	
+      <clumping>
+                 0.83999999999999996891      </clumping>
+      <diffuse_backscatter_vis>
+                 0.0740740821      </diffuse_backscatter_vis>
+      <emis_v>
+                 0.94999999999999995559      </emis_v>
+      <leaf_scatter_vis>
+                 0.2699999809      </leaf_scatter_vis>
+
+	  <!-- Reproduction Params -->	
+      <nonlocal_dispersal>
+                 1.0000000000      </nonlocal_dispersal>
+      <r_fract>
+                 0.3180772662      </r_fract>
+      <repro_min_h>
+                 5.0000000000      </repro_min_h>
+      <seed_rain>
+                 0.05      </seed_rain>
+
+	  <!-- Respiration Params -->	
+      <f_labile>
+                 0.7900000215      </f_labile>
+      <growth_resp_factor>
+                 0.3512839973      </growth_resp_factor>
+      <leaf_turnover_rate>
+                 0.0000000000      </leaf_turnover_rate>
+      <root_respiration_factor>
+                 2.9454386234      </root_respiration_factor>
+      <root_turnover_rate>
+                 0.69149		   </root_turnover_rate> <!-- Modified -->
+      <storage_turnover_rate>
+                 0.0000000000      </storage_turnover_rate>
+
+
+      <max_dbh>
+               100. 	      	   </max_dbh>
+   </pft>
+
+   <pft>
+      <num>				10      </num>
+      <include_pft_ag>	 0      </include_pft_ag>
+      <include_pft>		 1      </include_pft>
+
+
+	  <!-- Allocation Params -->	
+      <b1Bl>
+                 0.0480000004      </b1Bl>
+      <b2Bl>
+                 1.4550000429      </b2Bl>
+      <b1Bs>
+                 0.1616999954      </b1Bs>
+      <b2Bs>
+                 2.4572000504      </b2Bs>
+      <b1Ht>
+                25.1800003052      </b1Ht>
+      <b2Ht>
+                -0.0496399999      </b2Ht>
+      <hgt_min>
+                 1.5000000000      </hgt_min>
+      <q>
+                 0.9955696464      </q>
+      <qsw>
+                 0.0062051285      </qsw>
+      <rho>
+                 0.0000000000      </rho>
+      <SLA>
+                29.8367137909      </SLA>
+
+	  <!-- Derived Params -->	
+      <c2n_recruit>
+                28.5154876709      </c2n_recruit>
+
+	  <!-- Leaf Params -->	
+      <phenology>
+                   2      </phenology>
+
+	  <!-- Mortality Params -->	
+      <mort1>
+                 1.0000000000      </mort1>
+      <mort2>
+                 20.0000000000      </mort2>
+      <mort3>
+                 0.0038079999      </mort3>
+      <plant_min_temp>
+               193.0000000000      </plant_min_temp>
+      <seedling_mortality>
+                 0.9499999881      </seedling_mortality>
+      <treefall_gt>
+                 0.0000000000      </treefall_gt>
+      <treefall_lt>
+                 0.1000000015      </treefall_lt>
+
+	  <!-- Nitrogen Params -->	
+      <c2n_leaf>
+                19.3469314575      </c2n_leaf>
+
+	  <!-- Photosynthesis Params -->	
+      <cuticular_cond>
+             20000.0000000000      </cuticular_cond>
+      <D0>
+                 0.0099999998      </D0>
+      <dark_respiration_factor>
+                 0.0120350653      </dark_respiration_factor>
+      <leaf_width>
+                 0.0500000007      </leaf_width>
+      <quantum_efficiency>
+                 0.0799999982      </quantum_efficiency>
+      <photosyn_pathway>
+                   3      </photosyn_pathway>
+      <stomatal_slope>
+                 5.7251758575      </stomatal_slope>
+      <Vm_low_temp>
+                 4.7136998177      </Vm_low_temp>
+      <Vm0>
+                55.0		       </Vm0> <!-- Modified; more competitive with other hardwoods -->
+      <water_conductance>
+                 0.0046734586      </water_conductance>
+
+	  <!-- Radiation Params -->	
+      <clumping>
+                 0.83999999999999996891      </clumping>
+      <diffuse_backscatter_vis>
+                 0.0740740821      </diffuse_backscatter_vis>
+      <emis_v>
+                 0.94999999999999995559      </emis_v>
+      <leaf_scatter_vis>
+                 0.2699999809      </leaf_scatter_vis>
+
+	  <!-- Reproduction Params -->	
+      <nonlocal_dispersal>
+                 0.3249999881      </nonlocal_dispersal>
+      <r_fract>
+                 0.3157985210      </r_fract>
+      <repro_min_h>
+                 5.0000000000      </repro_min_h>
+      <seed_rain>
+                 0.05      </seed_rain>
+
+	  <!-- Respiration Params -->	
+      <f_labile>
+                 0.7900000215      </f_labile>
+      <growth_resp_factor>
+                 0.3508955240      </growth_resp_factor>
+      <leaf_turnover_rate>
+                 0.0000000000      </leaf_turnover_rate>
+      <root_respiration_factor>
+                 2.9418973923      </root_respiration_factor>
+      <root_turnover_rate>
+                 0.6812728643      </root_turnover_rate>
+      <storage_turnover_rate>
+                 0.0000000000      </storage_turnover_rate>
+
+      <max_dbh>
+               200.00		       </max_dbh>
+   </pft>
+
+   <pft>
+      <num>				11      </num>
+      <include_pft_ag>	 0      </include_pft_ag>
+      <include_pft>		 1      </include_pft>
+
+
+	  <!-- Allocation Params -->	
+      <b1Bl>
+                 0.0170000009      </b1Bl>
+      <b2Bl>
+                 1.7309999466      </b2Bl>
+      <b1Bs>
+                 0.2349999994      </b1Bs>
+      <b2Bs>
+                 2.2518000603      </b2Bs>
+      <b1Ht>
+                23.3873996735      </b1Ht>
+      <b2Ht>
+                -0.0540399998      </b2Ht>
+      <hgt_min>
+                 1.5000000000      </hgt_min>
+      <q>
+                 0.9969184995      </q>
+      <qsw>
+                 0.0153846154      </qsw>
+      <rho>
+                 0.0000000000      </rho>
+      <SLA>
+                39.5191078186      </SLA>
+
+	  <!-- Derived Params -->	
+      <c2n_recruit>
+                56.3194046021      </c2n_recruit>
+
+	  <!-- Leaf Params -->	
+      <phenology>
+                   2      </phenology>
+
+	  <!-- Mortality Params -->	
+      <seedling_mortality>
+                 0.9499999881      </seedling_mortality>
+      <mort1>
+                 1.0000000000      </mort1>
+      <mort2>
+                19.7858428955      </mort2>
+      <mort3>
+                 0.0042800000      </mort3>
+      <plant_min_temp>
+               193.0000000000      </plant_min_temp>
+      <treefall_gt>
+                 0.0000000000      </treefall_gt>
+      <treefall_lt>
+                 0.1000000015      </treefall_lt>
+
+	  <!-- Nitrogen Params -->	
+      <c2n_leaf>
+                18.0751247406      </c2n_leaf>
+
+	  <!-- Photosynthesis Params -->	
+      <cuticular_cond>
+             20000.0000000000      </cuticular_cond>
+      <dark_respiration_factor>
+                 0.0359999985      </dark_respiration_factor>
+      <D0>
+                 0.0099999998      </D0>
+      <leaf_width>
+                 0.0500000007      </leaf_width>
+      <photosyn_pathway>
+                   3      </photosyn_pathway>
+      <quantum_efficiency>
+                 0.0799999982      </quantum_efficiency>
+      <stomatal_slope>
+                 5.8392224312      </stomatal_slope>
+      <Vm_low_temp>
+                 4.7136998177      </Vm_low_temp>
+      <Vm0>
+                69.78505	       </Vm0> <!-- Pecan -->
+      <water_conductance>
+                 0.0047390494      </water_conductance>
+
+	  <!-- Radiation Params -->	
+      <clumping>
+                 0.83999999999999996891      </clumping>
+      <diffuse_backscatter_vis>
+                 0.0740740821      </diffuse_backscatter_vis>
+      <emis_v>
+                 0.94999999999999995559      </emis_v>
+      <leaf_scatter_vis>
+                 0.2699999809      </leaf_scatter_vis>
+
+	  <!-- Reproduction Params -->	
+      <nonlocal_dispersal>
+                 0.0740000010      </nonlocal_dispersal>
+      <r_fract>
+                 0.3119044304      </r_fract>
+      <repro_min_h>
+                 5.0000000000      </repro_min_h>
+      <seed_rain>
+                 0.05      </seed_rain>
+
+	  <!-- Respiration Params -->	
+      <f_labile>
+                 0.7900000215      </f_labile>
+      <growth_resp_factor>
+                 0.3507529199      </growth_resp_factor>
+      <leaf_turnover_rate>
+                 0.0000000000      </leaf_turnover_rate>
+      <root_respiration_factor>
+                 2.9264914989      </root_respiration_factor>
+      <root_turnover_rate>
+                 0.6728218794      </root_turnover_rate>
+      <storage_turnover_rate>
+                 0.0000000000      </storage_turnover_rate>
+
+
+      <max_dbh>
+               200.  		       </max_dbh>
+   </pft>
+ </config>
