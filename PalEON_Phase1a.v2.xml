@@ -35,8 +35,10 @@
                 18.3132781982      </c2n_recruit>
 
 	  <!-- Leaf Params -->	
+<!-- 
       <phenology>
                    2      			</phenology>
+ -->
 
 	  <!-- Mortality Params -->	
       <mort1>
@@ -232,9 +234,9 @@
       <leaf_turnover_rate>
                  0.3330000043      </leaf_turnover_rate>
       <root_respiration_factor>
-                 1.39838		   </root_respiration_factor> <!-- Pecan, Late Con -->
+                 1.4      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
       <root_turnover_rate>
-                 3.92722		   </root_turnover_rate> <!-- Modified -->
+                 1.2			   </root_turnover_rate> <!-- Modified, per Luke McC -->
       <storage_turnover_rate>
                  0.0000000000      </storage_turnover_rate>
 
@@ -346,9 +348,9 @@
       <leaf_turnover_rate>
                  0.3330000043      </leaf_turnover_rate>
       <root_respiration_factor>
-                 1.39838		   </root_respiration_factor> <!-- Pecab -->
+                 1.4      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
       <root_turnover_rate>
-                 3.80013		   </root_turnover_rate> <!-- Modified -->
+                 1.2			   </root_turnover_rate> <!-- Modified, per Luke McC -->
       <storage_turnover_rate>
                  0.0000000000      </storage_turnover_rate>
 
@@ -464,9 +466,9 @@
       <leaf_turnover_rate>
                  0.0000000000      </leaf_turnover_rate>
       <root_respiration_factor>
-                 2.9454386234      </root_respiration_factor>
+                 1.4      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
       <root_turnover_rate>
-                 0.69149		   </root_turnover_rate> <!-- Modified -->
+                 1.2			   </root_turnover_rate> <!-- Modified, per Luke McC -->
       <storage_turnover_rate>
                  0.0000000000      </storage_turnover_rate>
 
@@ -583,9 +585,9 @@
       <leaf_turnover_rate>
                  0.0000000000      </leaf_turnover_rate>
       <root_respiration_factor>
-                 2.9418973923      </root_respiration_factor>
+                 1.4      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
       <root_turnover_rate>
-                 0.6812728643      </root_turnover_rate>
+                 1.2			   </root_turnover_rate> <!-- Modified, per Luke McC -->
       <storage_turnover_rate>
                  0.0000000000      </storage_turnover_rate>
 
@@ -701,9 +703,9 @@
       <leaf_turnover_rate>
                  0.0000000000      </leaf_turnover_rate>
       <root_respiration_factor>
-                 2.9264914989      </root_respiration_factor>
+                 1.4      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
       <root_turnover_rate>
-                 0.6728218794      </root_turnover_rate>
+                 1.2			   </root_turnover_rate> <!-- Modified, per Luke McC -->
       <storage_turnover_rate>
                  0.0000000000      </storage_turnover_rate>
 

@@ -1,41 +1,3 @@
-for(i in 1:length(year$year)){#
-	for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH^sample(beta1, size=1, replace=T))}#
-	year$mean[i] <- mean(test)#
-	year$sd[i] <- sd(test)#
-	return(test)#
-}
-test <- rep(NA,1000)#
-for(j in 1:length(year$year)){#
-	for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH^sample(beta1, size=1, replace=T))}#
-	year$mean[j] <- mean(test)#
-	year$sd[j] <- sd(test)#
-	return(test)#
-}
-for(j in 1:length(year$year)){#
-	test <- rep(NA,1000)#
-	for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH^sample(beta1, size=1, replace=T))}#
-	year$mean[j] <- mean(test)#
-	year$sd[j] <- sd(test)#
-	return(test)#
-}
-year
-beta0 <- rnorm(50, mean=0.054, sd=0.004)#
-beta1 <- rnorm(50, mean=2.651, sd=0.0175)#
-for(j in 1:length(year$year)){#
-	test <- rep(NA,1000)#
-	for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH^sample(beta1, size=1, replace=T))}#
-	year$mean[j] <- mean(test)#
-	year$sd[j] <- sd(test)#
-}
-year
-year <- 1950:2010#
-year <- data.frame(year)
-DBH <- data.frame(dim=c(5,length(1950:2010)))
-DBH <- data.frame(dim=c(5,length(1950:2010)))#
-for(j in 1:ncol(DBH)){#
-	DBH <- rnorm(length(DBH[,1]), mean=10, sd=2)	#
-}
-DBH
 DBH <- data.frame(dim=c(5,length(1950:2010)))
 DBH
 DBH <- data.frame(ncol=5, nrow=length(1950:2010))
@@ -601,3 +563,13 @@ which(letters == "r")
 test
 which(test == 1)
 which(test > 5)
+library(rhdf5)
+source("http://bioconductor.org/biocLite.R")
+biocLite("rhdf5")
+library(rhdf5)
+? H5Fclose
+library(rhdf5)
+?HF5close
+?H5Fclose
+?h5createFile
+?h5ls

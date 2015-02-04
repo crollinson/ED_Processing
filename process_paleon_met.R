@@ -5,26 +5,25 @@
 #to be in the ED2 HDF5 format with the correct dimensions.  
 #
 #It requires the rhdf5 library, which is not available on CRAN, but by can be installed locally:
-#>source("http://bioconductor.org/biocLite.R")
-#>biocLite("rhdf5")
+#source("http://bioconductor.org/biocLite.R")
+#biocLite("rhdf5")
 #
 #on GEO CLUSTER (local install of rhdf5): 
 #install.packages("/usr4/spclpgm/jmatthes/zlibbioc_1.6.0.tar.gz",repos=NULL,type="source",lib="/usr4/spclpgm/jmatthes/")
 #install.packages("/usr4/spclpgm/jmatthes/rhdf5_2.4.0.tar.gz",repos=NULL,type="source",lib="/usr4/spclpgm/jmatthes/")
 #
-#Jaclyn Hatala Matthes, 1/7/14
-#jaclyn.hatala.matthes@gmail.com
+#Original: Jaclyn Hatala Matthes, 1/7/14, jaclyn.hatala.matthes@gmail.com
+#Edits: Christy Rollinson, January 2015, crollinson@gmail.com
 
-library(ncdf,lib.loc="/usr4/spclpgm/jmatthes/")
-library(rhdf5,lib.loc="/usr4/spclpgm/jmatthes/")
-library(abind,lib.loc="/usr4/spclpgm/jmatthes/")
+library(ncdf4)
+library(rhdf5)
+library(abind)
 
-in.path  <- "/projectnb/cheas/paleon/met_regional/phase1a_met_drivers_v4/"
-out.path <- "/projectnb/cheas/paleon/ED_runs/met_drivers/phase1a_met/bias_corr_v3/"
+in.path  <- "/projectnb/dietzelab/paleon/met_regional/phase1a_met_drivers_v4.1/"
+out.path <- "/projectnb/dietzelab/paleon/ED_runs/met_drivers/phase1a_met/met_v4.1/"
 dir.create(file.path(out.path), showWarnings = FALSE)
 
-#sites <- c("PBL","PDL","PHA","PHO","PMB","PUN")
-sites <- c("PHA","PHO","PMB","PUN")
+sites <- c("PBL","PDL","PHA","PHO","PMB","PUN")
 orig.vars <- c("lwdown","precipf","psurf","qair","swdown","tair","wind")
 ed2.vars  <- c("dlwrf","prate","pres","sh","vbdsf","tmp","ugrd")
 month.txt <- c("JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC")
@@ -32,6 +31,7 @@ month.txt <- c("JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV"
 for(s in 1:length(sites)){
   in.dir  <- paste(in.path,sites[s],"/",sep="")
   out.dir <- paste(out.path,sites[s],"/",sep="")
+# Already did this step in commandline
   dir.create(file.path(paste(out.path,sites[s],"/",sep="")), showWarnings = FALSE)
   print(sites[s])
 
@@ -44,12 +44,12 @@ for(s in 1:length(sites)){
     for(f in 1:length(in.files)){
       
       #open and read netcdf file
-      nc.file <- open.ncdf(paste(var.path,in.files[f],sep=""))
-      var     <- get.var.ncdf(nc.file,orig.vars[v])
-      time    <- get.var.ncdf(nc.file,"time")
-      lat     <- get.var.ncdf(nc.file,"lat")
-      lon     <- get.var.ncdf(nc.file,"lon")
-      close.ncdf(nc.file)
+      nc.file <- nc_open(paste(var.path,in.files[f],sep=""))
+      var     <- ncvar_get(nc.file,orig.vars[v])
+      time    <- ncvar_get(nc.file,"time")
+      lat     <- ncvar_get(nc.file,"lat")
+      lon     <- ncvar_get(nc.file,"lon")
+      nc_close(nc.file)
       
       var <- array(var,dim=c(length(var),1,1))                   
       
@@ -67,7 +67,7 @@ for(s in 1:length(sites)){
       h5write(time,out.file,"time")
       h5write(lon,out.file,"lon")
       h5write(lat,out.file,"lat")
-      #  H5Fclose(paste(out.path,site,"_dlwrf_",year,"_",month.txt[month.num],".h5",sep=""))
+      # H5Fclose(out.file) # don't need this because of how we created & wrote the files
     }
   }
 }
