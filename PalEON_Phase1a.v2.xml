@@ -38,6 +38,7 @@
 	  <!-- Respiration Params -->	
 		  <leaf_turnover_rate>		 0.32760	</leaf_turnover_rate>
 		  <root_respiration_factor>	 1.39838	</root_respiration_factor> <!-- Copied from Late Conifer -->
+		  <root_turnover_rate> 		 1.29750	</root_turnover_rate> <!-- Copied from Early Hard. -->		  
    </pft>
 
 
@@ -56,6 +57,7 @@
 	  <!-- Respiration Params -->	
 		  <leaf_turnover_rate>		0.32760		</leaf_turnover_rate> <!-- Copied from North. Pine -->
 		  <root_respiration_factor>	 1.39838	</root_respiration_factor>
+		  <root_turnover_rate> 		 1.29750	</root_turnover_rate> <!-- Copied from Early Hard. -->		  
    </pft>
 
 
