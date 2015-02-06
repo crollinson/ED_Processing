@@ -234,9 +234,9 @@
       <leaf_turnover_rate>
                  0.3330000043      </leaf_turnover_rate>
       <root_respiration_factor>
-                 1.4      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
+                 3.0      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
       <root_turnover_rate>
-                 1.2			   </root_turnover_rate> <!-- Modified, per Luke McC -->
+                 0.8			   </root_turnover_rate> <!-- Modified, per Luke McC -->
       <storage_turnover_rate>
                  0.0000000000      </storage_turnover_rate>
 
@@ -318,7 +318,7 @@
       <Vm_low_temp>
                  4.7136998177      </Vm_low_temp>
       <Vm0>
-                 72.38039		   </Vm0>	<!-- Pecan -->
+                 45		   </Vm0>	<!-- Modified -->
       <water_conductance>
                  0.0047599999      </water_conductance>
 
@@ -348,9 +348,9 @@
       <leaf_turnover_rate>
                  0.3330000043      </leaf_turnover_rate>
       <root_respiration_factor>
-                 1.4      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
+                 3.0      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
       <root_turnover_rate>
-                 1.2			   </root_turnover_rate> <!-- Modified, per Luke McC -->
+                 0.8			   </root_turnover_rate> <!-- Modified, per Luke McC -->
       <storage_turnover_rate>
                  0.0000000000      </storage_turnover_rate>
 
@@ -434,7 +434,7 @@
       <Vm_low_temp>
                  4.7136998177      </Vm_low_temp>
       <Vm0>
-                56.31326		       </Vm0> <!-- Pecan -->
+                40.0		       </Vm0> <!-- Modified -->
       <water_conductance>
                  0.0049651670      </water_conductance>
 
@@ -466,9 +466,9 @@
       <leaf_turnover_rate>
                  0.0000000000      </leaf_turnover_rate>
       <root_respiration_factor>
-                 1.4      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
+                 3.0      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
       <root_turnover_rate>
-                 1.2			   </root_turnover_rate> <!-- Modified, per Luke McC -->
+                 0.8			   </root_turnover_rate> <!-- Modified, per Luke McC -->
       <storage_turnover_rate>
                  0.0000000000      </storage_turnover_rate>
 
@@ -553,7 +553,7 @@
       <Vm_low_temp>
                  4.7136998177      </Vm_low_temp>
       <Vm0>
-                55.0		       </Vm0> <!-- Modified; more competitive with other hardwoods -->
+                45.0		       </Vm0> <!-- Modified; more competitive with other hardwoods -->
       <water_conductance>
                  0.0046734586      </water_conductance>
 
@@ -585,9 +585,9 @@
       <leaf_turnover_rate>
                  0.0000000000      </leaf_turnover_rate>
       <root_respiration_factor>
-                 1.4      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
+                 3.0      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
       <root_turnover_rate>
-                 1.2			   </root_turnover_rate> <!-- Modified, per Luke McC -->
+                 0.8			   </root_turnover_rate> <!-- Modified, per Luke McC -->
       <storage_turnover_rate>
                  0.0000000000      </storage_turnover_rate>
 
@@ -671,7 +671,7 @@
       <Vm_low_temp>
                  4.7136998177      </Vm_low_temp>
       <Vm0>
-                69.78505	       </Vm0> <!-- Pecan -->
+                55.0	           </Vm0> <!-- Modified -->
       <water_conductance>
                  0.0047390494      </water_conductance>
 
@@ -703,9 +703,9 @@
       <leaf_turnover_rate>
                  0.0000000000      </leaf_turnover_rate>
       <root_respiration_factor>
-                 1.4      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
+                 3.0      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
       <root_turnover_rate>
-                 1.2			   </root_turnover_rate> <!-- Modified, per Luke McC -->
+                 0.8			   </root_turnover_rate> <!-- Modified, per Luke McC -->
       <storage_turnover_rate>
                  0.0000000000      </storage_turnover_rate>
 
