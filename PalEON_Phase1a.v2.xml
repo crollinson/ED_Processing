@@ -149,16 +149,20 @@
                  1.5000000000      </hgt_min>
       <q>
                  0.3463000059      </q>
+<!-- 
       <qsw>
                  0.0015384615      </qsw>
+ -->
       <rho>
                  0.0000000000      </rho>
       <SLA>
                  11.72458	       </SLA> <!-- Pecan -->
 
 	  <!-- Derived Params -->	
+<!-- 
       <c2n_recruit>
                124.6847686768      </c2n_recruit>
+ -->
 
 	  <!-- Leaf Params -->	
       <phenology>
@@ -181,8 +185,10 @@
                  0.1000000015      </treefall_lt>
 
 	  <!-- Nitrogen Params -->	
+<!-- 
       <c2n_leaf>
                 78.0326232910      </c2n_leaf>
+ -->
 
 	  <!-- Photosynthesis Params -->	
       <cuticular_cond>
@@ -201,20 +207,26 @@
                  6.3948998451      </stomatal_slope>
       <Vm_low_temp>
                  4.7136998177      </Vm_low_temp>
+<!-- 
       <Vm0>
-                45      		   </Vm0>	<!-- Modified -->
+                45      		   </Vm0>	<!~~ Modified ~~>
+ -->
       <water_conductance>
                  0.0047599999      </water_conductance>
 
 	  <!-- Radiation Params -->	
       <clumping>
                            0.73499999999999998668      </clumping>
+<!-- 
       <diffuse_backscatter_vis>
                  0.0740740821      </diffuse_backscatter_vis>
+ -->
       <emis_v>
                  0.96999999999999997335      </emis_v>
+<!-- 
       <leaf_scatter_vis>
                  0.2699999809      </leaf_scatter_vis>
+ -->
 
 	  <!-- Reproduction Params -->	
       <nonlocal_dispersal>
@@ -267,16 +279,20 @@
                  1.5000000000      </hgt_min>
       <q>
                  0.3463000059      </q>
+<!-- 
       <qsw>
                  0.0025641026      </qsw>
+ -->
       <rho>
                  0.0000000000      </rho>
       <SLA>
                 10.70833	       </SLA> <!-- Pecan --> 
 
 	  <!-- Derived Params -->	
+<!-- 
       <c2n_recruit>
                132.0868988037      </c2n_recruit>
+ -->
 
 	  <!-- Leaf Params -->	
       <phenology>
@@ -297,8 +313,10 @@
       <treefall_lt>
                  0.1000000015      </treefall_lt>
 	  <!-- Nitrogen Params -->	
+<!-- 
       <c2n_leaf>
                108.4507446289      </c2n_leaf>
+ -->
 
 	  <!-- Photosynthesis Params -->	
       <cuticular_cond>
@@ -317,20 +335,26 @@
                  6.3948998451      </stomatal_slope>
       <Vm_low_temp>
                  4.7136998177      </Vm_low_temp>
+<!-- 
       <Vm0>
-                 65		   </Vm0>	<!-- Modified -->
+                 65		   </Vm0>	<!~~ Modified ~~>
+ -->
       <water_conductance>
                  0.0047599999      </water_conductance>
 
 	  <!-- Radiation Params -->	
       <clumping>
                  0.73499999999999998668      </clumping>
+<!-- 
       <diffuse_backscatter_vis>
                  0.0740740821      </diffuse_backscatter_vis>
+ -->
       <emis_v>
                  0.96999999999999997335      </emis_v>
+<!-- 
       <leaf_scatter_vis>
                  0.2699999809      </leaf_scatter_vis>
+ -->
 	  <!-- Reproduction Params -->	
       <nonlocal_dispersal>
                  0.0010000000      </nonlocal_dispersal>
@@ -382,16 +406,20 @@
                  1.5000000000      </hgt_min>
       <q>
                  0.6357867718      </q>
+<!-- 
       <qsw>
                  0.0076923077      </qsw>
+ -->
       <rho>
                  0.0000000000      </rho>
       <SLA>
-                42.80167		   </SLA> <!-- Pecan -->
+                30.0			   </SLA> <!-- Pecan -->
 
 	  <!-- Derived Params -->	
+<!-- 
       <c2n_recruit>
                 17.8949623108      </c2n_recruit>
+ -->
 
 	  <!-- Leaf Params -->	
       <phenology>
@@ -413,12 +441,14 @@
                  0.1000000015      </treefall_lt>
 
 	  <!-- Nitrogen Params -->	
+<!-- 
       <c2n_leaf>
                 13.4641094208      </c2n_leaf>
+ -->
 
 	  <!-- Photosynthesis Params -->	
       <cuticular_cond>
-             20000.0000000000      </cuticular_cond>
+             10000.0000000000      </cuticular_cond> <!-- Modified; restore default -->
       <D0>
                  0.0099999998      </D0>
       <dark_respiration_factor>
@@ -433,20 +463,26 @@
                  5.8748331070      </stomatal_slope>
       <Vm_low_temp>
                  4.7136998177      </Vm_low_temp>
+<!-- 
       <Vm0>
-                50.0		       </Vm0> <!-- Modified -->
+                50.0		       </Vm0> <!~~ Modified ~~>
+ -->
       <water_conductance>
                  0.0049651670      </water_conductance>
 
 	  <!-- Radiation Params -->	
       <clumping>
                  0.83999999999999996891      </clumping>
+<!-- 
       <diffuse_backscatter_vis>
                  0.0740740821      </diffuse_backscatter_vis>
+ -->
       <emis_v>
                  0.94999999999999995559      </emis_v>
+<!-- 
       <leaf_scatter_vis>
                  0.2699999809      </leaf_scatter_vis>
+ -->
 
 	  <!-- Reproduction Params -->	
       <nonlocal_dispersal>
@@ -500,16 +536,20 @@
                  1.5000000000      </hgt_min>
       <q>
                  0.9955696464      </q>
+<!-- 
       <qsw>
                  0.0062051285      </qsw>
+ -->
       <rho>
                  0.0000000000      </rho>
       <SLA>
                 29.8367137909      </SLA>
 
 	  <!-- Derived Params -->	
+<!-- 
       <c2n_recruit>
                 28.5154876709      </c2n_recruit>
+ -->
 
 	  <!-- Leaf Params -->	
       <phenology>
@@ -532,12 +572,14 @@
                  0.1000000015      </treefall_lt>
 
 	  <!-- Nitrogen Params -->	
+<!-- 
       <c2n_leaf>
                 19.3469314575      </c2n_leaf>
+ -->
 
 	  <!-- Photosynthesis Params -->	
       <cuticular_cond>
-             20000.0000000000      </cuticular_cond>
+             10000.0000000000      </cuticular_cond> <!-- Modified; restore default -->
       <D0>
                  0.0099999998      </D0>
       <dark_respiration_factor>
@@ -552,20 +594,26 @@
                  5.7251758575      </stomatal_slope>
       <Vm_low_temp>
                  4.7136998177      </Vm_low_temp>
+<!-- 
       <Vm0>
-                45.0		       </Vm0> <!-- Modified; more competitive with other hardwoods -->
+                45.0		       </Vm0> <!~~ Modified; more competitive with other hardwoods ~~>
+ -->
       <water_conductance>
                  0.0046734586      </water_conductance>
 
 	  <!-- Radiation Params -->	
       <clumping>
                  0.83999999999999996891      </clumping>
+<!-- 
       <diffuse_backscatter_vis>
                  0.0740740821      </diffuse_backscatter_vis>
+ -->
       <emis_v>
                  0.94999999999999995559      </emis_v>
+<!-- 
       <leaf_scatter_vis>
                  0.2699999809      </leaf_scatter_vis>
+ -->
 
 	  <!-- Reproduction Params -->	
       <nonlocal_dispersal>
@@ -618,16 +666,20 @@
                  1.5000000000      </hgt_min>
       <q>
                  0.9969184995      </q>
+<!-- 
       <qsw>
                  0.0153846154      </qsw>
+ -->
       <rho>
                  0.0000000000      </rho>
       <SLA>
                 39.5191078186      </SLA>
 
 	  <!-- Derived Params -->	
+<!-- 
       <c2n_recruit>
                 56.3194046021      </c2n_recruit>
+ -->
 
 	  <!-- Leaf Params -->	
       <phenology>
@@ -650,12 +702,14 @@
                  0.1000000015      </treefall_lt>
 
 	  <!-- Nitrogen Params -->	
+<!-- 
       <c2n_leaf>
                 18.0751247406      </c2n_leaf>
+ -->
 
 	  <!-- Photosynthesis Params -->	
       <cuticular_cond>
-             20000.0000000000      </cuticular_cond>
+             10000.0000000000      </cuticular_cond> <!-- Modified; restore default -->
       <dark_respiration_factor>
                  0.0359999985      </dark_respiration_factor>
       <D0>
@@ -670,20 +724,26 @@
                  5.8392224312      </stomatal_slope>
       <Vm_low_temp>
                  4.7136998177      </Vm_low_temp>
+<!-- 
       <Vm0>
-                65.0	           </Vm0> <!-- Modified -->
+                65.0	           </Vm0> <!~~ Modified ~~>
+ -->
       <water_conductance>
                  0.0047390494      </water_conductance>
 
 	  <!-- Radiation Params -->	
       <clumping>
                  0.83999999999999996891      </clumping>
+<!-- 
       <diffuse_backscatter_vis>
                  0.0740740821      </diffuse_backscatter_vis>
+ -->
       <emis_v>
                  0.94999999999999995559      </emis_v>
+<!-- 
       <leaf_scatter_vis>
                  0.2699999809      </leaf_scatter_vis>
+ -->
 
 	  <!-- Reproduction Params -->	
       <nonlocal_dispersal>
