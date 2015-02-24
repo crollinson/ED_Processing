@@ -192,7 +192,7 @@
 
 	  <!-- Photosynthesis Params -->	
       <cuticular_cond>
-              1000.0000000000      </cuticular_cond>
+              5000.0000000000      </cuticular_cond>
       <D0>
                  0.0099999998      </D0>
       <dark_respiration_factor>
@@ -207,10 +207,8 @@
                  6.3948998451      </stomatal_slope>
       <Vm_low_temp>
                  4.7136998177      </Vm_low_temp>
-<!-- 
       <Vm0>
-                45      		   </Vm0>	<!~~ Modified ~~>
- -->
+                36      		   </Vm0>	<!-- Pecan -->
       <water_conductance>
                  0.0047599999      </water_conductance>
 
@@ -320,7 +318,7 @@
 
 	  <!-- Photosynthesis Params -->	
       <cuticular_cond>
-              1000.0000000000      </cuticular_cond>
+              5000.0000000000      </cuticular_cond>
       <D0>
                  0.0099999998      </D0>
       <dark_respiration_factor>
@@ -335,10 +333,8 @@
                  6.3948998451      </stomatal_slope>
       <Vm_low_temp>
                  4.7136998177      </Vm_low_temp>
-<!-- 
       <Vm0>
-                 65		   </Vm0>	<!~~ Modified ~~>
- -->
+                 45				   </Vm0>	<!-- Pecan -->
       <water_conductance>
                  0.0047599999      </water_conductance>
 
@@ -448,11 +444,11 @@
 
 	  <!-- Photosynthesis Params -->	
       <cuticular_cond>
-             10000.0000000000      </cuticular_cond> <!-- Modified; restore default -->
+             20000.0000000000      </cuticular_cond> 
       <D0>
                  0.0099999998      </D0>
       <dark_respiration_factor>
-                 0.0339853056      </dark_respiration_factor>
+                 0.01913	       </dark_respiration_factor> <!-- Pecan -->
       <leaf_width>
                  0.0500000007      </leaf_width>
       <photosyn_pathway>
@@ -463,10 +459,8 @@
                  5.8748331070      </stomatal_slope>
       <Vm_low_temp>
                  4.7136998177      </Vm_low_temp>
-<!-- 
       <Vm0>
-                50.0		       </Vm0> <!~~ Modified ~~>
- -->
+                45.0		       </Vm0> <!-- Modified -->
       <water_conductance>
                  0.0049651670      </water_conductance>
 
@@ -579,7 +573,7 @@
 
 	  <!-- Photosynthesis Params -->	
       <cuticular_cond>
-             10000.0000000000      </cuticular_cond> <!-- Modified; restore default -->
+             20000.0000000000      </cuticular_cond> 
       <D0>
                  0.0099999998      </D0>
       <dark_respiration_factor>
@@ -594,10 +588,8 @@
                  5.7251758575      </stomatal_slope>
       <Vm_low_temp>
                  4.7136998177      </Vm_low_temp>
-<!-- 
       <Vm0>
-                45.0		       </Vm0> <!~~ Modified; more competitive with other hardwoods ~~>
- -->
+                40.0		       </Vm0> <!-- Modified; more competitive with other hardwoods -->
       <water_conductance>
                  0.0046734586      </water_conductance>
 
@@ -709,7 +701,7 @@
 
 	  <!-- Photosynthesis Params -->	
       <cuticular_cond>
-             10000.0000000000      </cuticular_cond> <!-- Modified; restore default -->
+             20000.0000000000      </cuticular_cond> 
       <dark_respiration_factor>
                  0.0359999985      </dark_respiration_factor>
       <D0>
@@ -724,10 +716,8 @@
                  5.8392224312      </stomatal_slope>
       <Vm_low_temp>
                  4.7136998177      </Vm_low_temp>
-<!-- 
       <Vm0>
-                65.0	           </Vm0> <!~~ Modified ~~>
- -->
+                55.0	           </Vm0> <!-- Modified -->
       <water_conductance>
                  0.0047390494      </water_conductance>
 
