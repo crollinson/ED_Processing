@@ -671,7 +671,7 @@ $ED_NL
    !                   2.  Similar to 1, but branches are treated as separate pools in the !
    !                       biophysics (thus doubling the number of prognostic variables).  !
    !---------------------------------------------------------------------------------------!
-   NL%IBRANCH_THERMO = 1
+   NL%IBRANCH_THERMO = 0
    !---------------------------------------------------------------------------------------!
 
 
@@ -1130,8 +1130,8 @@ $ED_NL
    !             4.  Same as 0, but if finds the ground conductance following CLM          !
    !                 technical note (equations 5.98-5.100).                                !
    !---------------------------------------------------------------------------------------!
-   NL%ICANTURB        = 0
-   !---------------------------------------------------------------------------------------!
+   NL%ICANTURB        = 1
+   !-------------------------1-------------------------------------------------------------!
 
 
 
