@@ -1,16 +1,3 @@
-DBH <- data.frame(dim=c(5,length(1950:2010)))
-DBH
-DBH <- data.frame(ncol=5, nrow=length(1950:2010))
-dim(DBH)
-?data.frame
-length(1950:2010)
-DBH <- data.frame(x=length(1950:2010), y=5)
-dim(DBH)
-DBH
-DBH <- data.frame(x=length(1950:2010), y=5, NA)
-dim(DBH)
-DBH <- vector(length=length(1950:2010))
-dim(DBH)
 length(DBH)
 DBH <- data.frame(DBH)
 summary(DBH)
@@ -573,3 +560,23 @@ library(rhdf5)
 ?H5Fclose
 ?h5createFile
 ?h5ls
+sites <- c("PHA", "PHO", "PUN", "PBL", "PDL", "PMB")#
+site.lat <- c(42.5, 45.5, 46.5, 46.5, 47.5, 43.5)#
+site.lon <- c(-72.5, -68.5, -89.5, -94.5, -95.5, -82.5)#
+#
+#Setup analysis file structure#
+base  <- "/projectnb/dietzelab/paleon/ED_runs/phase1a_spininitial.v2/"#
+out   <- "/projectnb/dietzelab/paleon/ED_runs/SAS_spinup/phase1a_spinup.v2/"
+blckyr <- 15 #number of years to chunk data by#
+nsteps <- (2000-1850)/blckyr # The number of blocks = the number steps we'll have
+disturb <- 0.015 # the treefall disturbance rate you will prescribe in the actual runs (or close to it)
+nsteps
+blckyr
+y=1850
+y%%blckyr
+y=1855
+y%%blckyr
+y%%blckyr == 0
+y=1850
+y%%blckyr == 0
+floor((y-yeara)/blckyr)+1
