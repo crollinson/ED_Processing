@@ -26,7 +26,7 @@ do
     cp ${cpdir}$SITE/ED2IN ${outdir}/$SITE/
     cp ${cpdir}$SITE/paleon_ed2_geo.sh ${outdir}/$SITE/
     cp ${cpdir}$SITE/PL_MET_HEADER ${outdir}/$SITE/
-    cp ${cpdir}$SITE/PalEON_PecanPFT.xml ${outdir}/$SITE/
+    cp ${cpdir}$SITE/PalEON_Phase1a.v2.xml ${outdir}/$SITE/
     mkdir ${outdir}$SITE/histo
     mkdir ${outdir}$SITE/analy
     

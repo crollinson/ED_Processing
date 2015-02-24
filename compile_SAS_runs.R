@@ -48,7 +48,7 @@ out   <- "/projectnb/dietzelab/paleon/ED_runs/SAS_spinup/phase1a_spinup.v2/"
 blckyr <- 10 #number of years to chunk data by
 nsteps <- (2000-1850)/blckyr # The number of blocks = the number steps we'll have
 niter <- length(list.dirs(paste(base,sites[1],"/",sep=""),recursive=FALSE)) #iterations/site 
-disturb <- 0.01 # the treefall disturbance rate you will prescribe in the actual runs (or close to it)
+disturb <- 0.015 # the treefall disturbance rate you will prescribe in the actual runs (or close to it)
 
 pft   <- c(5,6,8,9,10,11) #set of PFTs used in analysis
 dpm <- c(31,28,31,30,31,30,31,31,30,31,30,31) # days per month
