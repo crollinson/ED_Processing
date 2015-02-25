@@ -322,7 +322,7 @@
       <D0>
                  0.0099999998      </D0>
       <dark_respiration_factor>
-                 0.0199999996      </dark_respiration_factor>
+                 0.03		       </dark_respiration_factor>
       <leaf_width>
                  0.0500000007      </leaf_width>
       <photosyn_pathway>
@@ -334,7 +334,7 @@
       <Vm_low_temp>
                  4.7136998177      </Vm_low_temp>
       <Vm0>
-                 45				   </Vm0>	<!-- Pecan -->
+                 60				   </Vm0>	<!-- Pecan -->
       <water_conductance>
                  0.0047599999      </water_conductance>
 
@@ -448,7 +448,7 @@
       <D0>
                  0.0099999998      </D0>
       <dark_respiration_factor>
-                 0.01913	       </dark_respiration_factor> <!-- Pecan -->
+                 0.03		       </dark_respiration_factor> <!-- Pecan -->
       <leaf_width>
                  0.0500000007      </leaf_width>
       <photosyn_pathway>
@@ -460,7 +460,7 @@
       <Vm_low_temp>
                  4.7136998177      </Vm_low_temp>
       <Vm0>
-                45.0		       </Vm0> <!-- Modified -->
+                50.0		       </Vm0> <!-- Modified -->
       <water_conductance>
                  0.0049651670      </water_conductance>
 
@@ -717,7 +717,7 @@
       <Vm_low_temp>
                  4.7136998177      </Vm_low_temp>
       <Vm0>
-                55.0	           </Vm0> <!-- Modified -->
+                65.0	           </Vm0> <!-- Modified -->
       <water_conductance>
                  0.0047390494      </water_conductance>
 
