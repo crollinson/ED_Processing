@@ -1342,9 +1342,9 @@ $ED_NL
    !  UGBMIN -- minimum wind speed at the leaf level                                [ m/s] !
    !  USTMIN -- minimum friction velocity, u*, in m/s.                              [ m/s] !
    !---------------------------------------------------------------------------------------!
-   NL%UBMIN          = 0.65
-   NL%UGBMIN         = 0.25
-   NL%USTMIN         = 0.05
+   NL%UBMIN          = 1.0
+   NL%UGBMIN         = 0.5
+   NL%USTMIN         = 0.1
    !---------------------------------------------------------------------------------------!
 
 
