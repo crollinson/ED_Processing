@@ -45,7 +45,7 @@ base  <- "/projectnb/dietzelab/paleon/ED_runs/phase1a_spininitial.v2/"
 out   <- "/projectnb/dietzelab/paleon/ED_runs/SAS_spinup/phase1a_spinup.v2/"
 
 # Steps used to describe the steady state
-blckyr <- 10 #number of years to chunk data by
+blckyr <- 20 #number of years to chunk data by
 nsteps <- (2000-1850)/blckyr # The number of blocks = the number steps we'll have
 niter <- length(list.dirs(paste(base,sites[1],"/",sep=""),recursive=FALSE)) #iterations/site 
 disturb <- 0.015 # the treefall disturbance rate you will prescribe in the actual runs (or close to it)
@@ -272,18 +272,18 @@ fsc_in_m <- ssc_in_m <- ssl_in_m <- fsn_in_m <- pln_up_m <-  vector()
 #  ssl_ss <- median(ssl_in_y)/(ssl_loss * A_decomp * Lc)
 #  fsn_ss <- median(fsn_in_y)/(fsc_loss * A_decomp)
 
-  fsc_ss <- fsc_in_y[11]/(fsc_loss * A_decomp)
-  ssc_ss <- ssc_in_y[11]/(ssc_loss * A_decomp)
-  ssl_ss <- ssl_in_y[11]/(ssl_loss * A_decomp * Lc)
-  fsn_ss <- fsn_in_y[11]/(fsc_loss * A_decomp)
+  fsc_ss <- fsc_in_y[length(fsc_in_y)]/(fsc_loss * A_decomp)
+  ssc_ss <- ssc_in_y[length(ssc_in_y)]/(ssc_loss * A_decomp)
+  ssl_ss <- ssl_in_y[length(ssl_in_y)]/(ssl_loss * A_decomp * Lc)
+  fsn_ss <- fsn_in_y[length(fsn_in_y)]/(fsc_loss * A_decomp)
   
   #fast_N_loss + slow_C_loss
-  msn_med  <- fsc_loss*A_decomp*fsn_in_y[11]+ (ssc_loss * A_decomp)/c2n_slow 
+  msn_med  <- fsc_loss*A_decomp*fsn_in_y[length(fsn_in_y)]+ (ssc_loss * A_decomp)/c2n_slow 
   
   #ED2: csite%mineralized_N_loss  = csite%total_plant_nitrogen_uptake(ipa)             
   # + csite%today_Af_decomp(ipa) * Lc * K1 * csite%structural_soil_C(ipa)                     
   # * ( (1.0 - r_stsc) / c2n_slow - 1.0 / c2n_structural)
-  msn_loss <- pln_up_y[11] + A_decomp*Lc*ssl_loss*ssl_in_y[11]*
+  msn_loss <- pln_up_y[length(pln_up_y)] + A_decomp*Lc*ssl_loss*ssl_in_y[length(ssl_in_y)]*
     ((1.0-r_stsc)/c2n_slow - 1.0/c2n_structural)
   
   msn_ss   <- msn_med/msn_loss
