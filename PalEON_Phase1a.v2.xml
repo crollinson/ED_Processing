@@ -208,7 +208,7 @@
       <Vm_low_temp>
                  4.7136998177      </Vm_low_temp>
       <Vm0>
-                36      		   </Vm0>	<!-- Pecan -->
+                35      		   </Vm0>	<!-- Pecan -->
       <water_conductance>
                  0.0047599999      </water_conductance>
 
@@ -299,7 +299,7 @@
       <mort1>
                  1.0000000000      </mort1>
       <mort2>
-                20.0000000000      </mort2>
+                20.0000000000      </mort2> 
       <mort3>
                  0.0023568000      </mort3>
       <plant_min_temp>
@@ -322,7 +322,7 @@
       <D0>
                  0.0099999998      </D0>
       <dark_respiration_factor>
-                 0.03		       </dark_respiration_factor>
+                 0.015		       </dark_respiration_factor>
       <leaf_width>
                  0.0500000007      </leaf_width>
       <photosyn_pathway>
@@ -553,7 +553,7 @@
       <mort1>
                  1.0000000000      </mort1>
       <mort2>
-                 20.0000000000      </mort2>
+                 20.0000000000      </mort2> 
       <mort3>
                  0.0038079999      </mort3>
       <plant_min_temp>
@@ -683,7 +683,7 @@
       <mort1>
                  1.0000000000      </mort1>
       <mort2>
-                19.7858428955      </mort2>
+                20.0000000000      </mort2> 
       <mort3>
                  0.0042800000      </mort3>
       <plant_min_temp>
