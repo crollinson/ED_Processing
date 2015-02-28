@@ -5,8 +5,9 @@
       <num>       		5      </num>
       <include_pft_ag>  1      </include_pft_ag>
       <include_pft>     1      </include_pft>
+<!-- 
 
-	  <!-- Allocation Params -->	
+	  <!~~ Allocation Params ~~>	
       <b1Bl>
                  0.0799999982      </b1Bl>
       <b2Bl>
@@ -30,21 +31,21 @@
       <SLA>
                 22.0000000000      </SLA>
 
-	  <!-- Derived Params -->	
+	  <!~~ Derived Params ~~>	
       <c2n_recruit>
                 18.3132781982      </c2n_recruit>
 
-	  <!-- Leaf Params -->	
-<!-- 
+	  <!~~ Leaf Params ~~>	
+<!~~ 
       <phenology>
                    2      			</phenology>
- -->
+ ~~>
 
-	  <!-- Mortality Params -->	
+	  <!~~ Mortality Params ~~>	
       <mort1>
                  1.0000000000      </mort1>
       <mort2>
-                20.0000000000      </mort2>
+                10.0000000000      </mort2>
       <mort3>
                  0.0659999996      </mort3>
       <plant_min_temp>
@@ -56,11 +57,11 @@
       <treefall_lt>
                  0.2500000000      </treefall_lt>
 
-	  <!-- Nitrogen Params -->	
+	  <!~~ Nitrogen Params ~~>	
       <c2n_leaf>
                 18.3122673035      </c2n_leaf>
 
-	  <!-- Photosynthesis Params -->	
+	  <!~~ Photosynthesis Params ~~>	
       <cuticular_cond>
              	 10000.0000000000      </cuticular_cond>
       <D0>
@@ -82,7 +83,7 @@
       <water_conductance>
                  0.0047599999      </water_conductance>
                  
-	  <!-- Radiation Params -->	
+	  <!~~ Radiation Params ~~>	
       <clumping>
                  0.83999999999999996891      </clumping>
       <diffuse_backscatter_vis>
@@ -92,7 +93,7 @@
       <leaf_scatter_vis>
                  0.2699999809      </leaf_scatter_vis>
 
-	  <!-- Reproduction Params -->	
+	  <!~~ Reproduction Params ~~>	
       <nonlocal_dispersal>
                  1.0000000000      </nonlocal_dispersal>
       <r_fract>
@@ -102,7 +103,7 @@
       <seed_rain>
                  0.001      </seed_rain>
 
-	  <!-- Respiration Params -->	
+	  <!~~ Respiration Params ~~>	
       <f_labile>
                  1.0000000000      </f_labile>
       <growth_resp_factor>
@@ -117,9 +118,10 @@
                  0.0000000000      </storage_turnover_rate>
 
 
-	  <!-- ??? Params -->	
+	  <!~~ ??? Params ~~>	
       <max_dbh>
                  0.3979999959      </max_dbh>
+ -->
    </pft>
   
 
@@ -172,7 +174,7 @@
       <mort1>
                  1.0000000000      </mort1>
       <mort2>
-                20.0000000000      </mort2>
+                10.0000000000      </mort2>
       <mort3>
                  0.0033928000      </mort3>
       <plant_min_temp>
@@ -244,9 +246,9 @@
       <leaf_turnover_rate>
                  0.3330000043      </leaf_turnover_rate>
       <root_respiration_factor>
-                 3.0      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
+                 0.5      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
       <root_turnover_rate>
-                 0.8			   </root_turnover_rate> <!-- Modified, per Luke McC -->
+                 1.2			   </root_turnover_rate> <!-- Modified, per Luke McC -->
       <storage_turnover_rate>
                  0.0000000000      </storage_turnover_rate>
 
@@ -299,7 +301,7 @@
       <mort1>
                  1.0000000000      </mort1>
       <mort2>
-                20.0000000000      </mort2> 
+                10.0000000000      </mort2> 
       <mort3>
                  0.0023568000      </mort3>
       <plant_min_temp>
@@ -334,7 +336,7 @@
       <Vm_low_temp>
                  4.7136998177      </Vm_low_temp>
       <Vm0>
-                 60				   </Vm0>	<!-- Pecan -->
+                 50				   </Vm0>	<!-- Pecan -->
       <water_conductance>
                  0.0047599999      </water_conductance>
 
@@ -368,9 +370,9 @@
       <leaf_turnover_rate>
                  0.3330000043      </leaf_turnover_rate>
       <root_respiration_factor>
-                 3.0      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
+                 0.5      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
       <root_turnover_rate>
-                 0.8			   </root_turnover_rate> <!-- Modified, per Luke McC -->
+                 1.2			   </root_turnover_rate> <!-- Modified, per Luke McC -->
       <storage_turnover_rate>
                  0.0000000000      </storage_turnover_rate>
 
@@ -424,7 +426,7 @@
       <mort1>
                  1.0000000000      </mort1>
       <mort2>
-                 20.000000000      </mort2>
+                 10.000000000      </mort2>
       <mort3>
                  0.0061440002      </mort3>
       <plant_min_temp>
@@ -496,9 +498,9 @@
       <leaf_turnover_rate>
                  0.0000000000      </leaf_turnover_rate>
       <root_respiration_factor>
-                 3.0      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
+                 0.5      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
       <root_turnover_rate>
-                 0.8			   </root_turnover_rate> <!-- Modified, per Luke McC -->
+                 1.2			   </root_turnover_rate> <!-- Modified, per Luke McC -->
       <storage_turnover_rate>
                  0.0000000000      </storage_turnover_rate>
 
@@ -553,7 +555,7 @@
       <mort1>
                  1.0000000000      </mort1>
       <mort2>
-                 20.0000000000      </mort2> 
+                 10.0000000000      </mort2> 
       <mort3>
                  0.0038079999      </mort3>
       <plant_min_temp>
@@ -625,9 +627,9 @@
       <leaf_turnover_rate>
                  0.0000000000      </leaf_turnover_rate>
       <root_respiration_factor>
-                 3.0      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
+                 0.5      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
       <root_turnover_rate>
-                 0.8			   </root_turnover_rate> <!-- Modified, per Luke McC -->
+                 1.2			   </root_turnover_rate> <!-- Modified, per Luke McC -->
       <storage_turnover_rate>
                  0.0000000000      </storage_turnover_rate>
 
@@ -683,7 +685,7 @@
       <mort1>
                  1.0000000000      </mort1>
       <mort2>
-                20.0000000000      </mort2> 
+                10.0000000000      </mort2> 
       <mort3>
                  0.0042800000      </mort3>
       <plant_min_temp>
@@ -753,9 +755,9 @@
       <leaf_turnover_rate>
                  0.0000000000      </leaf_turnover_rate>
       <root_respiration_factor>
-                 3.0      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
+                 0.5      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
       <root_turnover_rate>
-                 0.8			   </root_turnover_rate> <!-- Modified, per Luke McC -->
+                 1.2			   </root_turnover_rate> <!-- Modified, per Luke McC -->
       <storage_turnover_rate>
                  0.0000000000      </storage_turnover_rate>
 
