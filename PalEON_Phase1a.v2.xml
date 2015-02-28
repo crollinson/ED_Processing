@@ -174,7 +174,7 @@
       <mort1>
                  1.0000000000      </mort1>
       <mort2>
-                10.0000000000      </mort2>
+                20.0000000000      </mort2>
       <mort3>
                  0.0033928000      </mort3>
       <plant_min_temp>
@@ -248,7 +248,7 @@
       <root_respiration_factor>
                  0.5      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
       <root_turnover_rate>
-                 1.2			   </root_turnover_rate> <!-- Modified, per Luke McC -->
+                 0.9			   </root_turnover_rate> <!-- Modified, per Luke McC -->
       <storage_turnover_rate>
                  0.0000000000      </storage_turnover_rate>
 
@@ -301,7 +301,7 @@
       <mort1>
                  1.0000000000      </mort1>
       <mort2>
-                10.0000000000      </mort2> 
+                20.0000000000      </mort2> 
       <mort3>
                  0.0023568000      </mort3>
       <plant_min_temp>
@@ -372,7 +372,7 @@
       <root_respiration_factor>
                  0.5      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
       <root_turnover_rate>
-                 1.2			   </root_turnover_rate> <!-- Modified, per Luke McC -->
+                 0.9			   </root_turnover_rate> <!-- Modified, per Luke McC -->
       <storage_turnover_rate>
                  0.0000000000      </storage_turnover_rate>
 
@@ -426,7 +426,7 @@
       <mort1>
                  1.0000000000      </mort1>
       <mort2>
-                 10.000000000      </mort2>
+                 20.000000000      </mort2>
       <mort3>
                  0.0061440002      </mort3>
       <plant_min_temp>
@@ -500,7 +500,7 @@
       <root_respiration_factor>
                  0.5      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
       <root_turnover_rate>
-                 1.2			   </root_turnover_rate> <!-- Modified, per Luke McC -->
+                 0.9			   </root_turnover_rate> <!-- Modified, per Luke McC -->
       <storage_turnover_rate>
                  0.0000000000      </storage_turnover_rate>
 
@@ -555,7 +555,7 @@
       <mort1>
                  1.0000000000      </mort1>
       <mort2>
-                 10.0000000000      </mort2> 
+                 20.0000000000      </mort2> 
       <mort3>
                  0.0038079999      </mort3>
       <plant_min_temp>
@@ -629,7 +629,7 @@
       <root_respiration_factor>
                  0.5      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
       <root_turnover_rate>
-                 1.2			   </root_turnover_rate> <!-- Modified, per Luke McC -->
+                 0.9			   </root_turnover_rate> <!-- Modified, per Luke McC -->
       <storage_turnover_rate>
                  0.0000000000      </storage_turnover_rate>
 
@@ -685,7 +685,7 @@
       <mort1>
                  1.0000000000      </mort1>
       <mort2>
-                10.0000000000      </mort2> 
+                20.0000000000      </mort2> 
       <mort3>
                  0.0042800000      </mort3>
       <plant_min_temp>
@@ -757,7 +757,7 @@
       <root_respiration_factor>
                  0.5      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
       <root_turnover_rate>
-                 1.2			   </root_turnover_rate> <!-- Modified, per Luke McC -->
+                 0.9			   </root_turnover_rate> <!-- Modified, per Luke McC -->
       <storage_turnover_rate>
                  0.0000000000      </storage_turnover_rate>
 
