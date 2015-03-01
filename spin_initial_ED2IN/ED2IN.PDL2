@@ -22,7 +22,7 @@ $ED_NL
    !            initial in the sense that exactly the same information written in the      !
    !            history will be used here.                                                 !
    !---------------------------------------------------------------------------------------!
-   NL%RUNTYPE  = 'INITIAL'
+   NL%RUNTYPE  = 'HISTORY'
    !---------------------------------------------------------------------------------------!
 
 
@@ -30,9 +30,9 @@ $ED_NL
    !---------------------------------------------------------------------------------------!
    !     Start of simulation. Information must be given in UTC time.                       !
    !---------------------------------------------------------------------------------------!
-   NL%IMONTHA  = 06
+   NL%IMONTHA  = 05
    NL%IDATEA   = 01
-   NL%IYEARA   = 1850
+   NL%IYEARA   = 1901
    NL%ITIMEA   = 0000
    !---------------------------------------------------------------------------------------!
 
@@ -235,7 +235,7 @@ $ED_NL
    !---------------------------------------------------------------------------------------!
    NL%IADD_SITE_MEANS   = 1
    NL%IADD_PATCH_MEANS  = 0
-   NL%IADD_COHORT_MEANS = 0
+   NL%IADD_COHORT_MEANS = 
    !---------------------------------------------------------------------------------------!
 
 
@@ -356,7 +356,7 @@ $ED_NL
    !
    !
    !---------------------------------------------------------------------------------------!
-   NL%IED_INIT_MODE   = 0
+   NL%IED_INIT_MODE   = 5
    !---------------------------------------------------------------------------------------!
 
 
@@ -383,7 +383,8 @@ $ED_NL
    !              path+prefix will be used, as the history for every grid must have come   !
    !              from the same simulation.                                                !
    !---------------------------------------------------------------------------------------!
-   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/SAS_spinup/phase1a_spinup.v2/PDLspin'
+!  NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/SAS_spinup/phase1a_spinup.v2/PDLspin'
+   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spininitial.v2/PDL/histo/PDLspin'
    !---------------------------------------------------------------------------------------!
 
 
@@ -398,10 +399,10 @@ $ED_NL
    ! IYEARH     want to extend the run, but yo should NOT change IMONTHA and related.      !
    ! ITIMEH                                                                                !
    !---------------------------------------------------------------------------------------!
-!   NL%ITIMEH   = 0000   ! UTC
-!   NL%IDATEH   = 01     ! Day
-!   NL%IMONTHH  = 07     ! Month
-!   NL%IYEARH   = 1855   ! Year
+   NL%ITIMEH   = 0000   ! UTC
+   NL%IDATEH   = 01     ! Day
+   NL%IMONTHH  = 05     ! Month
+   NL%IYEARH   = 1901   ! Year
    !---------------------------------------------------------------------------------------!
 
 
@@ -1341,9 +1342,9 @@ $ED_NL
    !  UGBMIN -- minimum wind speed at the leaf level                                [ m/s] !
    !  USTMIN -- minimum friction velocity, u*, in m/s.                              [ m/s] !
    !---------------------------------------------------------------------------------------!
-   NL%UBMIN          = 1.0
-   NL%UGBMIN         = 0.5
-   NL%USTMIN         = 0.1
+   NL%UBMIN          = 0.65
+   NL%UGBMIN         = 0.25
+   NL%USTMIN         = 0.05
    !---------------------------------------------------------------------------------------!
 
 
