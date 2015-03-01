@@ -158,7 +158,7 @@
       <rho>
                  0.0000000000      </rho>
       <SLA>
-                 11.72458	       </SLA> <!-- Pecan -->
+                 8.0		       </SLA> <!-- Modified -->
 
 	  <!-- Derived Params -->	
 <!-- 
@@ -194,11 +194,13 @@
 
 	  <!-- Photosynthesis Params -->	
       <cuticular_cond>
-              5000.0000000000      </cuticular_cond>
+              2000.0000000000      </cuticular_cond>
+<!-- 
       <D0>
                  0.0099999998      </D0>
       <dark_respiration_factor>
                  0.0199999996      </dark_respiration_factor>
+ -->
       <leaf_width>
                  0.0500000007      </leaf_width>
       <photosyn_pathway>
@@ -212,7 +214,7 @@
       <Vm0>
                 35      		   </Vm0>	<!-- Pecan -->
       <water_conductance>
-                 0.0047599999      </water_conductance>
+                 0.0001		       </water_conductance>
 
 	  <!-- Radiation Params -->	
       <clumping>
@@ -248,7 +250,7 @@
       <root_respiration_factor>
                  0.5      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
       <root_turnover_rate>
-                 0.9			   </root_turnover_rate> <!-- Modified, per Luke McC -->
+                 1.2			   </root_turnover_rate> <!-- Modified, per Luke McC -->
       <storage_turnover_rate>
                  0.0000000000      </storage_turnover_rate>
 
@@ -320,11 +322,13 @@
 
 	  <!-- Photosynthesis Params -->	
       <cuticular_cond>
-              5000.0000000000      </cuticular_cond>
+              2000.0000000000      </cuticular_cond>
+<!-- 
       <D0>
                  0.0099999998      </D0>
       <dark_respiration_factor>
                  0.015		       </dark_respiration_factor>
+ -->
       <leaf_width>
                  0.0500000007      </leaf_width>
       <photosyn_pathway>
@@ -338,7 +342,7 @@
       <Vm0>
                  50				   </Vm0>	<!-- Pecan -->
       <water_conductance>
-                 0.0047599999      </water_conductance>
+                 0.0001		       </water_conductance>
 
 	  <!-- Radiation Params -->	
       <clumping>
@@ -372,7 +376,7 @@
       <root_respiration_factor>
                  0.5      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
       <root_turnover_rate>
-                 0.9			   </root_turnover_rate> <!-- Modified, per Luke McC -->
+                 1.2			   </root_turnover_rate> <!-- Modified, per Luke McC -->
       <storage_turnover_rate>
                  0.0000000000      </storage_turnover_rate>
 
@@ -447,10 +451,12 @@
 	  <!-- Photosynthesis Params -->	
       <cuticular_cond>
              20000.0000000000      </cuticular_cond> 
+<!-- 
       <D0>
                  0.0099999998      </D0>
       <dark_respiration_factor>
-                 0.03		       </dark_respiration_factor> <!-- Pecan -->
+                 0.03		       </dark_respiration_factor> <!~~ Pecan ~~>
+ -->
       <leaf_width>
                  0.0500000007      </leaf_width>
       <photosyn_pathway>
@@ -464,7 +470,7 @@
       <Vm0>
                 50.0		       </Vm0> <!-- Modified -->
       <water_conductance>
-                 0.0049651670      </water_conductance>
+                 0.0001		       </water_conductance>
 
 	  <!-- Radiation Params -->	
       <clumping>
@@ -500,7 +506,7 @@
       <root_respiration_factor>
                  0.5      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
       <root_turnover_rate>
-                 0.9			   </root_turnover_rate> <!-- Modified, per Luke McC -->
+                 1.2			   </root_turnover_rate> <!-- Modified, per Luke McC -->
       <storage_turnover_rate>
                  0.0000000000      </storage_turnover_rate>
 
@@ -576,10 +582,12 @@
 	  <!-- Photosynthesis Params -->	
       <cuticular_cond>
              20000.0000000000      </cuticular_cond> 
+<!-- 
       <D0>
                  0.0099999998      </D0>
       <dark_respiration_factor>
                  0.0120350653      </dark_respiration_factor>
+ -->
       <leaf_width>
                  0.0500000007      </leaf_width>
       <quantum_efficiency>
@@ -593,7 +601,7 @@
       <Vm0>
                 40.0		       </Vm0> <!-- Modified; more competitive with other hardwoods -->
       <water_conductance>
-                 0.0046734586      </water_conductance>
+                 0.0001		       </water_conductance>
 
 	  <!-- Radiation Params -->	
       <clumping>
@@ -629,7 +637,7 @@
       <root_respiration_factor>
                  0.5      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
       <root_turnover_rate>
-                 0.9			   </root_turnover_rate> <!-- Modified, per Luke McC -->
+                 1.2			   </root_turnover_rate> <!-- Modified, per Luke McC -->
       <storage_turnover_rate>
                  0.0000000000      </storage_turnover_rate>
 
@@ -704,10 +712,12 @@
 	  <!-- Photosynthesis Params -->	
       <cuticular_cond>
              20000.0000000000      </cuticular_cond> 
+<!-- 
       <dark_respiration_factor>
                  0.0359999985      </dark_respiration_factor>
       <D0>
                  0.0099999998      </D0>
+ -->
       <leaf_width>
                  0.0500000007      </leaf_width>
       <photosyn_pathway>
@@ -721,7 +731,7 @@
       <Vm0>
                 65.0	           </Vm0> <!-- Modified -->
       <water_conductance>
-                 0.0047390494      </water_conductance>
+                 0.0001		       </water_conductance>
 
 	  <!-- Radiation Params -->	
       <clumping>
@@ -757,7 +767,7 @@
       <root_respiration_factor>
                  0.5      		   </root_respiration_factor> <!-- Modified, per Luke McC -->
       <root_turnover_rate>
-                 0.9			   </root_turnover_rate> <!-- Modified, per Luke McC -->
+                 1.2			   </root_turnover_rate> <!-- Modified, per Luke McC -->
       <storage_turnover_rate>
                  0.0000000000      </storage_turnover_rate>
 
