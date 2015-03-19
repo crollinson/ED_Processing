@@ -30,9 +30,9 @@ $ED_NL
    !---------------------------------------------------------------------------------------!
    !     Start of simulation. Information must be given in UTC time.                       !
    !---------------------------------------------------------------------------------------!
-   NL%IMONTHA  = 01
+   NL%IMONTHA  = 05
    NL%IDATEA   = 01
-   NL%IYEARA   = 1850
+   NL%IYEARA   = 1861
    NL%ITIMEA   = 0000
    !---------------------------------------------------------------------------------------!
 
@@ -43,7 +43,7 @@ $ED_NL
    !---------------------------------------------------------------------------------------!
    NL%IMONTHZ  = 01    ! Month
    NL%IDATEZ   = 01    ! Day
-   NL%IYEARZ   = 3011  ! Year
+   NL%IYEARZ   = 2000  ! Year
    NL%ITIMEZ   = 0000  ! UTC
    !---------------------------------------------------------------------------------------!
 
@@ -158,8 +158,8 @@ $ED_NL
    !            soil types                                                                 !
    !---------------------------------------------------------------------------------------!
     NL%N_POI    =    1
-    NL%POI_LAT  =  46.28
-    NL%POI_LON  = -94.58
+    NL%POI_LAT  =  43.61
+    NL%POI_LON  = -82.83
     NL%POI_RES  = 1.00   
    !---------------------------------------------------------------------------------------!
 
@@ -303,8 +303,8 @@ $ED_NL
    ! FFILOUT -- Path and prefix for analysis files (all but history/restart).              !
    ! SFILOUT -- Path and prefix for history files.                                         !
    !---------------------------------------------------------------------------------------!
-   NL%FFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/PBL/analy/PBL'
-   NL%SFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/PBL/histo/PBL'
+   NL%FFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.v2/PMB/analy/PMBspin'
+   NL%SFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.v2/PMB/histo/PMBspin'
    !---------------------------------------------------------------------------------------!
 
 
@@ -383,7 +383,8 @@ $ED_NL
    !              path+prefix will be used, as the history for every grid must have come   !
    !              from the same simulation.                                                !
    !---------------------------------------------------------------------------------------!
-   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/PBL/histo/PBLspin'
+!   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/SAS_spinup/phase1a_spinup.v2/PMBspin'
+   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.v2/PMB/histo/PMBspin'
    !---------------------------------------------------------------------------------------!
 
 
@@ -400,8 +401,8 @@ $ED_NL
    !---------------------------------------------------------------------------------------!
    NL%ITIMEH   = 0000   ! UTC
    NL%IDATEH   = 01     ! Day
-   NL%IMONTHH  = 01     ! Month
-   NL%IYEARH   = 1850   ! Year
+   NL%IMONTHH  = 05     ! Month
+   NL%IYEARH   = 1861   ! Year
    !---------------------------------------------------------------------------------------!
 
 
@@ -445,7 +446,7 @@ $ED_NL
    !   5 -- loam                |  11 -- clay                |  17 -- clayey silt          !
    !   6 -- sandy clay loam     |  12 -- peat                                              !
    !---------------------------------------------------------------------------------------!
-   NL%NSLCON   = 4      ! Default soil type if ISOILFLG = 2 (choices below:)
+   NL%NSLCON   = 5      ! Default soil type if ISOILFLG = 2 (choices below:)
    !---------------------------------------------------------------------------------------!
 
 
@@ -493,8 +494,8 @@ $ED_NL
    !     They are used only when ISOILFLG is 2, both values are between 0. and 1., and     !
    ! theira sum doesn't exceed 1.  Otherwise standard ED values will be used instead.      !
    !---------------------------------------------------------------------------------------!
-   NL%SLXCLAY = 0.11
-   NL%SLXSAND = 0.35
+   NL%SLXCLAY = 0.21
+   NL%SLXSAND = 0.40
    !---------------------------------------------------------------------------------------!
 
 
@@ -548,7 +549,7 @@ $ED_NL
    NL%LU_DATABASE      = '/projectnb/dietzelab/EDI/ed_inputs/glu/glu-'
    NL%PLANTATION_FILE  = ''
    NL%THSUMS_DATABASE  = '/projectnb/dietzelab/EDI/ed_inputs/'
-   NL%ED_MET_DRIVER_DB = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/PBL/PL_MET_HEADER'
+   NL%ED_MET_DRIVER_DB = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.v2/PMB/PL_MET_HEADER'
    NL%SOILSTATE_DB     = '/projectnb/dietzelab/EDI/ed_inputs/STW1996OCT.dat'
    NL%SOILDEPTH_DB     = '/projectnb/dietzelab/EDI/ed_inputs/soil_depths.dat'
    !---------------------------------------------------------------------------------------!
@@ -1111,8 +1112,8 @@ $ED_NL
    !                   past 12 months, to trigger fires.                                   !
    !---------------------------------------------------------------------------------------!
    NL%INCLUDE_FIRE    = 2
-   NL%FIRE_PARAMETER  = 0.33 ! There is No actual Fuel Threshold, so the default makes WAY too much fire
-   NL%SM_FIRE         = 0.02 ! Also lowering the Prevention threshold
+   NL%FIRE_PARAMETER  = 0.10 ! There is No actual Fuel Threshold, so the default makes WAY too much fire
+   NL%SM_FIRE         = 0.01 ! Also lowering the Prevention threshold
    !---------------------------------------------------------------------------------------!
 
 
@@ -1359,7 +1360,7 @@ $ED_NL
    !---------------------------------------------------------------------------------------!
    NL%UBMIN          = 1.0
    NL%UGBMIN         = 0.5
-   NL%USTMIN         = 0.1
+   NL%USTMIN         = 0.25
    !---------------------------------------------------------------------------------------!
 
 
