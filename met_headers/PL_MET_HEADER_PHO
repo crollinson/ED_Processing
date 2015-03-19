@@ -1,42 +1,42 @@
 # See README is at the bottom of this file.
 8
-/projectnb/dietzelab/paleon/ED_runs/met_drivers/phase1a_met/bias_corr_v3/PHO/dlwrf/PHO_dlwrf_
+/projectnb/dietzelab/paleon/ED_runs/met_drivers/phase1a_met/met_v4.2/PHO/dlwrf/PHO_dlwrf_
 1 1 1.0 1.0 -68.75 45.25
 5
 'dlwrf' 'hgt' 'vddsf' 'nbdsf' 'nddsf'
 21600. 30. 0. 0. 0.
 1 4 4 4 4
-/projectnb/dietzelab/paleon/ED_runs/met_drivers/phase1a_met/bias_corr_v3/PHO/prate/PHO_prate_
+/projectnb/dietzelab/paleon/ED_runs/met_drivers/phase1a_met/met_v4.2/PHO/prate/PHO_prate_
 1 1 1.0 1.0 -68.75 45.25
 1
 'prate'
 21600.
 1
-/projectnb/dietzelab/paleon/ED_runs/met_drivers/phase1a_met/bias_corr_v3/PHO/pres/PHO_pres_
+/projectnb/dietzelab/paleon/ED_runs/met_drivers/phase1a_met/met_v4.2/PHO/pres/PHO_pres_
 1 1 1.0 1.0 -68.75 45.25
 1
 'pres'
 21600.
 1
-/projectnb/dietzelab/paleon/ED_runs/met_drivers/phase1a_met/bias_corr_v3/PHO/sh/PHO_sh_
+/projectnb/dietzelab/paleon/ED_runs/met_drivers/phase1a_met/met_v4.2/PHO/sh/PHO_sh_
 1 1 1.0 1.0 -68.75 45.25
 1
 'sh'
 21600.
 1
-/projectnb/dietzelab/paleon/ED_runs/met_drivers/phase1a_met/bias_corr_v3/PHO/vbdsf/PHO_vbdsf_
+/projectnb/dietzelab/paleon/ED_runs/met_drivers/phase1a_met/met_v4.2/PHO/vbdsf/PHO_vbdsf_
 1 1 1.0 1.0 -68.75 45.25
 1
 'vbdsf'
 21600.
 1
-/projectnb/dietzelab/paleon/ED_runs/met_drivers/phase1a_met/bias_corr_v3/PHO/tmp/PHO_tmp_
+/projectnb/dietzelab/paleon/ED_runs/met_drivers/phase1a_met/met_v4.2/PHO/tmp/PHO_tmp_
 1 1 1.0 1.0 -68.75 45.25
 1
 'tmp'
 21600.
 1
-/projectnb/dietzelab/paleon/ED_runs/met_drivers/phase1a_met/bias_corr_v3/PHO/ugrd/PHO_ugrd_
+/projectnb/dietzelab/paleon/ED_runs/met_drivers/phase1a_met/met_v4.2/PHO/ugrd/PHO_ugrd_
 1 1 1.0 1.0 -68.75 45.25
 1
 'ugrd'

@@ -19,14 +19,18 @@ library(ncdf4)
 library(rhdf5)
 library(abind)
 
-in.path  <- "/projectnb/dietzelab/paleon/met_regional/phase1a_met_drivers_v4.1/"
-out.path <- "/projectnb/dietzelab/paleon/ED_runs/met_drivers/phase1a_met/met_v4.1/"
+in.path  <- "/projectnb/dietzelab/paleon/met_regional/phase1a_met_drivers_v4.2/"
+out.path <- "/projectnb/dietzelab/paleon/ED_runs/met_drivers/phase1a_met/met_v4.2/"
 dir.create(file.path(out.path), showWarnings = FALSE)
 
-sites <- c("PBL","PDL","PHA","PHO","PMB","PUN")
+sites <- c("PHA",	"PHO",	"PUN", 	"PBL", 	"PDL", 	"PMB")
+lat   <- c(42.54, 	45.25, 	46.22, 	46.28, 	47.17, 	43.61)
+lon 	  <- c(-72.18,	-68.73,	-89.53	-94.58,	-95.17,	-82.83)
 orig.vars <- c("lwdown","precipf","psurf","qair","swdown","tair","wind")
 ed2.vars  <- c("dlwrf","prate","pres","sh","vbdsf","tmp","ugrd")
 month.txt <- c("JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC")
+
+
 
 for(s in 1:length(sites)){
   in.dir  <- paste(in.path,sites[s],"/",sep="")
@@ -47,8 +51,8 @@ for(s in 1:length(sites)){
       nc.file <- nc_open(paste(var.path,in.files[f],sep=""))
       var     <- ncvar_get(nc.file,orig.vars[v])
       time    <- ncvar_get(nc.file,"time")
-      lat     <- ncvar_get(nc.file,"lat")
-      lon     <- ncvar_get(nc.file,"lon")
+      lat     <- lat[s]
+      lon     <- lon[s]
       nc_close(nc.file)
       
       var <- array(var,dim=c(length(var),1,1))                   
