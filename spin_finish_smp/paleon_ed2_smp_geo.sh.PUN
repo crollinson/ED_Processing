@@ -1,0 +1,12 @@
+#!/bin/sh
+#$ -wd /projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.smp/PUN
+#$ -j y 
+#$ -S /bin/bash         
+#$ -V 
+#$ -pe omp 8
+#$ -m e
+#$ -M crollinson@gmail.com
+#$ -l h_rt=48:00:00
+#$ -N PUNspinSMP
+#cd /projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.smp/PUN
+./ed_2.1-opt
