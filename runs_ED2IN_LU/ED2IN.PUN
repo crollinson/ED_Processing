@@ -158,8 +158,8 @@ $ED_NL
    !            soil types                                                                 !
    !---------------------------------------------------------------------------------------!
     NL%N_POI    =    1
-    NL%POI_LAT  =  47.17
-    NL%POI_LON  = -95.17
+    NL%POI_LAT  =  46.22
+    NL%POI_LON  = -89.53
     NL%POI_RES  = 1.00   
    !---------------------------------------------------------------------------------------!
 
@@ -303,8 +303,8 @@ $ED_NL
    ! FFILOUT -- Path and prefix for analysis files (all but history/restart).              !
    ! SFILOUT -- Path and prefix for history files.                                         !
    !---------------------------------------------------------------------------------------!
-   NL%FFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/PDL/analy/PDL'
-   NL%SFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/PDL/histo/PDL'
+   NL%FFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.lu/PUN/analy/PUN'
+   NL%SFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.lu/PUN/histo/PUN'
    !---------------------------------------------------------------------------------------!
 
 
@@ -383,7 +383,7 @@ $ED_NL
    !              path+prefix will be used, as the history for every grid must have come   !
    !              from the same simulation.                                                !
    !---------------------------------------------------------------------------------------!
-   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/PDL/histo/PDLspin'
+   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.lu/PUN/histo/PUNspin'
    !---------------------------------------------------------------------------------------!
 
 
@@ -445,7 +445,7 @@ $ED_NL
    !   5 -- loam                |  11 -- clay                |  17 -- clayey silt          !
    !   6 -- sandy clay loam     |  12 -- peat                                              !
    !---------------------------------------------------------------------------------------!
-   NL%NSLCON   = 4      ! Default soil type if ISOILFLG = 2 (choices below:)
+   NL%NSLCON   = 3      ! Default soil type if ISOILFLG = 2 (choices below:)
    !---------------------------------------------------------------------------------------!
 
 
@@ -493,8 +493,8 @@ $ED_NL
    !     They are used only when ISOILFLG is 2, both values are between 0. and 1., and     !
    ! theira sum doesn't exceed 1.  Otherwise standard ED values will be used instead.      !
    !---------------------------------------------------------------------------------------!
-   NL%SLXCLAY = 0.11
-   NL%SLXSAND = 0.35
+   NL%SLXCLAY = 0.04
+   NL%SLXSAND = 0.85
    !---------------------------------------------------------------------------------------!
 
 
@@ -548,7 +548,7 @@ $ED_NL
    NL%LU_DATABASE      = '/projectnb/dietzelab/EDI/ed_inputs/glu/glu-'
    NL%PLANTATION_FILE  = ''
    NL%THSUMS_DATABASE  = '/projectnb/dietzelab/EDI/ed_inputs/'
-   NL%ED_MET_DRIVER_DB = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/PDL/PL_MET_HEADER'
+   NL%ED_MET_DRIVER_DB = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.lu/PUN/PL_MET_HEADER'
    NL%SOILSTATE_DB     = '/projectnb/dietzelab/EDI/ed_inputs/STW1996OCT.dat'
    NL%SOILDEPTH_DB     = '/projectnb/dietzelab/EDI/ed_inputs/soil_depths.dat'
    !---------------------------------------------------------------------------------------!
@@ -1123,7 +1123,7 @@ $ED_NL
    !                   0.  no anthropogenic disturbance.                                   !
    !                   1.  use anthropogenic disturbance dataset.                          !
    !---------------------------------------------------------------------------------------!
-   NL%IANTH_DISTURB   = 0
+   NL%IANTH_DISTURB   = 1
    !---------------------------------------------------------------------------------------!
 
 
