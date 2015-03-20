@@ -384,6 +384,7 @@ $ED_NL
    !              from the same simulation.                                                !
    !---------------------------------------------------------------------------------------!
    NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/SAS_spinup/phase1a_spinup.v2/PBLspin'
+!   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.v2/PBL/histo/PBLspin'
    !---------------------------------------------------------------------------------------!
 
 
@@ -400,8 +401,8 @@ $ED_NL
    !---------------------------------------------------------------------------------------!
 !   NL%ITIMEH   = 0000   ! UTC
 !   NL%IDATEH   = 01     ! Day
-!   NL%IMONTHH  = 01     ! Month
-!   NL%IYEARH   = 1850   ! Year
+!   NL%IMONTHH  = 06     ! Month
+!   NL%IYEARH   = 1983   ! Year
    !---------------------------------------------------------------------------------------!
 
 
