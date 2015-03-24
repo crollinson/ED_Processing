@@ -60,8 +60,8 @@ $ED_NL
    ! RADFRQ -- Time step to integrate radiation, in seconds.  This must be an integer      !
    !            multiple of DTLSM, and we recommend it to be exactly the same as DTLSM.    !
    !---------------------------------------------------------------------------------------!
-   NL%DTLSM  =  900
-   NL%RADFRQ  = 900
+   NL%DTLSM  =  600
+   NL%RADFRQ  = 600
    !---------------------------------------------------------------------------------------!
 
 
@@ -828,7 +828,7 @@ $ED_NL
    !              1.  Dietze (2008) model.  Cohorts have a finite radius, and cohorts are  !
    !                  stacked on the top of each other.                                    !
    !---------------------------------------------------------------------------------------!
-   NL%CROWN_MOD       = 1
+   NL%CROWN_MOD       = 0
    !---------------------------------------------------------------------------------------!
 
 
@@ -865,7 +865,7 @@ $ED_NL
    !                 lim -> 0.  Black hole (0 itself is unacceptable)                      !
    !                        1.  Homogeneously spread over the layer (i.e., no clumping)    !
    !---------------------------------------------------------------------------------------!
-   NL%ICANRAD        =  0
+   NL%ICANRAD        =  1
    NL%LTRANS_VIS     =  0.050
    NL%LTRANS_NIR     =  0.270
    NL%LREFLECT_VIS   =  0.150
@@ -959,6 +959,7 @@ $ED_NL
    NL%CBR_SCHEME      = 0
    NL%DDMORT_CONST    = 0.9
    !---------------------------------------------------------------------------------------!
+
 
 
 

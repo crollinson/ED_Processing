@@ -32,7 +32,7 @@ $ED_NL
    !---------------------------------------------------------------------------------------!
    NL%IMONTHA  = 01
    NL%IDATEA   = 01
-   NL%IYEARA   = 1854
+   NL%IYEARA   = 2024
    NL%ITIMEA   = 0000
    !---------------------------------------------------------------------------------------!
 
@@ -43,7 +43,7 @@ $ED_NL
    !---------------------------------------------------------------------------------------!
    NL%IMONTHZ  = 01    ! Month
    NL%IDATEZ   = 01    ! Day
-   NL%IYEARZ   = 2001  ! Year
+   NL%IYEARZ   = 3011  ! Year
    NL%ITIMEZ   = 0000  ! UTC
    !---------------------------------------------------------------------------------------!
 
@@ -60,8 +60,8 @@ $ED_NL
    ! RADFRQ -- Time step to integrate radiation, in seconds.  This must be an integer      !
    !            multiple of DTLSM, and we recommend it to be exactly the same as DTLSM.    !
    !---------------------------------------------------------------------------------------!
-   NL%DTLSM  =  900
-   NL%RADFRQ  = 900
+   NL%DTLSM  =  450
+   NL%RADFRQ  = 450
    !---------------------------------------------------------------------------------------!
 
 
@@ -158,8 +158,8 @@ $ED_NL
    !            soil types                                                                 !
    !---------------------------------------------------------------------------------------!
     NL%N_POI    =    1
-    NL%POI_LAT  =  46.22
-    NL%POI_LON  = -89.53
+    NL%POI_LAT  =  42.54
+    NL%POI_LON  = -72.18
     NL%POI_RES  = 1.00   
    !---------------------------------------------------------------------------------------!
 
@@ -303,8 +303,8 @@ $ED_NL
    ! FFILOUT -- Path and prefix for analysis files (all but history/restart).              !
    ! SFILOUT -- Path and prefix for history files.                                         !
    !---------------------------------------------------------------------------------------!
-   NL%FFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spininitial.v2/PUN/analy/PUNspin'
-   NL%SFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spininitial.v2/PUN/histo/PUNspin'
+   NL%FFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/PHA/analy/PHA'
+   NL%SFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/PHA/histo/PHA'
    !---------------------------------------------------------------------------------------!
 
 
@@ -383,7 +383,7 @@ $ED_NL
    !              path+prefix will be used, as the history for every grid must have come   !
    !              from the same simulation.                                                !
    !---------------------------------------------------------------------------------------!
-   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spininitial.v2/PUN/histo/PUNspin'
+   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/PHA/histo/PHA'
    !---------------------------------------------------------------------------------------!
 
 
@@ -401,7 +401,7 @@ $ED_NL
    NL%ITIMEH   = 0000   ! UTC
    NL%IDATEH   = 01     ! Day
    NL%IMONTHH  = 01     ! Month
-   NL%IYEARH   = 1854   ! Year
+   NL%IYEARH   = 2024   ! Year
    !---------------------------------------------------------------------------------------!
 
 
@@ -493,7 +493,7 @@ $ED_NL
    !     They are used only when ISOILFLG is 2, both values are between 0. and 1., and     !
    ! theira sum doesn't exceed 1.  Otherwise standard ED values will be used instead.      !
    !---------------------------------------------------------------------------------------!
-   NL%SLXCLAY = 0.04
+   NL%SLXCLAY = 0.05
    NL%SLXSAND = 0.85
    !---------------------------------------------------------------------------------------!
 
@@ -548,7 +548,7 @@ $ED_NL
    NL%LU_DATABASE      = '/projectnb/dietzelab/EDI/ed_inputs/glu/glu-'
    NL%PLANTATION_FILE  = ''
    NL%THSUMS_DATABASE  = '/projectnb/dietzelab/EDI/ed_inputs/'
-   NL%ED_MET_DRIVER_DB = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spininitial.v2/PUN/PL_MET_HEADER'
+   NL%ED_MET_DRIVER_DB = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/PHA/PL_MET_HEADER'
    NL%SOILSTATE_DB     = '/projectnb/dietzelab/EDI/ed_inputs/STW1996OCT.dat'
    NL%SOILDEPTH_DB     = '/projectnb/dietzelab/EDI/ed_inputs/soil_depths.dat'
    !---------------------------------------------------------------------------------------!
@@ -828,7 +828,7 @@ $ED_NL
    !              1.  Dietze (2008) model.  Cohorts have a finite radius, and cohorts are  !
    !                  stacked on the top of each other.                                    !
    !---------------------------------------------------------------------------------------!
-   NL%CROWN_MOD       = 1
+   NL%CROWN_MOD       = 0
    !---------------------------------------------------------------------------------------!
 
 
@@ -865,7 +865,7 @@ $ED_NL
    !                 lim -> 0.  Black hole (0 itself is unacceptable)                      !
    !                        1.  Homogeneously spread over the layer (i.e., no clumping)    !
    !---------------------------------------------------------------------------------------!
-   NL%ICANRAD        =  0
+   NL%ICANRAD        =  1
    NL%LTRANS_VIS     =  0.050
    NL%LTRANS_NIR     =  0.270
    NL%LREFLECT_VIS   =  0.150
@@ -1110,8 +1110,8 @@ $ED_NL
    !                   the minimum water deficit relative to the total rainfall, over the  !
    !                   past 12 months, to trigger fires.                                   !
    !---------------------------------------------------------------------------------------!
-   NL%INCLUDE_FIRE    = 0
-   NL%FIRE_PARAMETER  = 0.10 ! There is No actual Fuel Threshold, so the default makes WAY too much fire
+   NL%INCLUDE_FIRE    = 2
+   NL%FIRE_PARAMETER  = 0.33 ! There is No actual Fuel Threshold, so the default makes WAY too much fire
    NL%SM_FIRE         = 0.01 ! Also lowering the Prevention threshold
    !---------------------------------------------------------------------------------------!
 
@@ -1330,7 +1330,7 @@ $ED_NL
    !                              TREEFALL_DISTURBANCE_RATE is internally adjusted so the  !
    !                              average patch age is still 1/TREEFALL_DISTURBANCE_RATE   !
    !---------------------------------------------------------------------------------------!
-   NL%TREEFALL_DISTURBANCE_RATE  = 0.00
+   NL%TREEFALL_DISTURBANCE_RATE  = 0.01
    NL%TIME2CANOPY                = 0.
    !---------------------------------------------------------------------------------------!
 
@@ -1359,7 +1359,7 @@ $ED_NL
    !---------------------------------------------------------------------------------------!
    NL%UBMIN          = 1.0
    NL%UGBMIN         = 0.5
-   NL%USTMIN         = 0.1
+   NL%USTMIN         = 0.25
    !---------------------------------------------------------------------------------------!
 
 

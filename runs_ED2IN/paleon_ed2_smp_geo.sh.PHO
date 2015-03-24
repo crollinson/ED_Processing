@@ -1,0 +1,13 @@
+#!/bin/sh
+#$ -wd /projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/PHO
+#$ -j y 
+#$ -S /bin/bash         
+#$ -V 
+#$ -pe omp 16
+#$ -v OMP_NUM_THREADS=16
+#$ -m e
+#$ -M crollinson@gmail.com
+#$ -l h_rt=240:00:00
+#$ -N PHOrunSMP
+#cd /projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/PHO
+./ed_2.1-opt
