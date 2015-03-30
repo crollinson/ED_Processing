@@ -60,8 +60,8 @@ $ED_NL
    ! RADFRQ -- Time step to integrate radiation, in seconds.  This must be an integer      !
    !            multiple of DTLSM, and we recommend it to be exactly the same as DTLSM.    !
    !---------------------------------------------------------------------------------------!
-   NL%DTLSM  =  900
-   NL%RADFRQ  = 900
+   NL%DTLSM  =  600
+   NL%RADFRQ  = 600
    !---------------------------------------------------------------------------------------!
 
 
@@ -545,7 +545,7 @@ $ED_NL
    !---------------------------------------------------------------------------------------!
    NL%VEG_DATABASE     = '/projectnb/dietzelab/EDI/oge2OLD/OGE2_'
    NL%SOIL_DATABASE    = '/projectnb/dietzelab/EDI/faoOLD_'
-   NL%LU_DATABASE      = '/projectnb/dietzelab/EDI/ed_inputs/glu/glu-'
+   NL%LU_DATABASE      = '/projectnb/dietzelab/paleon/ED_runs/lulcc_paleon_ed/PMB'
    NL%PLANTATION_FILE  = ''
    NL%THSUMS_DATABASE  = '/projectnb/dietzelab/EDI/ed_inputs/'
    NL%ED_MET_DRIVER_DB = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.lu/PMB/PL_MET_HEADER'
@@ -771,7 +771,7 @@ $ED_NL
    !  New scheme: plants shed their leaves once a 10-day running average of available      !
    !              water becomes less than a critical value.                                !
    !---------------------------------------------------------------------------------------!
-   NL%IPHEN_SCHEME    = 0     
+   NL%IPHEN_SCHEME    = 2    
    !---------------------------------------------------------------------------------------!
 
 
@@ -1112,7 +1112,7 @@ $ED_NL
    !---------------------------------------------------------------------------------------!
    NL%INCLUDE_FIRE    = 2
    NL%FIRE_PARAMETER  = 0.33 ! There is No actual Fuel Threshold, so the default makes WAY too much fire
-   NL%SM_FIRE         = 0.02 ! Also lowering the Prevention threshold
+   NL%SM_FIRE         = 0.01 ! Also lowering the Prevention threshold
    !---------------------------------------------------------------------------------------!
 
 

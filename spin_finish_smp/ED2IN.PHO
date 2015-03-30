@@ -303,8 +303,8 @@ $ED_NL
    ! FFILOUT -- Path and prefix for analysis files (all but history/restart).              !
    ! SFILOUT -- Path and prefix for history files.                                         !
    !---------------------------------------------------------------------------------------!
-   NL%FFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.smp/PHO/analy/PHOspin'
-   NL%SFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.smp/PHO/histo/PHOspin'
+   NL%FFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.v2/PHO/analy/PHOspin'
+   NL%SFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.v2/PHO/histo/PHOspin'
    !---------------------------------------------------------------------------------------!
 
 
@@ -384,7 +384,7 @@ $ED_NL
    !              from the same simulation.                                                !
    !---------------------------------------------------------------------------------------!
    NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/SAS_spinup/phase1a_spinup.v2/PHOspin'
-!   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.smp/PHO/histo/PHOspin'
+!   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.v2/PHO/histo/PHOspin'
    !---------------------------------------------------------------------------------------!
 
 
@@ -549,7 +549,7 @@ $ED_NL
    NL%LU_DATABASE      = '/projectnb/dietzelab/EDI/ed_inputs/glu/glu-'
    NL%PLANTATION_FILE  = ''
    NL%THSUMS_DATABASE  = '/projectnb/dietzelab/EDI/ed_inputs/'
-   NL%ED_MET_DRIVER_DB = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.smp/PHO/PL_MET_HEADER'
+   NL%ED_MET_DRIVER_DB = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.v2/PHO/PL_MET_HEADER'
    NL%SOILSTATE_DB     = '/projectnb/dietzelab/EDI/ed_inputs/STW1996OCT.dat'
    NL%SOILDEPTH_DB     = '/projectnb/dietzelab/EDI/ed_inputs/soil_depths.dat'
    !---------------------------------------------------------------------------------------!

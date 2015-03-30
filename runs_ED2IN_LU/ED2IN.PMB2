@@ -30,9 +30,9 @@ $ED_NL
    !---------------------------------------------------------------------------------------!
    !     Start of simulation. Information must be given in UTC time.                       !
    !---------------------------------------------------------------------------------------!
-   NL%IMONTHA  = 01
+   NL%IMONTHA  = 12
    NL%IDATEA   = 01
-   NL%IYEARA   = 2024
+   NL%IYEARA   = 2998
    NL%ITIMEA   = 0000
    !---------------------------------------------------------------------------------------!
 
@@ -60,8 +60,8 @@ $ED_NL
    ! RADFRQ -- Time step to integrate radiation, in seconds.  This must be an integer      !
    !            multiple of DTLSM, and we recommend it to be exactly the same as DTLSM.    !
    !---------------------------------------------------------------------------------------!
-   NL%DTLSM  =  450
-   NL%RADFRQ  = 450
+   NL%DTLSM  =  600
+   NL%RADFRQ  = 600
    !---------------------------------------------------------------------------------------!
 
 
@@ -158,8 +158,8 @@ $ED_NL
    !            soil types                                                                 !
    !---------------------------------------------------------------------------------------!
     NL%N_POI    =    1
-    NL%POI_LAT  =  42.54
-    NL%POI_LON  = -72.18
+    NL%POI_LAT  =  43.61
+    NL%POI_LON  = -82.83
     NL%POI_RES  = 1.00   
    !---------------------------------------------------------------------------------------!
 
@@ -303,8 +303,8 @@ $ED_NL
    ! FFILOUT -- Path and prefix for analysis files (all but history/restart).              !
    ! SFILOUT -- Path and prefix for history files.                                         !
    !---------------------------------------------------------------------------------------!
-   NL%FFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/PHA/analy/PHA'
-   NL%SFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/PHA/histo/PHA'
+   NL%FFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.lu/PMB/analy/PMB'
+   NL%SFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.lu/PMB/histo/PMB'
    !---------------------------------------------------------------------------------------!
 
 
@@ -383,7 +383,8 @@ $ED_NL
    !              path+prefix will be used, as the history for every grid must have come   !
    !              from the same simulation.                                                !
    !---------------------------------------------------------------------------------------!
-   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/PHA/histo/PHA'
+!   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.lu/PMB/histo/PMBspin'
+   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.lu/PMB/histo/PMB'
    !---------------------------------------------------------------------------------------!
 
 
@@ -400,8 +401,8 @@ $ED_NL
    !---------------------------------------------------------------------------------------!
    NL%ITIMEH   = 0000   ! UTC
    NL%IDATEH   = 01     ! Day
-   NL%IMONTHH  = 01     ! Month
-   NL%IYEARH   = 2024   ! Year
+   NL%IMONTHH  = 12     ! Month
+   NL%IYEARH   = 2998   ! Year
    !---------------------------------------------------------------------------------------!
 
 
@@ -445,7 +446,7 @@ $ED_NL
    !   5 -- loam                |  11 -- clay                |  17 -- clayey silt          !
    !   6 -- sandy clay loam     |  12 -- peat                                              !
    !---------------------------------------------------------------------------------------!
-   NL%NSLCON   = 3      ! Default soil type if ISOILFLG = 2 (choices below:)
+   NL%NSLCON   = 5      ! Default soil type if ISOILFLG = 2 (choices below:)
    !---------------------------------------------------------------------------------------!
 
 
@@ -493,8 +494,8 @@ $ED_NL
    !     They are used only when ISOILFLG is 2, both values are between 0. and 1., and     !
    ! theira sum doesn't exceed 1.  Otherwise standard ED values will be used instead.      !
    !---------------------------------------------------------------------------------------!
-   NL%SLXCLAY = 0.05
-   NL%SLXSAND = 0.85
+   NL%SLXCLAY = 0.21
+   NL%SLXSAND = 0.40
    !---------------------------------------------------------------------------------------!
 
 
@@ -545,10 +546,10 @@ $ED_NL
    !---------------------------------------------------------------------------------------!
    NL%VEG_DATABASE     = '/projectnb/dietzelab/EDI/oge2OLD/OGE2_'
    NL%SOIL_DATABASE    = '/projectnb/dietzelab/EDI/faoOLD_'
-   NL%LU_DATABASE      = '/projectnb/dietzelab/EDI/ed_inputs/glu/glu-'
+   NL%LU_DATABASE      = '/projectnb/dietzelab/paleon/ED_runs/lulcc_paleon_ed/PMB'
    NL%PLANTATION_FILE  = ''
    NL%THSUMS_DATABASE  = '/projectnb/dietzelab/EDI/ed_inputs/'
-   NL%ED_MET_DRIVER_DB = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/PHA/PL_MET_HEADER'
+   NL%ED_MET_DRIVER_DB = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.lu/PMB/PL_MET_HEADER'
    NL%SOILSTATE_DB     = '/projectnb/dietzelab/EDI/ed_inputs/STW1996OCT.dat'
    NL%SOILDEPTH_DB     = '/projectnb/dietzelab/EDI/ed_inputs/soil_depths.dat'
    !---------------------------------------------------------------------------------------!
@@ -771,7 +772,7 @@ $ED_NL
    !  New scheme: plants shed their leaves once a 10-day running average of available      !
    !              water becomes less than a critical value.                                !
    !---------------------------------------------------------------------------------------!
-   NL%IPHEN_SCHEME    = 0     
+   NL%IPHEN_SCHEME    = 2     
    !---------------------------------------------------------------------------------------!
 
 
@@ -1123,7 +1124,7 @@ $ED_NL
    !                   0.  no anthropogenic disturbance.                                   !
    !                   1.  use anthropogenic disturbance dataset.                          !
    !---------------------------------------------------------------------------------------!
-   NL%IANTH_DISTURB   = 0
+   NL%IANTH_DISTURB   = 1
    !---------------------------------------------------------------------------------------!
 
 

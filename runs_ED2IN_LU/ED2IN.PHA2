@@ -22,7 +22,7 @@ $ED_NL
    !            initial in the sense that exactly the same information written in the      !
    !            history will be used here.                                                 !
    !---------------------------------------------------------------------------------------!
-   NL%RUNTYPE  = 'INITIAL'
+   NL%RUNTYPE  = 'HISTORY'
    !---------------------------------------------------------------------------------------!
 
 
@@ -30,9 +30,9 @@ $ED_NL
    !---------------------------------------------------------------------------------------!
    !     Start of simulation. Information must be given in UTC time.                       !
    !---------------------------------------------------------------------------------------!
-   NL%IMONTHA  = 06
+   NL%IMONTHA  = 12
    NL%IDATEA   = 01
-   NL%IYEARA   = 1850
+   NL%IYEARA   = 2930
    NL%ITIMEA   = 0000
    !---------------------------------------------------------------------------------------!
 
@@ -43,7 +43,7 @@ $ED_NL
    !---------------------------------------------------------------------------------------!
    NL%IMONTHZ  = 01    ! Month
    NL%IDATEZ   = 01    ! Day
-   NL%IYEARZ   = 2000  ! Year
+   NL%IYEARZ   = 3011  ! Year
    NL%ITIMEZ   = 0000  ! UTC
    !---------------------------------------------------------------------------------------!
 
@@ -158,8 +158,8 @@ $ED_NL
    !            soil types                                                                 !
    !---------------------------------------------------------------------------------------!
     NL%N_POI    =    1
-    NL%POI_LAT  =  46.22
-    NL%POI_LON  = -89.53
+    NL%POI_LAT  =  42.54
+    NL%POI_LON  = -72.18
     NL%POI_RES  = 1.00   
    !---------------------------------------------------------------------------------------!
 
@@ -303,8 +303,8 @@ $ED_NL
    ! FFILOUT -- Path and prefix for analysis files (all but history/restart).              !
    ! SFILOUT -- Path and prefix for history files.                                         !
    !---------------------------------------------------------------------------------------!
-   NL%FFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.v2/PUN/analy/PUNspin'
-   NL%SFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.v2/PUN/histo/PUNspin'
+   NL%FFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.lu/PHA/analy/PHA'
+   NL%SFILOUT = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.lu/PHA/histo/PHA'
    !---------------------------------------------------------------------------------------!
 
 
@@ -356,7 +356,7 @@ $ED_NL
    !
    !
    !---------------------------------------------------------------------------------------!
-   NL%IED_INIT_MODE   = 3
+   NL%IED_INIT_MODE   = 5
    !---------------------------------------------------------------------------------------!
 
 
@@ -383,7 +383,8 @@ $ED_NL
    !              path+prefix will be used, as the history for every grid must have come   !
    !              from the same simulation.                                                !
    !---------------------------------------------------------------------------------------!
-   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/SAS_spinup/phase1a_spinup.v2/PUNspin'
+!   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.lu/PHA/histo/PHAspin'
+   NL%SFILIN   = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.lu/PHA/histo/PHA'
    !---------------------------------------------------------------------------------------!
 
 
@@ -398,10 +399,10 @@ $ED_NL
    ! IYEARH     want to extend the run, but yo should NOT change IMONTHA and related.      !
    ! ITIMEH                                                                                !
    !---------------------------------------------------------------------------------------!
-!   NL%ITIMEH   = 0000   ! UTC
-!   NL%IDATEH   = 01     ! Day
-!   NL%IMONTHH  = 06     ! Month
-!   NL%IYEARH   = 1856   ! Year
+   NL%ITIMEH   = 0000   ! UTC
+   NL%IDATEH   = 01     ! Day
+   NL%IMONTHH  = 12     ! Month
+   NL%IYEARH   = 2930   ! Year
    !---------------------------------------------------------------------------------------!
 
 
@@ -493,7 +494,7 @@ $ED_NL
    !     They are used only when ISOILFLG is 2, both values are between 0. and 1., and     !
    ! theira sum doesn't exceed 1.  Otherwise standard ED values will be used instead.      !
    !---------------------------------------------------------------------------------------!
-   NL%SLXCLAY = 0.04
+   NL%SLXCLAY = 0.05
    NL%SLXSAND = 0.85
    !---------------------------------------------------------------------------------------!
 
@@ -545,10 +546,10 @@ $ED_NL
    !---------------------------------------------------------------------------------------!
    NL%VEG_DATABASE     = '/projectnb/dietzelab/EDI/oge2OLD/OGE2_'
    NL%SOIL_DATABASE    = '/projectnb/dietzelab/EDI/faoOLD_'
-   NL%LU_DATABASE      = '/projectnb/dietzelab/EDI/ed_inputs/glu/glu-'
+   NL%LU_DATABASE      = '/projectnb/dietzelab/paleon/ED_runs/lulcc_paleon_ed/PHA'
    NL%PLANTATION_FILE  = ''
    NL%THSUMS_DATABASE  = '/projectnb/dietzelab/EDI/ed_inputs/'
-   NL%ED_MET_DRIVER_DB = '/projectnb/dietzelab/paleon/ED_runs/phase1a_spinfinish.v2/PUN/PL_MET_HEADER'
+   NL%ED_MET_DRIVER_DB = '/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.lu/PHA/PL_MET_HEADER'
    NL%SOILSTATE_DB     = '/projectnb/dietzelab/EDI/ed_inputs/STW1996OCT.dat'
    NL%SOILDEPTH_DB     = '/projectnb/dietzelab/EDI/ed_inputs/soil_depths.dat'
    !---------------------------------------------------------------------------------------!
@@ -1123,7 +1124,7 @@ $ED_NL
    !                   0.  no anthropogenic disturbance.                                   !
    !                   1.  use anthropogenic disturbance dataset.                          !
    !---------------------------------------------------------------------------------------!
-   NL%IANTH_DISTURB   = 0
+   NL%IANTH_DISTURB   = 1
    !---------------------------------------------------------------------------------------!
 
 
@@ -1359,7 +1360,7 @@ $ED_NL
    !---------------------------------------------------------------------------------------!
    NL%UBMIN          = 1.0
    NL%UGBMIN         = 0.5
-   NL%USTMIN         = 0.2
+   NL%USTMIN         = 0.25
    !---------------------------------------------------------------------------------------!
 
 
