@@ -329,7 +329,7 @@
       <Vm_low_temp>
                  5.02425      </Vm_low_temp> 	<!-- Ryan Kelley (Pecan) -->
       <Vm0>
-                 72.38039	  </Vm0>	<!-- Pecan -->
+                 50.0000	  </Vm0>	<!-- Loosely Pecan; between mean-2SD late con & general temperate conifer -->
       <water_conductance>
                  0.00448	  </water_conductance> 	<!-- Ryan Kelley (Pecan) -->
 
@@ -394,10 +394,8 @@
                  1.50000      </hgt_min>
       <q>
                  0.63580      </q>	<!-- Pecan -->
-<!-- 
       <qsw>
-                 0.0076923077      </qsw>
- -->
+                 0.00500      </qsw> <!-- Fudged to be more similar to conifers -->
       <rho>
                  0.00000      </rho>
       <SLA>
@@ -434,7 +432,7 @@
 
 	  <!-- Photosynthesis Params -->	
       <cuticular_cond>
-             20000.00000      </cuticular_cond> 	<!-- Modified per Jackie -->
+              7904.00000      </cuticular_cond> 	<!-- Pecan, Southern Mid Hardwood -->
       <D0>
                  0.01000      </D0>	<!-- Modified per Jackie -->
       <dark_respiration_factor>
@@ -450,7 +448,7 @@
       <Vm_low_temp>
                  4.98547      </Vm_low_temp>	<!-- Ryan Kelley (Pecan) -->
       <Vm0>
-                56.31326	  </Vm0> <!-- Pecan -->
+                57.30000	  </Vm0> <!-- Pecan; mean + 2SD -->
       <water_conductance>
                  0.00426	  </water_conductance>	<!-- Ryan Kelley (Pecan) -->
 
@@ -516,10 +514,8 @@
                  1.50000      </hgt_min>
       <q>
                  0.99521      </q> <!-- Pecan -->
-<!-- 
       <qsw>
-                 0.00621      </qsw>
- -->
+                 0.00500      </qsw> <!-- Fudged to be more similar to conifers -->
       <rho>
                  0.00000      </rho>
       <SLA>
@@ -573,7 +569,7 @@
       <Vm_low_temp>
                  5.08067      </Vm_low_temp> 	<!-- Ryan Kelley (Pecan) -->
       <Vm0>
-                43.24452	  </Vm0> <!-- Pecan -->
+                64.00000	  </Vm0> <!-- Pecan; generic temperate deciduous -->
       <water_conductance>
                  0.00473	  </water_conductance> 	<!-- Ryan Kelley (Pecan) -->
 
@@ -639,10 +635,8 @@
                  1.50000      </hgt_min>
       <q>
                  0.99734      </q> <!-- Pecan -->
-<!-- 
       <qsw>
-                 0.0153846154      </qsw>
- -->
+                 0.00500      </qsw> <!-- Fudged to be more similar to conifers -->
       <rho>
                  0.0000000000      </rho>
       <SLA>
