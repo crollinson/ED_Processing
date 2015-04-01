@@ -1,10 +1,10 @@
 ## --------------------------------------------------------------
 ## Script to loop through the 6 sites and extract data into the 100-yr files 
 ## --------------------------------------------------------------
-source("/projectnb/dietzelab/paleon/ED_runs/phase1a_runs_HI2/model2netcdf.ED2.paleon.R")
+source("/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/model2netcdf.ED2.paleon.R")
 
-raw.path <- "/projectnb/dietzelab/paleon/ED_runs/phase1a_runs_HI2/"
-new.path <- "/projectnb/dietzelab/paleon/ED_runs/phase1a_runs_HI2/paleon_out/"
+raw.path <- "/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/"
+new.path <- "/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/post-process/"
 site.list <- c("PHA", "PHO", "PUN", "PBL", "PDL", "PMB")
 site.lat <- c(42.54, 45.25, 46.22, 46.28, 47.17, 43.61)
 site.lon <- c(-72.18, -68.73, -89.53, -94.58, -95.17, -82.83)
@@ -13,8 +13,7 @@ start.run <- as.Date("1850-01-01", "%Y-%m-%d")
 end.run <- as.Date("3010-01-01", "%Y-%m-%d") 
 
 
-#for(s in unique(sites)){
-site=""
+for(site in unique(site.list)){
   raw.dir <- paste0(raw.path, site, "/")
   new.dir <- paste0(new.path, site, "/")
   sitelat <- site.lat[which(site.list==site)]
@@ -37,5 +36,5 @@ site=""
   print(paste0("----------  Processing Site: ", site, "  ----------")) 
   
   model2netcdf.ED2.paleon(site, raw.dir, new.dir, sitelat, sitelon, start.run, start.loop, end.run, end.loop, bins)
-#}
+}
 
