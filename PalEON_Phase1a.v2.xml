@@ -2,7 +2,6 @@
 <!DOCTYPE config SYSTEM "ed.dtd">
 <!-- Modifications based on Pecan meta analysis unless otherwise noted -->
  <config>
-
    <pft>
       <num>       		5      </num>
       <include_pft_ag>  1      </include_pft_ag>
@@ -165,7 +164,7 @@
       <mort1>
                  1.00000      </mort1>
       <mort2>
-                20.00000     </mort2> <!-- Modified Manually -->
+                 7.50000     </mort2> <!-- Modified Manually -->
       <mort3>
                  0.00339      </mort3>
       <plant_min_temp>
@@ -185,7 +184,7 @@
       <cuticular_cond>
               1000.0000      </cuticular_cond>	<!--  ED Default -->
       <D0>
-                 0.01000      </D0>	<!-- Jackie, Marcos -->
+                 0.01600      </D0>	<!-- Jackie, Marcos -->
       <dark_respiration_factor>
                  0.02029      </dark_respiration_factor> 	<!-- Ryan Kelly/Pecan (South Pine) -->
       <leaf_width>
@@ -197,12 +196,11 @@
       <stomatal_slope>
                  6.39490      </stomatal_slope>	<!-- Jackie -->
       <Vm_low_temp>
-<!--                  5.05244      </Vm_low_temp>	<!-- Ryan Kelly/Pecan (South Pine) --> -->
-                 10      </Vm_low_temp>
+                 5.05244      </Vm_low_temp>	<!-- Ryan Kelly/Pecan (South Pine) -->
       <Vm0>
                 41.97682      </Vm0>	<!-- Pecan -->
       <water_conductance>
-                 0.0000457	  </water_conductance> 	<!-- Ryan * 0.01 -->
+                 0.00457	  </water_conductance> 	<!-- Ryan -->
 
 	  <!-- Radiation Params -->	
       <clumping>
@@ -222,7 +220,7 @@
       <repro_min_h>
                  5.00000      </repro_min_h>
       <seed_rain>
-                 0.05000      </seed_rain>	<!-- Modified per Jackie -->
+                 0.02000      </seed_rain>	<!-- Modified -->
       <f_labile>
                  0.50214      </f_labile>	<!-- Ryan Kelly/Pecan (South Pine) -->
 
@@ -261,7 +259,7 @@
       <hgt_min>
                  1.50000      </hgt_min>
       <q>
-                 0.76880      </q> 	<!-- Ryan -->
+                 0.76880      </q> 	<!-- Ryan Late Conifer -->
       <sapwood_ratio>
               3900.00000      </sapwood_ratio> <!-- ED Default -->
       <qsw>
@@ -282,7 +280,7 @@
       <mort1>
                  1.00000      </mort1>
       <mort2>
-                20.00000     </mort2> <!-- ED Default -->
+                10.00000     </mort2> <!-- Modified Manually -->
       <mort3>
                  0.00236      </mort3>
       <plant_min_temp>
@@ -301,7 +299,7 @@
       <cuticular_cond>
               1000.0000      </cuticular_cond>	<!--  ED Default -->
       <D0>
-                 0.01000      </D0>	<!-- Jackie, Marcos -->
+                 0.01600      </D0>	<!-- Jackie, Marcos -->
       <dark_respiration_factor>
                  0.02029	  </dark_respiration_factor> <!-- Same as North Pine -->
       <leaf_width>
@@ -317,7 +315,7 @@
       <Vm0>
                  45.85573	  </Vm0>	<!-- Pecan Temp Confier -->
       <water_conductance>
-                 0.0000448	  </water_conductance> 	<!-- Ryan * 0.01 -->
+                 0.00448	  </water_conductance> 	<!-- Ryan -->
 
 	  <!-- Radiation Params -->	
       <clumping>
@@ -336,7 +334,7 @@
       <repro_min_h>
                  5.00000      </repro_min_h>
       <seed_rain>
-                 0.05000      </seed_rain>	<!-- Modified per Jackie -->
+                 0.02000      </seed_rain>	<!-- Modified -->
 
 	  <!-- Respiration Params -->	
       <f_labile>
@@ -397,7 +395,7 @@
       <mort1>
                  1.0000      </mort1>	<!-- ED Default -->
       <mort2>
-                20.00000     </mort2> <!-- ED Default -->
+                 5.00000     </mort2> <!-- Modified Manually -->
       <mort3>
                  0.00614      </mort3> <!-- ED Default -->
       <plant_min_temp>
@@ -417,9 +415,9 @@
       <cuticular_cond>
               7904.00000      </cuticular_cond> 	<!-- Pecan Mid Hardwood -->
       <D0>
-                 0.01000      </D0>	<!-- Jackie, Marcos -->
+                 0.01600      </D0>	<!-- Jackie, Marcos -->
       <dark_respiration_factor>
-                 0.01913      </dark_respiration_factor>  <!-- Pecan -->
+                 0.03053      </dark_respiration_factor>  <!-- Late Hardwood Pecan -->
       <leaf_width>
                  0.10101      </leaf_width>	<!-- Ryan Kelley (Pecan) -->
       <photosyn_pathway>
@@ -433,7 +431,7 @@
       <Vm0>
                 56.28928	  </Vm0> <!-- Pecan -->
       <water_conductance>
-                 0.000047	  </water_conductance> 	<!--  Ryan Kelley M. Hardwood (Pecan) * 0.01 -->
+                 0.0047	  </water_conductance> 	<!--  Ryan Kelley M. Hardwood (Pecan) -->
 
 	  <!-- Radiation Params -->	
       <clumping>
@@ -453,7 +451,7 @@
       <repro_min_h>
                  5.00000      </repro_min_h>
       <seed_rain>
-                 0.05000      </seed_rain>	<!-- Modified per Jackie -->
+                 0.02000      </seed_rain>	<!-- Modified -->
 
 	  <!-- Respiration Params -->	
       <f_labile>
@@ -469,6 +467,7 @@
       <storage_turnover_rate>
                  0.00000      </storage_turnover_rate>	<!-- Modified per Jackie -->
    </pft>
+
 
    <pft>
       <num>				10      </num>
@@ -500,7 +499,7 @@
       <rho>
                  0.00000      </rho>
       <SLA>
-                29.34375      </SLA> <!-- Pecan -->
+                39.73958      </SLA> <!-- Temp Decid Pecan -->
 
 	  <!-- Derived Params -->	
       <c2n_recruit>
@@ -514,7 +513,7 @@
       <mort1>
                  1.0000      </mort1> <!-- ED Default -->
       <mort2>
-                20.00000     </mort2> <!-- ED Default -->
+                 7.50000     </mort2> <!-- Modified Manually -->
       <mort3>
                  0.00381      </mort3> <!-- ED Default -->
       <plant_min_temp>
@@ -534,9 +533,9 @@
       <cuticular_cond>
               7904.00000      </cuticular_cond> 	<!-- Pecan Mid Hardwood -->
       <D0>
-                 0.01000      </D0>	<!-- Manually Edited -->
+                 0.01600      </D0>	<!-- Manually Edited -->
       <dark_respiration_factor>
-                 0.01209      </dark_respiration_factor>  <!-- Pecan -->
+                 0.03053      </dark_respiration_factor>  <!-- Late Hardwood Pecan -->
       <leaf_width>
                  0.08699      </leaf_width>	<!-- late hardwood Pecan -->
       <photosyn_pathway>
@@ -550,7 +549,7 @@
       <Vm0>
                 63.96669	  </Vm0> <!-- Pecan generic temperate deciduous -->
       <water_conductance>
-                 0.000047	  </water_conductance> 	<!--  Ryan Kelley (Pecan) * 0.01 -->
+                 0.0047	  </water_conductance> 	<!--  Ryan Kelley (Pecan) -->
 
 	  <!-- Radiation Params -->	
       <clumping>
@@ -570,7 +569,7 @@
       <repro_min_h>
                  5.00000      </repro_min_h>
       <seed_rain>
-                 0.05000      </seed_rain>	<!-- Modified per Jackie -->
+                 0.02000      </seed_rain>	<!-- Modified -->
 
 	  <!-- Respiration Params -->	
       <f_labile>
@@ -631,7 +630,7 @@
       <mort1>
                  1.0000      </mort1> <!-- Ed Default -->
       <mort2>
-                20.00000     </mort2> <!-- Ed Default -->
+                10.00000     </mort2> <!-- Modified Manually -->
       <mort3>
                  0.00428      </mort3> <!-- Ed Default -->
       <plant_min_temp>
@@ -651,7 +650,7 @@
       <cuticular_cond>
               7904.00000      </cuticular_cond> 	<!-- Pecan mid hardwood -->
       <D0>
-                 0.01000      </D0>	<!-- Modified -->
+                 0.01600      </D0>	<!-- Modified -->
       <dark_respiration_factor>
                  0.03053      </dark_respiration_factor>  <!-- Pecan -->
       <leaf_width>
@@ -667,7 +666,7 @@
       <Vm0>
                 69.78505	  </Vm0> <!-- Pecan -->
       <water_conductance>
-                 0.000043	  </water_conductance>	<!-- Ryan Kelley (Pecan) * 0.01 -->
+                 0.0043	  </water_conductance>	<!-- Ryan Kelley (Pecan) -->
 
 	  <!-- Radiation Params -->	
       <clumping>
@@ -687,7 +686,7 @@
       <repro_min_h>
                  5.00000      </repro_min_h>
       <seed_rain>
-                 0.05000      </seed_rain>	<!-- Modified per Jackie -->
+                 0.02000      </seed_rain>	<!-- Modified -->
 
 	  <!-- Respiration Params -->	
       <f_labile>
