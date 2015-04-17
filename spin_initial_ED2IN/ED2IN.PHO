@@ -414,7 +414,7 @@ $ED_NL
    !           into a single layer, so if you are running for places where it doesn't snow !
    !           a lot, leave this set to 1.  One value for all grids.                       ! 
    !---------------------------------------------------------------------------------------!
-   NL%NZG = 10
+   NL%NZG = 12
    NL%NZS = 4
    !---------------------------------------------------------------------------------------!
 
@@ -515,9 +515,9 @@ $ED_NL
    !               2 = porosity (saturation)                                               !
    ! STGOFF  - initial temperature offset (soil temperature = air temperature + offset)    !
    !---------------------------------------------------------------------------------------!
-   NL%SLZ     =   -2.17, -1.5, -1.1, -0.8, -0.6, -0.45, -0.3, -0.2, -0.12, -0.06
-   NL%SLMSTR  =    1.00,  1.00, 1.00, 1.00, 1.00, 1.00,  1.00, 1.00, 1.00,  1.00
-   NL%STGOFF  =    0.0,   0.0,  0.0,  0.0,  0.0,  0.0,   0.0,  0.0,  0.0,   0.0
+   NL%SLZ     = -5.50, -4.50, -2.17, -1.50, -1.10, -0.80, -0.60, -0.45, -0.30, -0.20, -0.12, -0.06
+   NL%SLMSTR  =  1.00,  1.00,  1.00,  1.00,  1.00,  1.00,  1.00,  1.00,  1.00,  1.00,  1.00,  1.00
+   NL%STGOFF  =  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00
    !---------------------------------------------------------------------------------------!
 
 
@@ -586,7 +586,7 @@ $ED_NL
    !            3.  Aquifer.  Soil moisture of the ficticious layer beneath the bottom is  !
    !                always at saturation.                                                  !
    !---------------------------------------------------------------------------------------!
-   NL%ISOILBC        = 0
+   NL%ISOILBC        = 3
    !---------------------------------------------------------------------------------------!
 
 
@@ -694,7 +694,7 @@ $ED_NL
    !      (2001).                                                                          !
    ! 3 -- Same as 2, except that we find Gamma* as in Farquhar et al. (1980) and in CLM.   !
    !---------------------------------------------------------------------------------------!
-   NL%IPHYSIOL = 1
+   NL%IPHYSIOL = 2
    !---------------------------------------------------------------------------------------!
 
 
@@ -867,14 +867,14 @@ $ED_NL
    !                        1.  Homogeneously spread over the layer (i.e., no clumping)    !
    !---------------------------------------------------------------------------------------!
    NL%ICANRAD        =  2
-   NL%LTRANS_VIS     =  0.050
-   NL%LTRANS_NIR     =  0.270
-   NL%LREFLECT_VIS   =  0.150
-   NL%LREFLECT_NIR   =  0.540
-   NL%ORIENT_TREE    =  0.100
-   NL%ORIENT_GRASS   = -0.100
-   NL%CLUMP_TREE     =  0.800
-   NL%CLUMP_GRASS    =  1.000
+   NL%LTRANS_VIS     =  0.05
+   NL%LTRANS_NIR     =  0.2
+   NL%LREFLECT_VIS   =  0.1
+   NL%LREFLECT_NIR   =  0.4
+   NL%ORIENT_TREE    =  0.1
+   NL%ORIENT_GRASS   =  0
+   NL%CLUMP_TREE     =  0.8
+   NL%CLUMP_GRASS    =  1
    !---------------------------------------------------------------------------------------!
 
 
@@ -893,7 +893,7 @@ $ED_NL
    !                      rates when it is close to the optimal, plumetting when it is     !
    !                      almost saturated.                                                !
    !---------------------------------------------------------------------------------------!
-   NL%DECOMP_SCHEME   = 0
+   NL%DECOMP_SCHEME   = 2
    !---------------------------------------------------------------------------------------!
 
 
@@ -916,7 +916,7 @@ $ED_NL
    !                      depth, H it the crown height and psi_fc and psi_wp are the       !
    !                      matric potentials at wilting point and field capacity.           !
    !---------------------------------------------------------------------------------------!
-   NL%H2O_PLANT_LIM   = 1
+   NL%H2O_PLANT_LIM   = 2
    !---------------------------------------------------------------------------------------!
 
 
@@ -1008,13 +1008,13 @@ $ED_NL
    NL%MPHOTO_TRC3     = 9.0
    NL%MPHOTO_TEC3     = 7.2
    NL%MPHOTO_C4       = 5.2
-   NL%BPHOTO_BLC3     = 10000.
-   NL%BPHOTO_NLC3     = 1000.
-   NL%BPHOTO_C4       = 10000.
-   NL%KW_GRASS        = 900.
-   NL%KW_TREE         = 600.
-   NL%GAMMA_C3        = 0.015
-   NL%GAMMA_C4        = 0.040
+   NL%BPHOTO_BLC3     = 10000
+   NL%BPHOTO_NLC3     = 1000
+   NL%BPHOTO_C4       = 10000
+   NL%KW_GRASS        = 900
+   NL%KW_TREE         = 600
+   NL%GAMMA_C3        = 0.0145
+   NL%GAMMA_C4        = 0.035
    NL%D0_GRASS        = 0.016
    NL%D0_TREE         = 0.016
    NL%ALPHA_C3        = 0.080
@@ -1042,7 +1042,7 @@ $ED_NL
    !                       ing point is by definition -1.5MPa, so make sure that the value !
    !                       is above -1.5.                                                  !
    !---------------------------------------------------------------------------------------!
-   NL%THETACRIT       = -1.48
+   NL%THETACRIT       = -1.2
    !---------------------------------------------------------------------------------------!
 
 
@@ -1145,7 +1145,7 @@ $ED_NL
    !             4.  Same as 0, but if finds the ground conductance following CLM          !
    !                 technical note (equations 5.98-5.100).                                !
    !---------------------------------------------------------------------------------------!
-   NL%ICANTURB        = 3
+   NL%ICANTURB        = 1
    !---------------------------------------------------------------------------------------!
 
 
@@ -1164,7 +1164,7 @@ $ED_NL
    ! 4.  CLM (2004).  Similar to 2 and 3, but they have special functions to deal with     !
    !     very stable and very stable cases.                                                !
    !---------------------------------------------------------------------------------------!
-   NL%ISFCLYRM        = 1
+   NL%ISFCLYRM        = 4
    !---------------------------------------------------------------------------------------!
 
 
@@ -1204,7 +1204,7 @@ $ED_NL
    NL%GAMH            = 13.0
    NL%TPRANDTL        = 0.74
    NL%RIBMAX          = 0.50
-   NL%LEAF_MAXWHC     = 0.001
+   NL%LEAF_MAXWHC     = 0.00
    !---------------------------------------------------------------------------------------!
 
 
@@ -1223,7 +1223,7 @@ $ED_NL
    !            2.  Soil conductivity decreases with depth even for constant soil moisture !
    !                , otherwise it is the same as 1.                                       !
    !---------------------------------------------------------------------------------------!
-   NL%IPERCOL         = 2
+   NL%IPERCOL         = 1
    !---------------------------------------------------------------------------------------!
 
 
@@ -1342,7 +1342,7 @@ $ED_NL
    !                -folding lifetime" of the TSW in seconds due to runoff.  If you don't  !
    !                want runoff to happen, set this to 0.                                  !
    !---------------------------------------------------------------------------------------!
-   NL%RUNOFF_TIME    = 600.
+   NL%RUNOFF_TIME    = 60
    !---------------------------------------------------------------------------------------!
 
 
@@ -1357,9 +1357,9 @@ $ED_NL
    !  UGBMIN -- minimum wind speed at the leaf level                                [ m/s] !
    !  USTMIN -- minimum friction velocity, u*, in m/s.                              [ m/s] !
    !---------------------------------------------------------------------------------------!
-   NL%UBMIN          = 1.0
-   NL%UGBMIN         = 0.5
-   NL%USTMIN         = 0.1
+   NL%UBMIN          = 0.65
+   NL%UGBMIN         = 0.25
+   NL%USTMIN         = 0.05
    !---------------------------------------------------------------------------------------!
 
 
@@ -1433,7 +1433,7 @@ $ED_NL
    NL%METCYC1     = 1850
    NL%METCYCF     = 1869
    NL%IMETAVG     = 2
-   NL%IMETRAD     = 0
+   NL%IMETRAD     = 2
    NL%INITIAL_CO2 = 277
    !---------------------------------------------------------------------------------------!
 
@@ -1487,9 +1487,9 @@ $ED_NL
    ! MIN_RECRUIT_DBH -- Minimum DBH that is measured in the census, in cm.                 !
    !---------------------------------------------------------------------------------------!
    NL%DT_CENSUS       = 1
-   NL%YR1ST_CENSUS    = 1901
+   NL%YR1ST_CENSUS    = 1850
    NL%MON1ST_CENSUS   = 7
-   NL%MIN_RECRUIT_DBH = 10
+   NL%MIN_RECRUIT_DBH = 0.01
    !---------------------------------------------------------------------------------------!
 
 

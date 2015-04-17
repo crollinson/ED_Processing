@@ -242,6 +242,10 @@ colnames(C.pools) <- c("Var.No", "Var.ED", "Description")
 
     		out <- add(dens.pft$dens, 6)
 
+	  # Establishment Rate
+
+	  # Mortality Rate
+	  
 	  ## ----------------
 	  ## Carbon Pools
 	  ## ----------------
@@ -503,7 +507,7 @@ print(paste0("----------  Data organized  ----------"))
     var[[40]] <- ncvar_def("wind", units="m s-1", dim=list(dim.t), longname="Wind Speed")
     var[[41]] <- ncvar_def("CO2", units="ppm", dim=list(dim.t), longname="CO2 Concentration")
 
-var.names <- c("PFT", "poolname", "SoilDepth", "Fcomp", "BA", "Dens", "AGB", "CarbPools", "TotLivBiom", "TotSoilCarb", "GWBI", "BAI", "GPP", "AutoResp", "HeteroResp", "NPP", "NEE", "LW_albedo", "LWnet", "SWnet", "Qh", "LAI", "Qs", "Qsb", "Evap", "Transp", "SFCWDepth", "SFCWMass", "SoilMoist", "SoilTemp", "lwdown", "swdown", "precipf", "psurf", "qair", "tair", "wind", "CO2")
+var.names <- c("PFT", "poolname", "SoilDepth", "Fcomp", "BA", "Dens", "Mort", "AGB", "CarbPools", "TotLivBiom", "TotSoilCarb", "GWBI", "BAI", "GPP", "AutoResp", "HeteroResp", "NPP", "NEE", "IgnitionRate", "LW_albedo", "SW_Albedo", "LWnet", "SWnet", "Qh", "Qle", "LAI", "Qs", "Qsb", "Evap", "Transp", "SFCWDepth", "SFCWMass", "SoilMoist", "SoilTemp", "lwdown", "swdown", "precipf", "psurf", "qair", "tair", "wind", "CO2")
 
  
     ## write NCDF File

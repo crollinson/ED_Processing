@@ -1,10 +1,11 @@
 ## --------------------------------------------------------------
 ## Script to loop through the 6 sites and extract data into the 100-yr files 
 ## --------------------------------------------------------------
-source("/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/model2netcdf.ED2.paleon.R")
+raw.path <- "/projectnb/dietzelab/paleon/ED_runs/phase1a_spininitial.v2/"
+new.path <- "/projectnb/dietzelab/paleon/ED_runs/phase1a_spininitial.v2/spininitial_post-process/"
 
-raw.path <- "/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/"
-new.path <- "/projectnb/dietzelab/paleon/ED_runs/phase1a_runs.v2/post-process/"
+source("model2netcdf.ED2.paleon.R")
+
 site.list <- c("PHA", "PHO", "PUN", "PBL", "PDL", "PMB")
 site.lat <- c(42.54, 45.25, 46.22, 46.28, 47.17, 43.61)
 site.lon <- c(-72.18, -68.73, -89.53, -94.58, -95.17, -82.83)

@@ -1,0 +1,723 @@
+<?xml version="1.0"?>
+<!DOCTYPE config SYSTEM "ed.dtd">
+<!-- Modifications based on Pecan meta analysis unless otherwise noted -->
+ <config>
+   <pft>
+      <num>       		5      </num>
+      <include_pft_ag>  1      </include_pft_ag>
+      <include_pft>     1      </include_pft>
+<!-- 
+
+	  <!-- Allocation Params -->	
+      <b1Bl>
+                 0.0799999982      </b1Bl>
+      <b2Bl>
+                 1.0000000000      </b2Bl>
+      <b1Bs>
+                 0.0000100000      </b1Bs>
+      <b2Bs>
+                 1.0000000000      </b2Bs>
+      <b1Ht>
+                 0.4778000116      </b1Ht>
+      <b2Ht>
+                -0.7500000000      </b2Ht>
+      <hgt_min>
+                 0.1500000060      </hgt_min>
+      <q>
+                 1.0000000000      </q>
+      <qsw>
+                 0.0056410255      </qsw>
+      <rho>
+                 0.5299999714      </rho>
+      <SLA>
+                22.0000000000      </SLA>
+
+	  <!-- Derived Params -->	
+      <c2n_recruit>
+                18.3132781982      </c2n_recruit>
+	  <!-- Leaf Params -->	
+      <phenology>
+                   2      			</phenology>
+	  <!-- Mortality Params -->	
+      <mort1>
+                 1.0000000000      </mort1>
+      <mort2>
+                10.0000000000      </mort2>
+      <mort3>
+                 0.0659999996      </mort3>
+      <plant_min_temp>
+                 213.00000000      </plant_min_temp>
+      <seedling_mortality>
+                 0.9499999881      </seedling_mortality>
+      <treefall_gt>
+                 0.0000000000      </treefall_gt>
+      <treefall_lt>
+                 0.2500000000      </treefall_lt>
+
+	  <!-- Nitrogen Params -->	
+      <c2n_leaf>
+                18.3122673035      </c2n_leaf>
+
+	  <!-- Photosynthesis Params -->	
+      <cuticular_cond>
+             	 10000.0000000000      </cuticular_cond>
+      <D0>
+                 0.0099999998      </D0>
+      <dark_respiration_factor>
+                 0.0399999991      </dark_respiration_factor>
+      <leaf_width>
+                 0.0500000007      </leaf_width>
+      <photosyn_pathway>
+                 3      </photosyn_pathway>
+      <quantum_efficiency>
+                 0.0799999982      </quantum_efficiency>
+      <stomatal_slope>
+                 6.3948998451      </stomatal_slope>
+      <Vm_low_temp>
+                 4.7136998177      </Vm_low_temp>
+      <Vm0>
+                18.2999992371      </Vm0>
+      <water_conductance>
+                 0.0047599999      </water_conductance>
+                 
+	  <!-- Radiation Params -->	
+      <clumping>
+                 0.83999999999999996891      </clumping>
+      <diffuse_backscatter_vis>
+                 0.0740740821      </diffuse_backscatter_vis>
+      <emis_v>
+                 0.95999999999999996447      </emis_v>
+      <leaf_scatter_vis>
+                 0.2699999809      </leaf_scatter_vis>
+
+	  <!-- Reproduction Params -->	
+      <nonlocal_dispersal>
+                 1.0000000000      </nonlocal_dispersal>
+      <r_fract>
+                 1.0000000000      </r_fract>
+      <repro_min_h>
+                 0.0000000000      </repro_min_h>
+      <seed_rain>
+                 0.001      </seed_rain>
+
+	  <!-- Respiration Params -->	
+      <f_labile>
+                 1.0000000000      </f_labile>
+      <growth_resp_factor>
+                 0.3330000043      </growth_resp_factor>
+      <leaf_turnover_rate>
+                 2.0000000000      </leaf_turnover_rate>
+      <root_turnover_rate>
+                 0.3330000043      </root_turnover_rate>
+      <root_respiration_factor>
+                 0.5279999971      </root_respiration_factor>
+      <storage_turnover_rate>
+                 0.0000000000      </storage_turnover_rate>
+
+
+	  <!-- ??? Params -->	
+      <max_dbh>
+                 0.3979999959      </max_dbh>
+ -->
+   </pft>
+  
+
+
+
+
+
+  <pft>
+      <num>      		6      </num>
+      <include_pft_ag>  0      </include_pft_ag>
+      <include_pft>		1      </include_pft>
+
+	  <!-- Allocation Params -->	
+      <b1Bl>
+                 0.02400      </b1Bl>	<!-- Jackie -->
+      <b2Bl>
+                 1.89900      </b2Bl>	<!-- Jackie -->
+      <b1Bs>
+                 0.14700      </b1Bs>
+      <b2Bs>
+                 2.23800      </b2Bs>
+      <b1Ht>
+                27.14000      </b1Ht>
+      <b2Ht>
+                -0.03884      </b2Ht>	
+      <hgt_min>
+                 1.50000      </hgt_min>
+      <q>
+<!--                  0.76880      </q> 	<!~~ Pecan Late Conifer ~~>  -->
+                 0.34639      </q> 	<!-- ED Default -->
+      <sapwood_ratio>
+              3900.00000      </sapwood_ratio> <!-- ED Default -->
+      <qsw>
+                 0.00154      </qsw> <!-- ED Default -->
+      <rho>
+                 0.00000     </rho>
+      <SLA>
+                 6			 </SLA> <!-- Jackie -->
+
+	  <!-- Derived Params -->	
+      <c2n_recruit>
+               124.6847686768      </c2n_recruit>
+
+	  <!-- Leaf Params -->	
+      <phenology>
+                   0      </phenology>
+
+	  <!-- Mortality Params -->	
+      <mort1>
+                 1.00000      </mort1>
+      <mort2>
+                20.00000      </mort2> 
+      <mort3>
+                 0.00339      </mort3>
+      <plant_min_temp>
+                 193.000      </plant_min_temp>	<!-- Pecan -->
+      <seedling_mortality>
+                 0.95000      </seedling_mortality>
+      <treefall_gt>
+                 0.00000      </treefall_gt>
+      <treefall_lt>
+                 0.10000      </treefall_lt>
+
+	  <!-- Nitrogen Params -->	
+      <c2n_leaf>
+                78.03262      </c2n_leaf>	<!-- Ryan Kelley/ Pecan -->
+
+	  <!-- Photosynthesis Params -->	
+      <cuticular_cond>
+              1000.000      </cuticular_cond>	<!-- ED Default -->
+      <D0>
+                 0.01000      </D0>	<!-- Jackie -->
+      <dark_respiration_factor>
+                 0.02000      </dark_respiration_factor> 	<!-- Jackie -->
+      <leaf_width>
+                 0.05000      </leaf_width> 
+      <photosyn_pathway>
+                   3	      </photosyn_pathway>
+      <quantum_efficiency>
+                 0.08000      </quantum_efficiency>	
+      <stomatal_slope>
+                 6.39490      </stomatal_slope>	<!-- Jackie -->
+      <Vm_low_temp>
+                 4.71370      </Vm_low_temp>	<!-- Ryan Kelly/Pecan (South Pine) -->
+      <Vm0>
+                11.35000      </Vm0>	<!-- Jackie -->
+      <water_conductance>
+<!--                  0.0000457	  </water_conductance>	<!~~ Ryan Kelly/Pecan (South Pine) ~~> -->
+                 0.00476	  </water_conductance>	<!-- Jackie -->
+
+	  <!-- Radiation Params -->	
+      <clumping>
+                0.73500      </clumping>
+      <diffuse_backscatter_vis>
+                 0.0740740821      </diffuse_backscatter_vis>
+      <emis_v>
+                 0.97000      </emis_v>
+      <leaf_scatter_vis>
+                 0.2699999809      </leaf_scatter_vis>
+
+	  <!-- Reproduction Params -->	
+      <nonlocal_dispersal>
+                 0.76600      </nonlocal_dispersal>	<!-- ED Default -->
+      <r_fract>
+                 0.30000      </r_fract>	<!-- Ryan Kelly/Pecan (South Pine) -->
+      <repro_min_h>
+                 5.00000      </repro_min_h>
+      <seed_rain>
+                 0.05000      </seed_rain>	<!-- Modified per Jackie -->
+      <f_labile>
+                 0.79000      </f_labile>	<!-- ED Default -->
+
+	  <!-- Respiration Params -->	
+      <growth_resp_factor>
+                 0.45030      </growth_resp_factor>	<!-- ED Default -->
+      <leaf_turnover_rate>
+                 0.33300      </leaf_turnover_rate> <!-- ED Default -->
+      <root_respiration_factor>
+                 0.52800      </root_respiration_factor> <!-- ED Default-->
+      <root_turnover_rate>
+                 3.92722	  </root_turnover_rate> <!-- ED Default -->
+      <storage_turnover_rate>
+                 0.00000      </storage_turnover_rate>
+   </pft>
+
+<pft>
+      <num>				8      </num>
+      <include_pft_ag>	0      </include_pft_ag>
+      <include_pft>		1      </include_pft>
+
+	  <!-- Allocation Params -->	
+      <b1Bl>
+                 0.04540      </b1Bl>	<!-- ED Default -->
+      <b2Bl>
+                 1.87351      </b2Bl>	<!-- ED Default -->
+      <b1Bs>
+                 0.16170      </b1Bs>
+      <b2Bs>
+                 2.15360      </b2Bs>
+      <b1Ht>
+                22.79000      </b1Ht>
+      <b2Ht>
+                -0.04445      </b2Ht>	
+      <hgt_min>
+                 1.50000      </hgt_min>
+      <q>
+<!--                  0.76880      </q> 	<!~~ Pecan ~~>  -->
+                 0.34639      </q> 	<!-- ED Default -->
+      <sapwood_ratio>
+              3900.00000      </sapwood_ratio> <!-- ED Default -->
+      <qsw>
+                 0.00256      </qsw> <!-- ED Default -->
+      <rho>
+                 0.00000      </rho>
+      <SLA>
+                 10.00000	 </SLA> <!-- ED Default -->
+
+	  <!-- Derived Params -->	
+      <c2n_recruit>
+               132.0868988037      </c2n_recruit>
+
+	  <!-- Leaf Params -->	
+      <phenology>
+                   0      </phenology>
+	  <!-- Mortality Params -->	
+      <mort1>
+                 1.00000      </mort1>
+      <mort2>
+                20.00000      </mort2>  	<!-- ED Default -->
+      <mort3>
+                 0.00236      </mort3>
+      <plant_min_temp>
+                 213.00000      </plant_min_temp>	<!-- Jackie -->
+      <seedling_mortality>
+                 0.95000      </seedling_mortality> <!-- ED Default -->
+      <treefall_gt>
+                 0.00000      </treefall_gt>
+      <treefall_lt>
+                 0.10000      </treefall_lt>
+	  <!-- Nitrogen Params -->	
+      <c2n_leaf>
+                108.45074      </c2n_leaf>	<!-- ED Default -->
+
+	  <!-- Photosynthesis Params -->	
+      <cuticular_cond>
+              1000.000      </cuticular_cond>	<!-- ED Default -->
+
+      <D0>
+                 0.01000      </D0>	<!-- Jackie -->
+      <dark_respiration_factor>
+                 0.02000	  </dark_respiration_factor> <!-- Jackie -->
+      <leaf_width>
+                 0.05000      </leaf_width> <!-- ED Default -->
+      <photosyn_pathway>
+                 3			  </photosyn_pathway>
+      <quantum_efficiency>
+                 0.08000      </quantum_efficiency>	<!-- ED Default -->
+      <stomatal_slope>
+                 6.39490      </stomatal_slope>	<!-- Jackie -->
+      <Vm_low_temp>
+                 4.71370      </Vm_low_temp> 	<!-- ED Default -->
+      <Vm0>
+                 13.62000	  </Vm0>	<!-- ED Default -->
+      <water_conductance>
+                 0.00476	  </water_conductance> 	<!-- Jackie -->
+<!--                  0.00001	  </water_conductance>	<!~~ ED Default ~~> -->
+
+	  <!-- Radiation Params -->	
+      <clumping>
+                 0.73500      </clumping>	<!-- ED Default -->
+      <diffuse_backscatter_vis>
+                 0.0740740821      </diffuse_backscatter_vis>
+      <emis_v>
+                 0.97000      </emis_v>
+      <leaf_scatter_vis>
+                 0.2699999809      </leaf_scatter_vis>
+	  <!-- Reproduction Params -->	
+      <nonlocal_dispersal>
+                 0.00100      </nonlocal_dispersal>	<!-- ED Default -->
+      <r_fract>
+                 0.30000      </r_fract>	<!-- ED Default -->
+      <repro_min_h>
+                 5.00000      </repro_min_h>
+      <seed_rain>
+                 0.05000      </seed_rain>	<!-- Modified per Jackie -->
+
+	  <!-- Respiration Params -->	
+      <f_labile>
+                 0.79000      </f_labile>	<!-- ED Default-->
+      <growth_resp_factor>
+                 0.45030      </growth_resp_factor>	<!-- ED Default -->
+      <leaf_turnover_rate>
+                 0.33333      </leaf_turnover_rate>	<!-- Pecan -->
+      <root_respiration_factor>
+                 0.52800      </root_respiration_factor> <!-- ED Default -->
+      <root_turnover_rate>
+                 3.80013	  </root_turnover_rate> <!-- ED Default -->
+      <storage_turnover_rate>
+                 0.00000      </storage_turnover_rate>
+   </pft>
+
+<pft>
+      <num>				9	</num>
+      <include_pft_ag>	0   </include_pft_ag>
+      <include_pft>		1	</include_pft>
+
+
+	  <!-- Allocation Params -->	
+      <b1Bl>
+                 0.01290      </b1Bl>	<!-- ED -->
+      <b2Bl>
+                 1.74770      </b2Bl>	<!-- ED -->
+      <b1Bs>
+                 0.02648      </b1Bs>
+      <b2Bs>
+                 2.95954      </b2Bs>
+      <b1Ht>
+                22.67990      </b1Ht>
+      <b2Ht>
+                -0.06534      </b2Ht>
+      <hgt_min>
+                 1.50000      </hgt_min>
+      <q>
+                 0.63580      </q>	<!-- Jackie -->
+<!--                  1.12740      </q>	<!~~ ED Default ~~> -->
+      <sapwood_ratio>
+              3900.00000      </sapwood_ratio> <!-- ED Default -->
+      <qsw>
+                 0.00769      </qsw> <!-- ED Default -->
+      <rho>
+                 0.00000      </rho>
+      <SLA>
+<!--                 42.80167	  </SLA> <!~~ Pecan ~~> -->
+			    28.46075	  </SLA> <!-- Jackie; closer to ED Default; should reduce LAI -->
+	  <!-- Derived Params -->	
+      <c2n_recruit>
+                17.8949623108      </c2n_recruit>
+
+	  <!-- Leaf Params -->	
+      <phenology>
+                   2      </phenology>
+	  <!-- Mortality Params -->	
+      <mort1>
+                 1.00000      </mort1>
+      <mort2>
+                 20.00000     </mort2>	<!-- ED Default -->
+      <mort3>
+                 0.00614      </mort3> <!-- ED Default -->
+      <plant_min_temp>
+               193.15000      </plant_min_temp>
+      <seedling_mortality>
+                 0.95000      </seedling_mortality> <!-- ED -->
+      <treefall_gt>
+                 0.00000      </treefall_gt>
+      <treefall_lt>
+                 0.10000      </treefall_lt>
+
+	  <!-- Nitrogen Params -->	
+      <c2n_leaf>
+                13.46411      </c2n_leaf>	<!-- ED -->
+
+	  <!-- Photosynthesis Params -->	
+      <cuticular_cond>
+              20000.00000      </cuticular_cond> 	<!-- Jackie -->
+      <D0>
+                 0.01000      </D0>	<!-- ED Default -->
+      <dark_respiration_factor>
+                 0.03399	  </dark_respiration_factor> <!-- Jackie -->
+      <leaf_width>
+                 0.05000      </leaf_width>	<!-- Jackie -->
+      <photosyn_pathway>
+                   3      	  </photosyn_pathway>
+      <quantum_efficiency>
+                 0.08000      </quantum_efficiency> <!-- ED -->
+      <stomatal_slope>
+                 5.87483      </stomatal_slope>	<!-- Jackie -->
+      <Vm_low_temp>
+                 4.71370      </Vm_low_temp>	<!-- Jackie -->
+      <Vm0>
+                27.96089	  </Vm0> <!-- Jackie -->
+      <water_conductance>
+<!--                  0.0000426	  </water_conductance>	<!~~ Ryan Kelley (Pecan) ~~> -->
+                 0.00497	  </water_conductance>	<!-- Jackie -->
+
+	  <!-- Radiation Params -->	
+      <clumping>
+                 0.84000      </clumping> <!-- Pecan -->
+      <diffuse_backscatter_vis>
+                 0.0740740821      </diffuse_backscatter_vis>
+      <emis_v>
+                 0.95000      </emis_v>
+      <leaf_scatter_vis>
+                 0.2699999809      </leaf_scatter_vis>
+
+	  <!-- Reproduction Params -->	
+      <nonlocal_dispersal>
+                 1.00000      </nonlocal_dispersal>	<!-- ED -->
+      <r_fract>
+                 0.31808      </r_fract>	<!-- Jackie -->
+      <repro_min_h>
+                 5.00000      </repro_min_h>
+      <seed_rain>
+                 0.05000      </seed_rain>	<!-- Modified per Jackie -->
+
+	  <!-- Respiration Params -->	
+      <f_labile>
+                 0.79000      </f_labile>	<!-- ED -->
+      <growth_resp_factor>
+                 0.35128      </growth_resp_factor>	<!-- Jackie -->
+      <leaf_turnover_rate>
+                 0.00000      </leaf_turnover_rate>
+      <root_respiration_factor>
+                 2.94544      </root_respiration_factor> <!-- Jackie -->
+      <root_turnover_rate>
+                 0.69149	  </root_turnover_rate> <!-- Jackie -->
+      <storage_turnover_rate>
+                 0.00000      </storage_turnover_rate>	<!-- Modified per Jackie -->
+   </pft>
+
+   <pft>
+      <num>				10      </num>
+      <include_pft_ag>	 0      </include_pft_ag>
+      <include_pft>		 1      </include_pft>
+
+
+	  <!-- Allocation Params -->	
+      <b1Bl>
+                 0.04800      </b1Bl>	<!-- Jackie -->
+      <b2Bl>
+                 1.45500      </b2Bl>	<!-- Jackie -->
+      <b1Bs>
+                 0.16170      </b1Bs>
+      <b2Bs>
+                 2.45720      </b2Bs>
+      <b1Ht>
+                25.18000      </b1Ht>
+      <b2Ht>
+                -0.04964      </b2Ht>	
+      <hgt_min>
+                 1.50000      </hgt_min>
+      <q>
+                 0.99557      </q> <!--Pecan -->
+<!--                  1.12740      </q>	<!~~ ED Default ~~> -->
+      <sapwood_ratio>
+              3900.00000      </sapwood_ratio> <!-- ED Default -->
+      <qsw>
+                 0.00621      </qsw> <!-- ED Default -->
+      <rho>
+                 0.00000      </rho>
+      <SLA>
+                29.83671      </SLA> <!-- ED -->
+
+	  <!-- Derived Params -->	
+<!-- 
+      <c2n_recruit>
+                28.5154876709      </c2n_recruit>
+ -->
+
+	  <!-- Leaf Params -->	
+      <phenology>
+                   2      </phenology>
+
+	  <!-- Mortality Params -->	
+      <mort1>
+                 1.00000      </mort1>
+      <mort2>
+                 20.00000     </mort2> 	<!-- ED -->
+      <mort3>
+                 0.00381      </mort3> <!-- ED Default -->
+      <plant_min_temp>
+               193.00000      </plant_min_temp> <!-- Modified -->
+      <seedling_mortality>
+                 0.95000      </seedling_mortality>
+      <treefall_gt>
+                 0.00000      </treefall_gt>
+      <treefall_lt>
+                 0.10000      </treefall_lt>
+
+	  <!-- Nitrogen Params -->	
+      <c2n_leaf>
+                19.34693      </c2n_leaf> <!-- Pecan -->
+
+	  <!-- Photosynthesis Params -->	
+      <cuticular_cond>
+              20000.00000      </cuticular_cond> 	<!-- Jackie -->
+
+      <D0>
+                 0.01000      </D0>	<!-- ED Default -->
+      <dark_respiration_factor>
+                 0.01204      </dark_respiration_factor>  <!-- Jackie -->
+      <leaf_width>
+                 0.05000      </leaf_width>	<!-- Jackie -->
+      <photosyn_pathway>
+                   3      </photosyn_pathway>
+      <quantum_efficiency>
+                 0.08000      </quantum_efficiency>  <!-- Jackie -->
+      <stomatal_slope>
+                 5.72518      </stomatal_slope>  <!-- Jackie -->
+      <Vm_low_temp>
+                 4.71370      </Vm_low_temp>  <!-- Jackie -->
+      <Vm0>
+                29.37212	  </Vm0> <!-- Jackie -->
+      <water_conductance>
+<!--                  0.0000473	  </water_conductance> 	<!~~ Ryan Kelley (Pecan) ~~> -->
+                 0.00467	  </water_conductance>	<!-- Jackie -->
+
+	  <!-- Radiation Params -->	
+      <clumping>
+                 0.84000      </clumping>
+      <diffuse_backscatter_vis>
+                 0.0740740821      </diffuse_backscatter_vis>
+      <emis_v>
+                 0.95000      </emis_v>
+      <leaf_scatter_vis>
+                 0.2699999809      </leaf_scatter_vis>
+
+	  <!-- Reproduction Params -->	
+      <nonlocal_dispersal>
+                 0.32500      </nonlocal_dispersal>	<!-- Jackie -->
+      <r_fract>
+                 0.31580      </r_fract> 	<!-- Jackie -->
+      <repro_min_h>
+                 5.00000      </repro_min_h>
+      <seed_rain>
+                 0.05000      </seed_rain>	<!-- Modified per Jackie -->
+
+	  <!-- Respiration Params -->	
+      <f_labile>
+                 0.79000      </f_labile>	<!-- Jackie -->
+      <growth_resp_factor>
+                 0.35090      </growth_resp_factor>	<!-- Jackie -->
+      <leaf_turnover_rate>
+                 0.00000      </leaf_turnover_rate>
+      <root_respiration_factor>
+<!--                  1.09632      </root_respiration_factor> <!~~ 2 SD below Pecan ~~> -->
+                 2.94190      </root_respiration_factor> <!-- Jackie -->
+      <root_turnover_rate>
+                 0.68127	  </root_turnover_rate>	<!-- Jackie -->
+      <storage_turnover_rate>
+                 0.00000      </storage_turnover_rate>	<!-- Modified per Jackie -->
+   </pft>
+
+   <pft>
+      <num>				11      </num>
+      <include_pft_ag>	 0      </include_pft_ag>
+      <include_pft>		 1      </include_pft>
+
+
+	  <!-- Allocation Params -->	
+      <b1Bl>
+                 0.01700      </b1Bl>	<!-- ED -->
+      <b2Bl>
+                 1.73100      </b2Bl>	<!-- ED -->
+      <b1Bs>
+                 0.23500      </b1Bs>
+      <b2Bs>
+                 2.25180      </b2Bs>
+      <b1Ht>
+                23.38740      </b1Ht>
+      <b2Ht>
+                -0.05404      </b2Ht>
+      <hgt_min>
+                 1.50000      </hgt_min>
+      <q>
+                 0.99692      </q> <!-- Jackie -->
+<!--                  1.12740      </q>	<!~~ ED Default ~~> -->
+      <sapwood_ratio>
+              3900.00000      </sapwood_ratio> <!-- ED Default -->
+      <qsw>
+                 0.01538      </qsw> <!-- Jackie -->
+      <rho>
+                 0.00000      </rho>
+      <SLA>
+                39.51911      </SLA> <!-- Jackie -->
+
+	  <!-- Derived Params -->	
+      <c2n_recruit>
+                56.3194046021      </c2n_recruit>
+
+	  <!-- Leaf Params -->	
+      <phenology>
+                   2      </phenology>
+
+	  <!-- Mortality Params -->	
+      <mort1>
+                 1.00000      </mort1>
+      <mort2>
+                19.78584      </mort2> 	<!-- Jackie -->
+      <mort3>
+                 0.00428      </mort3> <!-- Ed Default -->
+      <plant_min_temp>
+               193.00000      </plant_min_temp>	<!-- Modified -->
+      <seedling_mortality>
+                 0.95000      </seedling_mortality>	<!-- Ryan Kelley (Pecan) -->
+      <treefall_gt>
+                 0.00000      </treefall_gt>
+      <treefall_lt>
+                 0.10000      </treefall_lt>
+
+	  <!-- Nitrogen Params -->	
+      <c2n_leaf>
+                18.07512      </c2n_leaf>	<!-- Pecan -->
+
+	  <!-- Photosynthesis Params -->	
+      <cuticular_cond>
+              20000.00000      </cuticular_cond> 	<!-- Jackie -->
+
+      <D0>
+                 0.01000      </D0>	<!-- Jackie -->
+      <dark_respiration_factor>
+                 0.03600	  </dark_respiration_factor> <!-- Jackie -->
+      <leaf_width>
+                 0.0500      </leaf_width>	<!-- Jackie -->
+      <photosyn_pathway>
+                   3      </photosyn_pathway>
+      <quantum_efficiency>
+                 0.08000      </quantum_efficiency>	<!-- Jackie -->
+      <stomatal_slope>
+                 5.83922          </stomatal_slope>		<!-- Jackie -->
+      <Vm_low_temp>
+                 4.71370      </Vm_low_temp>	<!-- Jackie -->
+      <Vm0>
+                55.97720	  </Vm0> <!-- Jackie -->
+      <water_conductance>
+<!--                  0.0000431	  </water_conductance>	<!~~ Ryan Kelley (Pecan) ~~> -->
+                 0.00474	  </water_conductance>	<!-- Jackie -->
+
+	  <!-- Radiation Params -->	
+      <clumping>
+                 0.84000      </clumping>
+      <diffuse_backscatter_vis>
+                 0.0740740821      </diffuse_backscatter_vis>
+      <emis_v>
+                 0.95000      </emis_v>
+      <leaf_scatter_vis>
+                 0.2699999809      </leaf_scatter_vis>
+
+	  <!-- Reproduction Params -->	
+      <nonlocal_dispersal>
+                 0.07400      </nonlocal_dispersal>	<!-- Jackie -->
+      <r_fract>
+                 0.31190      </r_fract> 	<!-- Jackie -->
+      <repro_min_h>
+                 5.00000      </repro_min_h>
+      <seed_rain>
+                 0.05000      </seed_rain>	<!-- Modified per Jackie -->
+
+	  <!-- Respiration Params -->	
+      <f_labile>
+                 0.79000      </f_labile> 	<!-- Jackie -->
+      <growth_resp_factor>
+                 0.35075      </growth_resp_factor>  	<!-- Jackie -->
+      <leaf_turnover_rate>
+                 0.00000      </leaf_turnover_rate>
+      <root_respiration_factor>
+                 2.92649      </root_respiration_factor> <!-- Jackie -->
+      <root_turnover_rate>
+                 0.67282	  </root_turnover_rate>  	<!-- Jackie -->
+      <storage_turnover_rate>
+                 0.00000      </storage_turnover_rate>	<!-- Modified per Jackie -->
+   </pft>
+ </config>

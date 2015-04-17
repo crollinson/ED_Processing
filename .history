@@ -1,31 +1,3 @@
-length(DBH)
-DBH <- data.frame(DBH)
-summary(DBH)
-for(j in 1:5){#
-	DBH[,j] <- rnorm(length(DBH[,1]), mean=10, sd=2)#
-}
-summary(DBH)
-names(DBH) <- paste("X", 1:5)
-summary(DBH)
-names(DBH) <- paste("X", 1:5, sep="")
-summary(DBH)
-DBH$Year <- 1950:2010
-DBH <- DBH[, c("Year", 1:5)]
-DBH$Year <- 1950:2010
-summary(DBH)
-DBH <- DBH[, c(6, 1:5)]
-summary(DBH)
-beta0 <- rnorm(50, mean=0.054, sd=0.004)#
-beta1 <- rnorm(50, mean=2.651, sd=0.0175)#
-for(j in 1:length(DBH$Year)){#
-	test <- rep(NA,1000)#
-	for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH[DBH$Year==j, 2:ncol(DBH)]^sample(beta1, size=1, replace=T))}#
-	year$mean[j] <- mean(test)#
-	year$sd[j] <- sd(test)#
-}
-for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH[DBH$Year==j, 2:ncol(DBH)]^sample(beta1, size=1, replace=T))}
-test <- rep(NA,1000)
-for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH[DBH$Year==j, 2:ncol(DBH)]^sample(beta1, size=1, replace=T))}
 test <- rep(NA,1000)
 for(i in 1:1000){test[i] <- mean(sample(beta0, size=1, replace=T)*DBH[DBH$Year==j, 2:ncol(DBH)]^sample(beta1, size=1, replace=T))}
 mean(2*DBH[DBH$Year==j, 2:ncol(DBH)]^2)
@@ -580,3 +552,56 @@ y%%blckyr == 0
 y=1850
 y%%blckyr == 0
 floor((y-yeara)/blckyr)+1
+pha1 <- nc_open("~/Desktop/PalEON CR/ED_Misc/spininit/PHA_SpinInit.nc")#
+summary(pha1$var)
+library(ncdf4)
+pha1 <- nc_open("~/Desktop/PalEON CR/ED_Misc/spininit/PHA_SpinInit.nc")
+summary(pha1$var)
+agb <- ncvar_get(pha1, "AGB")#
+fcomp <- t(ncvar_get(pha1, "Fcomp"))#
+mort.rate <- t(ncvar_get(pha1, "Mort"))#
+soil.moist <- t(ncvar_get(pha1, "SoilMoist"))#
+gpp <- ncvar_get(pha1, "GPP")#
+nee <- ncvar_get(pha1, "NEE")#
+transp <- ncvar_get(pha1, "Transp")#
+evap <- ncvar_get(pha1, "Evap")#
+tair <- ncvar_get(pha1, "tair")#
+precipf <- ncvar_get(pha1, "precipf")#
+lai <- ncvar_get(pha1, "LAI")
+plot(fcomp[,5]*agb, type="l", lwd=2, col=pft.colors[1], ylim=c(0, max(agb)), main="AGB", ylab="AGB, kg/m2", font.lab=2)#
+	lines(fcomp[,6]*agb, lwd=2, col=pft.colors[2])#
+	lines(fcomp[,8]*agb, lwd=2, col=pft.colors[3])#
+	lines(fcomp[,9]*agb, lwd=2, col=pft.colors[4])#
+	lines(fcomp[,10]*agb, lwd=2, col=pft.colors[5])#
+	lines(fcomp[,11]*agb, lwd=2, col=pft.colors[6])#
+	legend("topleft", legend=c("PFT 5", "PFT 6", "PFT 8", "PFT 9", "PFT 10", "PFT 11"), col=pft.colors, lwd=2, bty="n")
+pft.colors <- c("gray50", "green3", "darkgreen", "yellow3", "orange3", "red")
+plot(fcomp[,5]*agb, type="l", lwd=2, col=pft.colors[1], ylim=c(0, max(agb)), main="AGB", ylab="AGB, kg/m2", font.lab=2)
+lines(fcomp[,6]*agb, lwd=2, col=pft.colors[2])#
+	lines(fcomp[,8]*agb, lwd=2, col=pft.colors[3])#
+	lines(fcomp[,9]*agb, lwd=2, col=pft.colors[4])#
+	lines(fcomp[,10]*agb, lwd=2, col=pft.colors[5])#
+	lines(fcomp[,11]*agb, lwd=2, col=pft.colors[6])#
+	legend("topleft", legend=c("PFT 5", "PFT 6", "PFT 8", "PFT 9", "PFT 10", "PFT 11"), col=pft.colors, lwd=2, bty="n")
+plot(fcomp[,5], type="l", lwd=2, col=pft.colors[1], ylim=c(0,1), main="Fcomp")#
+	lines(fcomp[,6], lwd=2, col=pft.colors[2])#
+	lines(fcomp[,8], lwd=2, col=pft.colors[3])#
+	lines(fcomp[,9], lwd=2, col=pft.colors[4])#
+	lines(fcomp[,10], lwd=2, col=pft.colors[5])#
+	lines(fcomp[,11], lwd=2, col=pft.colors[6])#
+	legend(x=500, y=0.8, legend=c("PFT 5", "PFT 6", "PFT 8", "PFT 9", "PFT 10", "PFT 11"), col=pft.colors, lwd=2, bty="n")
+plot(soil.moist[,1], type="l", lwd=2, col=1, ylim=range(soil.moist), main="SoilMoist")
+lines(soil.moist[,11], lwd=1, col=14)
+lines(soil.moist[,8], lwd=1, col=8)
+lines(soil.moist[,12], lwd=1, col=12)
+lines(soil.moist[,11], lwd=1, col=14)
+lines(soil.moist[,10], lwd=1, col=10)
+plot(soil.moist[,1], type="l", lwd=2, col=1, ylim=range(soil.moist), main="SoilMoist")
+lines(soil.moist[,11], lwd=1, col=14)
+plot(fcomp[,5]*agb, type="l", lwd=2, col=pft.colors[1], ylim=c(0, max(agb)), main="AGB", ylab="AGB, kg/m2", font.lab=2)#
+	lines(fcomp[,6]*agb, lwd=2, col=pft.colors[2])#
+	lines(fcomp[,8]*agb, lwd=2, col=pft.colors[3])#
+	lines(fcomp[,9]*agb, lwd=2, col=pft.colors[4])#
+	lines(fcomp[,10]*agb, lwd=2, col=pft.colors[5])#
+	lines(fcomp[,11]*agb, lwd=2, col=pft.colors[6])#
+	legend("topleft", legend=c("PFT 5", "PFT 6", "PFT 8", "PFT 9", "PFT 10", "PFT 11"), col=pft.colors, lwd=2, bty="n")

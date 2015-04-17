@@ -3,11 +3,11 @@
 #$ -j y 
 #$ -S /bin/bash         
 #$ -V 
-#$ -pe omp 8
-#$ -v OMP_NUM_THREADS=8
+#$ -pe omp 4
+#$ -v OMP_NUM_THREADS=4
 #$ -m e
 #$ -M crollinson@gmail.com
 #$ -l h_rt=48:00:00
-#$ -N PHAspinSMP
+#$ -N PHAspinInit
 #cd /projectnb/dietzelab/paleon/ED_runs/phase1a_spininitial.v2/PHA
 ./ed_2.1-opt

@@ -2,13 +2,14 @@
 <!DOCTYPE config SYSTEM "ed.dtd">
 <!-- Modifications based on Pecan meta analysis unless otherwise noted -->
  <config>
+
    <pft>
       <num>       		5      </num>
       <include_pft_ag>  1      </include_pft_ag>
       <include_pft>     1      </include_pft>
 <!-- 
 
-	  <!~~ Allocation Params ~~>	
+	  <!-- Allocation Params -->	
       <b1Bl>
                  0.0799999982      </b1Bl>
       <b2Bl>
@@ -32,13 +33,13 @@
       <SLA>
                 22.0000000000      </SLA>
 
-	  <!~~ Derived Params ~~>	
+	  <!-- Derived Params -->	
       <c2n_recruit>
                 18.3132781982      </c2n_recruit>
-	  <!~~ Leaf Params ~~>	
+	  <!-- Leaf Params -->	
       <phenology>
                    2      			</phenology>
-	  <!~~ Mortality Params ~~>	
+	  <!-- Mortality Params -->	
       <mort1>
                  1.0000000000      </mort1>
       <mort2>
@@ -54,11 +55,11 @@
       <treefall_lt>
                  0.2500000000      </treefall_lt>
 
-	  <!~~ Nitrogen Params ~~>	
+	  <!-- Nitrogen Params -->	
       <c2n_leaf>
                 18.3122673035      </c2n_leaf>
 
-	  <!~~ Photosynthesis Params ~~>	
+	  <!-- Photosynthesis Params -->	
       <cuticular_cond>
              	 10000.0000000000      </cuticular_cond>
       <D0>
@@ -80,7 +81,7 @@
       <water_conductance>
                  0.0047599999      </water_conductance>
                  
-	  <!~~ Radiation Params ~~>	
+	  <!-- Radiation Params -->	
       <clumping>
                  0.83999999999999996891      </clumping>
       <diffuse_backscatter_vis>
@@ -90,7 +91,7 @@
       <leaf_scatter_vis>
                  0.2699999809      </leaf_scatter_vis>
 
-	  <!~~ Reproduction Params ~~>	
+	  <!-- Reproduction Params -->	
       <nonlocal_dispersal>
                  1.0000000000      </nonlocal_dispersal>
       <r_fract>
@@ -100,7 +101,7 @@
       <seed_rain>
                  0.001      </seed_rain>
 
-	  <!~~ Respiration Params ~~>	
+	  <!-- Respiration Params -->	
       <f_labile>
                  1.0000000000      </f_labile>
       <growth_resp_factor>
@@ -115,17 +116,12 @@
                  0.0000000000      </storage_turnover_rate>
 
 
-	  <!~~ ??? Params ~~>	
+	  <!-- ??? Params -->	
       <max_dbh>
                  0.3979999959      </max_dbh>
  -->
    </pft>
   
-
-
-
-
-
   <pft>
       <num>      		6      </num>
       <include_pft_ag>  0      </include_pft_ag>
@@ -133,35 +129,33 @@
 
 	  <!-- Allocation Params -->	
       <b1Bl>
-                 0.02400      </b1Bl>
+                 0.03228      </b1Bl>	<!-- Pecan -->
       <b2Bl>
-                 1.89900      </b2Bl>
+                 1.84426      </b2Bl>	<!-- Pecan -->
       <b1Bs>
                  0.14700      </b1Bs>
       <b2Bs>
                  2.23800      </b2Bs>
       <b1Ht>
-                27.14000      </b1Ht>
+                45.00000      </b1Ht> <!-- Modified -->
       <b2Ht>
-                -0.03884      </b2Ht>
+                -0.01942      </b2Ht>	<!-- ED Default / 2 -->
       <hgt_min>
                  1.50000      </hgt_min>
       <q>
-                 1.41114      </q> 	<!-- Ryan Kelly (S. Pine)/Pecan -->
-<!-- 
+                 0.76880      </q> 	<!-- Ryan Late Conifer -->
+      <sapwood_ratio>
+              3900.00000      </sapwood_ratio> <!-- ED Default -->
       <qsw>
-                 0.00306      </qsw>
- -->
+                 0.00306      </qsw> <!-- ED Equation -->
       <rho>
                  0.00000     </rho>
       <SLA>
-                 11.93417	 </SLA> <!-- Pecan -->
+                11.93417	 </SLA> <!-- North Pine Pecan -->
 
 	  <!-- Derived Params -->	
-<!-- 
       <c2n_recruit>
                124.6847686768      </c2n_recruit>
- -->
 
 	  <!-- Leaf Params -->	
       <phenology>
@@ -171,13 +165,13 @@
       <mort1>
                  1.00000      </mort1>
       <mort2>
-                43.17267      </mort2> <!-- Ryan Kelly (S. Pine)/Pecan -->
+                20.00000     </mort2> <!-- Modified Manually -->
       <mort3>
                  0.00339      </mort3>
       <plant_min_temp>
                  193.000      </plant_min_temp>	<!-- Pecan -->
       <seedling_mortality>
-                 0.95000      </seedling_mortality>
+                 0.95238      </seedling_mortality>	<!-- Ryan (Pecan) -->
       <treefall_gt>
                  0.00000      </treefall_gt>
       <treefall_lt>
@@ -185,43 +179,40 @@
 
 	  <!-- Nitrogen Params -->	
       <c2n_leaf>
-                39.46400      </c2n_leaf>	<!-- Pecan -->
+                39.46400      </c2n_leaf>	<!-- Ryan (Pecan) -->
 
 	  <!-- Photosynthesis Params -->	
       <cuticular_cond>
-              4426.97974      </cuticular_cond>	<!-- Ryan Kelly/Pecan (South Pine) -->
+              1000.0000      </cuticular_cond>	<!--  ED Default -->
       <D0>
-                 0.01000      </D0>	<!-- Modified per Jackie -->
+                 0.01000      </D0>	<!-- Jackie, Marcos -->
       <dark_respiration_factor>
                  0.02029      </dark_respiration_factor> 	<!-- Ryan Kelly/Pecan (South Pine) -->
       <leaf_width>
-                 0.05000      </leaf_width>
+                 0.09988      </leaf_width> <!-- Ryan (Pecan) -->
       <photosyn_pathway>
                    3	      </photosyn_pathway>
       <quantum_efficiency>
-                 0.05811      </quantum_efficiency>	<!-- Pecan -->
+                 0.05811      </quantum_efficiency>	<!-- Pecan Temperate Conifer -->
       <stomatal_slope>
                  6.39490      </stomatal_slope>	<!-- Jackie -->
       <Vm_low_temp>
-                 5.05244      </Vm_low_temp>	<!-- Ryan Kelly/Pecan (South Pine) -->
+<!--                  5.05244      </Vm_low_temp>	<!-- Ryan Kelly/Pecan (South Pine) --> -->
+                 10      </Vm_low_temp>
       <Vm0>
                 41.97682      </Vm0>	<!-- Pecan -->
       <water_conductance>
-                 0.000457	  </water_conductance>	<!-- Ryan Kelly/Pecan (South Pine) -->
+                 0.0000457	  </water_conductance> 	<!-- Ryan * 0.01 -->
 
 	  <!-- Radiation Params -->	
       <clumping>
                 0.73500      </clumping>
-<!-- 
       <diffuse_backscatter_vis>
-                 0.0740740821      </diffuse_backscatter_vis>
- -->
+                 0.0740740821 </diffuse_backscatter_vis>
       <emis_v>
                  0.97000      </emis_v>
-<!-- 
       <leaf_scatter_vis>
-                 0.2699999809      </leaf_scatter_vis>
- -->
+                 0.2699999809 </leaf_scatter_vis>
 
 	  <!-- Reproduction Params -->	
       <nonlocal_dispersal>
@@ -237,16 +228,17 @@
 
 	  <!-- Respiration Params -->	
       <growth_resp_factor>
-                 0.27140      </growth_resp_factor>	<!-- Ryan Kelly/Pecan (South Pine) -->
+                 0.45030      </growth_resp_factor>	<!-- ED Default -->
       <leaf_turnover_rate>
                  0.32760      </leaf_turnover_rate> <!-- Pecan -->
       <root_respiration_factor>
                  3.35208      </root_respiration_factor> <!-- Pecan -->
       <root_turnover_rate>
-                 0.62140	  </root_turnover_rate> <!-- Ryan Kelly, in line with Luke McCormick -->
+                 0.62140      </root_turnover_rate> 	<!-- Ryan (Pecan) -->
       <storage_turnover_rate>
                  0.00000      </storage_turnover_rate>
    </pft>
+
 
 <pft>
       <num>				8      </num>
@@ -255,35 +247,33 @@
 
 	  <!-- Allocation Params -->	
       <b1Bl>
-                 0.04540      </b1Bl>
+                 0.04010      </b1Bl>	<!-- Avg of Pecan & North Pine  -->
       <b2Bl>
-                 1.68290      </b2Bl>
+                 1.87351      </b2Bl>	<!-- Pecan -->
       <b1Bs>
                  0.16170      </b1Bs>
       <b2Bs>
                  2.15360      </b2Bs>
       <b1Ht>
-                22.79000      </b1Ht>
+                40.00000      </b1Ht> <!-- Modified -->
       <b2Ht>
-                -0.04445      </b2Ht>
+                -0.02222      </b2Ht>	<!-- ED Default /2 -->
       <hgt_min>
                  1.50000      </hgt_min>
       <q>
-                 0.76880      </q> 	<!-- Ryan Kelley (Pecan) -->
-<!-- 
+                 0.76880      </q> 	<!-- Ryan -->
+      <sapwood_ratio>
+              3900.00000      </sapwood_ratio> <!-- ED Default -->
       <qsw>
-                 0.00256      </qsw>
- -->
+                 0.00275      </qsw> <!-- ED Equation -->
       <rho>
                  0.00000      </rho>
       <SLA>
-                10.70833	  </SLA> <!-- Pecan --> 
+                 10.70833	 </SLA> <!-- Pecan -->
 
 	  <!-- Derived Params -->	
-<!-- 
       <c2n_recruit>
                132.0868988037      </c2n_recruit>
- -->
 
 	  <!-- Leaf Params -->	
       <phenology>
@@ -292,7 +282,7 @@
       <mort1>
                  1.00000      </mort1>
       <mort2>
-                19.64308      </mort2>  	<!-- Ryan Kelley (Pecan) -->
+                20.00000     </mort2> <!-- ED Default -->
       <mort3>
                  0.00236      </mort3>
       <plant_min_temp>
@@ -305,43 +295,39 @@
                  0.10000      </treefall_lt>
 	  <!-- Nitrogen Params -->	
       <c2n_leaf>
-               39.72000      </c2n_leaf>	<!-- Pecan -->
+               39.72000      </c2n_leaf>	<!-- Ryan (Pecan) -->
 
 	  <!-- Photosynthesis Params -->	
       <cuticular_cond>
-              4426.97974      </cuticular_cond>	<!-- copied from North Pine, Ryan Kelly/Pecan South Pine -->
+              1000.0000      </cuticular_cond>	<!--  ED Default -->
       <D0>
-                 0.01000      </D0>	<!-- Modified per Jackie -->
+                 0.01000      </D0>	<!-- Jackie, Marcos -->
       <dark_respiration_factor>
                  0.02029	  </dark_respiration_factor> <!-- Same as North Pine -->
       <leaf_width>
-                 0.05000      </leaf_width>
+                 0.10181      </leaf_width> <!-- Ryan (Pecan) -->
       <photosyn_pathway>
                  3			  </photosyn_pathway>
       <quantum_efficiency>
-                 0.07305      </quantum_efficiency>	<!-- Pecan -->
+                 0.05811      </quantum_efficiency>	<!-- Same as North Pine -->
       <stomatal_slope>
                  6.39490      </stomatal_slope>	<!-- Jackie -->
       <Vm_low_temp>
                  5.02425      </Vm_low_temp> 	<!-- Ryan Kelley (Pecan) -->
       <Vm0>
-                 50.0000	  </Vm0>	<!-- Loosely Pecan; between mean-2SD late con & general temperate conifer -->
+                 45.85573	  </Vm0>	<!-- Pecan Temp Confier -->
       <water_conductance>
-                 0.000448	  </water_conductance> 	<!-- Ryan Kelley (Pecan) -->
+                 0.0000448	  </water_conductance> 	<!-- Ryan * 0.01 -->
 
 	  <!-- Radiation Params -->	
       <clumping>
                  0.81260      </clumping>	<!-- Pecan -->
-<!-- 
       <diffuse_backscatter_vis>
                  0.0740740821      </diffuse_backscatter_vis>
- -->
       <emis_v>
                  0.97000      </emis_v>
-<!-- 
       <leaf_scatter_vis>
                  0.2699999809      </leaf_scatter_vis>
- -->
 	  <!-- Reproduction Params -->	
       <nonlocal_dispersal>
                  0.39221      </nonlocal_dispersal>	<!-- Ryan Kelley/Pecan -->
@@ -360,12 +346,13 @@
       <leaf_turnover_rate>
                  0.31150      </leaf_turnover_rate>	<!-- Pecan -->
       <root_respiration_factor>
-                 1.39838      </root_respiration_factor> <!-- Pecan -->
+                 3.35208      </root_respiration_factor> <!-- Pecan, N. Pine -->
       <root_turnover_rate>
-                 0.7	  </root_turnover_rate> <!-- copied from PFT 6, Ryan Kelly, in line with Luke McCormick -->
+                 0.62140     	  </root_turnover_rate> <!-- Same as N. Pine -->
       <storage_turnover_rate>
                  0.00000      </storage_turnover_rate>
    </pft>
+
 
 <pft>
       <num>				9	</num>
@@ -375,44 +362,42 @@
 
 	  <!-- Allocation Params -->	
       <b1Bl>
-                 0.01290      </b1Bl>
+                 0.02212      </b1Bl>	<!-- Pecan Allom -->
       <b2Bl>
-                 1.74770      </b2Bl>
+                 1.86859      </b2Bl>	<!-- Pecan Allom -->
       <b1Bs>
                  0.02648      </b1Bs>
       <b2Bs>
                  2.95954      </b2Bs>
       <b1Ht>
-                22.67990      </b1Ht>
+                35.00000      </b1Ht> <!-- Modified -->
       <b2Ht>
-                -0.06534      </b2Ht>
+                -0.03267      </b2Ht>	<!-- ED Default / 2 -->
       <hgt_min>
                  1.50000      </hgt_min>
       <q>
-                 0.63580      </q>	<!-- Pecan -->
-<!-- 
+                 0.63580      </q> 	<!-- Pecan -->
+      <sapwood_ratio>
+              3900.00000      </sapwood_ratio> <!-- ED Default -->
       <qsw>
-                 0.00500      </qsw> <!~~ Fudged to be more similar to conifers ~~>
- -->
+                 0.01097      </qsw> <!-- ED Equation -->
       <rho>
                  0.00000      </rho>
       <SLA>
-                42.80167	  </SLA> <!-- Pecan -->
+                29.34375      </SLA> <!-- Same as Mid-Hardwood Pecan -->
 
 	  <!-- Derived Params -->	
-<!-- 
       <c2n_recruit>
                 17.8949623108      </c2n_recruit>
- -->
 
 	  <!-- Leaf Params -->	
       <phenology>
                    2      </phenology>
 	  <!-- Mortality Params -->	
       <mort1>
-                 1.00000      </mort1>
+                 1.0000      </mort1>	<!-- ED Default -->
       <mort2>
-                 43.10863     </mort2>	<!-- Ryan Kelley (Pecan) -->
+                20.00000     </mort2> <!-- ED Default -->
       <mort3>
                  0.00614      </mort3> <!-- ED Default -->
       <plant_min_temp>
@@ -430,39 +415,35 @@
 
 	  <!-- Photosynthesis Params -->	
       <cuticular_cond>
-              7904.00000      </cuticular_cond> 	<!-- Pecan, Southern Mid Hardwood -->
+              7904.00000      </cuticular_cond> 	<!-- Pecan Mid Hardwood -->
       <D0>
-                 0.01000      </D0>	<!-- Modified per Jackie -->
+                 0.01000      </D0>	<!-- Jackie, Marcos -->
       <dark_respiration_factor>
-                 0.01913	  </dark_respiration_factor> <!-- Pecan -->
+                 0.01913      </dark_respiration_factor>  <!-- Pecan -->
       <leaf_width>
                  0.10101      </leaf_width>	<!-- Ryan Kelley (Pecan) -->
       <photosyn_pathway>
                    3      	  </photosyn_pathway>
       <quantum_efficiency>
-                 0.05729      </quantum_efficiency> <!-- Pecan -->
+                 0.06789      </quantum_efficiency>	<!-- Pecan Temperate Deciduous -->
       <stomatal_slope>
-                 6.18200      </stomatal_slope>	<!-- Pecan -->
+                 5.94000      </stomatal_slope>	<!-- Pecan Temperate Decid -->
       <Vm_low_temp>
                  4.98547      </Vm_low_temp>	<!-- Ryan Kelley (Pecan) -->
       <Vm0>
-                65.00000	  </Vm0> <!-- Pecan, general hardwood -->
+                56.28928	  </Vm0> <!-- Pecan -->
       <water_conductance>
-                 0.000426	  </water_conductance>	<!-- Ryan Kelley (Pecan) -->
+                 0.000047	  </water_conductance> 	<!--  Ryan Kelley M. Hardwood (Pecan) * 0.01 -->
 
 	  <!-- Radiation Params -->	
       <clumping>
                  0.79830      </clumping> <!-- Pecan -->
-<!-- 
       <diffuse_backscatter_vis>
                  0.0740740821      </diffuse_backscatter_vis>
- -->
       <emis_v>
                  0.95000      </emis_v>
-<!-- 
       <leaf_scatter_vis>
                  0.2699999809      </leaf_scatter_vis>
- -->
 
 	  <!-- Reproduction Params -->	
       <nonlocal_dispersal>
@@ -497,35 +478,33 @@
 
 	  <!-- Allocation Params -->	
       <b1Bl>
-                 0.04800      </b1Bl>
+                 0.01736      </b1Bl>	<!--Avg Pecan early & late hardwood -->
       <b2Bl>
-                 1.45500      </b2Bl>
+                 1.95792      </b2Bl>	<!--Avg Pecan early & late hardwood -->
       <b1Bs>
                  0.16170      </b1Bs>
       <b2Bs>
                  2.45720      </b2Bs>
       <b1Ht>
-                25.18000      </b1Ht>
+                35.00000      </b1Ht> <!-- Modified -->
       <b2Ht>
-                -0.04964      </b2Ht>
+                -0.02482      </b2Ht>	<!-- ED Default / 2 -->
       <hgt_min>
                  1.50000      </hgt_min>
       <q>
-                 0.99521      </q> <!-- Pecan -->
-<!-- 
+                 0.99521      </q> 	<!-- Pecan -->
+      <sapwood_ratio>
+              3900.00000      </sapwood_ratio> <!-- ED Default -->
       <qsw>
-                 0.00500      </qsw> <!~~ Fudged to be more similar to conifers ~~>
- -->
+                 0.00752      </qsw>  <!-- ED Equation  -->
       <rho>
                  0.00000      </rho>
       <SLA>
-                29.69958      </SLA> <!-- Pecan -->
+                29.34375      </SLA> <!-- Pecan -->
 
 	  <!-- Derived Params -->	
-<!-- 
       <c2n_recruit>
                 28.5154876709      </c2n_recruit>
- -->
 
 	  <!-- Leaf Params -->	
       <phenology>
@@ -533,9 +512,9 @@
 
 	  <!-- Mortality Params -->	
       <mort1>
-                 1.00000      </mort1>
+                 1.0000      </mort1> <!-- ED Default -->
       <mort2>
-                 19.78785     </mort2> 	<!-- Ryan Kelley (Pecan) -->
+                20.00000     </mort2> <!-- ED Default -->
       <mort3>
                  0.00381      </mort3> <!-- ED Default -->
       <plant_min_temp>
@@ -553,39 +532,35 @@
 
 	  <!-- Photosynthesis Params -->	
       <cuticular_cond>
-             7904.00000      </cuticular_cond> 	<!-- Pecan, Southern Mid Hardwood -->
+              7904.00000      </cuticular_cond> 	<!-- Pecan Mid Hardwood -->
       <D0>
-                 0.01000      </D0>	<!-- Modified per Jackie -->
+                 0.01000      </D0>	<!-- Manually Edited -->
       <dark_respiration_factor>
-                 0.01210      </dark_respiration_factor>  <!-- Pecan -->
+                 0.01209      </dark_respiration_factor>  <!-- Pecan -->
       <leaf_width>
                  0.08699      </leaf_width>	<!-- late hardwood Pecan -->
       <photosyn_pathway>
                    3      </photosyn_pathway>
       <quantum_efficiency>
-                 0.03769      </quantum_efficiency>  <!-- Pecan -->
+                 0.06789      </quantum_efficiency>	<!-- Pecan Temperate Deciduous -->
       <stomatal_slope>
-                 8.90413      </stomatal_slope> 	<!-- Ryan Kelley (Pecan) -->
+                 5.94000      </stomatal_slope>	<!-- Pecan Temperate Decid -->
       <Vm_low_temp>
                  5.08067      </Vm_low_temp> 	<!-- Ryan Kelley (Pecan) -->
       <Vm0>
-                64.00000	  </Vm0> <!-- Pecan; generic temperate deciduous -->
+                63.96669	  </Vm0> <!-- Pecan generic temperate deciduous -->
       <water_conductance>
-                 0.000473	  </water_conductance> 	<!-- Ryan Kelley (Pecan) -->
+                 0.000047	  </water_conductance> 	<!--  Ryan Kelley (Pecan) * 0.01 -->
 
 	  <!-- Radiation Params -->	
       <clumping>
                  0.84000      </clumping>
-<!-- 
       <diffuse_backscatter_vis>
                  0.0740740821      </diffuse_backscatter_vis>
- -->
       <emis_v>
                  0.95000      </emis_v>
-<!-- 
       <leaf_scatter_vis>
                  0.2699999809      </leaf_scatter_vis>
- -->
 
 	  <!-- Reproduction Params -->	
       <nonlocal_dispersal>
@@ -605,9 +580,6 @@
       <leaf_turnover_rate>
                  0.00000      </leaf_turnover_rate>
       <root_respiration_factor>
-<!-- 
-                 1.09632      </root_respiration_factor> <!~~ 2 SD below Pecan ~~>
- -->
                  1.83895      </root_respiration_factor> <!-- Pecan -->
       <root_turnover_rate>
                  0.67111	  </root_turnover_rate>	<!-- Ryan Kelley (Pecan) -->
@@ -623,35 +595,33 @@
 
 	  <!-- Allocation Params -->	
       <b1Bl>
-                 0.01700      </b1Bl>
+                 0.01259      </b1Bl>	<!-- Pecan -->
       <b2Bl>
-                 1.73100      </b2Bl>
+                 2.04724      </b2Bl>	<!-- Pecan -->
       <b1Bs>
                  0.23500      </b1Bs>
       <b2Bs>
                  2.25180      </b2Bs>
       <b1Ht>
-                23.38740      </b1Ht>
+                35.00000      </b1Ht> <!-- Modified -->
       <b2Ht>
-                -0.05404      </b2Ht>
+                -0.02702      </b2Ht>	<!-- ED Default / 2 -->
       <hgt_min>
                  1.50000      </hgt_min>
       <q>
-                 0.99734      </q> <!-- Pecan -->
-<!-- 
+                 0.99734      </q> 	<!-- Pecan -->
+      <sapwood_ratio>
+              3900.00000      </sapwood_ratio> <!-- ED Default -->
       <qsw>
-                 0.00500      </qsw> <!~~ Fudged to be more similar to conifers ~~>
- -->
+                 0.01010      </qsw>  <!-- ED Calculation; default is 0.01538 -->
       <rho>
                  0.00000      </rho>
       <SLA>
                 39.38542      </SLA> <!-- Pecan -->
 
 	  <!-- Derived Params -->	
-<!-- 
       <c2n_recruit>
                 56.3194046021      </c2n_recruit>
- -->
 
 	  <!-- Leaf Params -->	
       <phenology>
@@ -659,9 +629,9 @@
 
 	  <!-- Mortality Params -->	
       <mort1>
-                 1.00000      </mort1>
+                 1.0000      </mort1> <!-- Ed Default -->
       <mort2>
-                10.23066      </mort2> 	<!-- Manually Tweaked -->
+                20.00000     </mort2> <!-- Ed Default -->
       <mort3>
                  0.00428      </mort3> <!-- Ed Default -->
       <plant_min_temp>
@@ -679,39 +649,35 @@
 
 	  <!-- Photosynthesis Params -->	
       <cuticular_cond>
-             12338.99380      </cuticular_cond> 	<!-- Ryan Kelley (Pecan) -->
+              7904.00000      </cuticular_cond> 	<!-- Pecan mid hardwood -->
       <D0>
-                 0.01000      </D0>	<!-- Modified per Jackie -->
+                 0.01000      </D0>	<!-- Modified -->
       <dark_respiration_factor>
-                 0.03053	  </dark_respiration_factor> <!-- Pecan -->
+                 0.03053      </dark_respiration_factor>  <!-- Pecan -->
       <leaf_width>
                  0.08699      </leaf_width>	<!-- Pecan -->
       <photosyn_pathway>
                    3      </photosyn_pathway>
       <quantum_efficiency>
-                 0.04460      </quantum_efficiency>	<!-- Pecan -->
+                 0.06789      </quantum_efficiency>	<!-- Pecan Temperate Deciduous -->
       <stomatal_slope>
-                 7.2          </stomatal_slope>		<!-- ED default -->
+                 5.94000      </stomatal_slope>	<!-- Pecan Temperate Decid -->
       <Vm_low_temp>
                  4.94058      </Vm_low_temp>	<!-- Ryan Kelley (Pecan) -->
       <Vm0>
                 69.78505	  </Vm0> <!-- Pecan -->
       <water_conductance>
-                 0.000431	  </water_conductance>	<!-- Ryan Kelley (Pecan) -->
+                 0.000043	  </water_conductance>	<!-- Ryan Kelley (Pecan) * 0.01 -->
 
 	  <!-- Radiation Params -->	
       <clumping>
                  0.84000      </clumping>
-<!-- 
       <diffuse_backscatter_vis>
                  0.0740740821      </diffuse_backscatter_vis>
- -->
       <emis_v>
                  0.95000      </emis_v>
-<!-- 
       <leaf_scatter_vis>
                  0.2699999809      </leaf_scatter_vis>
- -->
 
 	  <!-- Reproduction Params -->	
       <nonlocal_dispersal>
@@ -727,7 +693,7 @@
       <f_labile>
                  0.50329      </f_labile> 	<!-- Ryan Kelley (Pecan) -->
       <growth_resp_factor>
-                 0.35508      </growth_resp_factor>  	<!-- Ryan Kelley (Pecan) -->
+                 0.35508      </growth_resp_factor>  
       <leaf_turnover_rate>
                  0.00000      </leaf_turnover_rate>
       <root_respiration_factor>
@@ -737,4 +703,5 @@
       <storage_turnover_rate>
                  0.00000      </storage_turnover_rate>	<!-- Modified per Jackie -->
    </pft>
+
  </config>
